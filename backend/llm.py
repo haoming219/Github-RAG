@@ -1,5 +1,5 @@
 import os, json
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 from typing import Generator
 
 client = None
@@ -67,14 +67,20 @@ def stream_answer(retrieved_docs: list[dict], messages: list[dict]) -> Generator
 
     prompt_messages = build_prompt_messages(retrieved_docs, messages)
     c = _get_client()
-    response = c.chat.completions.create(
-        model=os.environ["GLM_MODEL_ID"],
-        messages=prompt_messages,
-        stream=True,
-        max_tokens=1024,
-    )
-    for chunk in response:
-        delta = chunk.choices[0].delta
-        if delta.content:
-            yield f"data: {json.dumps({'text': delta.content}, ensure_ascii=False)}\n\n"
+    try:
+        response = c.chat.completions.create(
+            model=os.environ["GLM_MODEL_ID"],
+            messages=prompt_messages,
+            stream=True,
+            max_tokens=4096,
+        )
+        for chunk in response:
+            delta = chunk.choices[0].delta
+            if delta.content:
+                yield f"data: {json.dumps({'text': delta.content}, ensure_ascii=False)}\n\n"
+        response.close()
+    except RateLimitError:
+        yield 'data: {"text": "请求过于频繁，请稍等几秒后再试。"}\n\n'
+    except Exception as e:
+        yield f'data: {{"text": "后端错误：{type(e).__name__}: {str(e)[:100]}"}}\n\n'
     yield "data: [DONE]\n\n"

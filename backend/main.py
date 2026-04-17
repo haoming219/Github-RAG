@@ -53,7 +53,7 @@ def filters_options():
     )
 
 @app.post("/api/chat")
-def chat(request: ChatRequest):
+async def chat(request: ChatRequest):
     filters = request.filters
     language = filters.language if filters else ""
     min_stars = filters.min_stars if filters else 0
