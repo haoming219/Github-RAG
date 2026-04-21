@@ -57,21 +57,24 @@ python eval/evaluate.py
 
 ### 3.1 分层抽样策略
 
-从 `chunk_metadata.json` 中读取所有父块元数据，按以下维度分层，目标生成 **150 条** query（精确配额，不依赖随机去重）：
+从 `chunk_metadata.json` 中读取所有父块元数据，按以下维度分层，目标生成 **400 条** query（精确配额，不依赖随机去重）。400 条在 95% 置信水平下误差约 ±4.8%，足以区分调参前后的效果差异。
 
-**Language 层（共 120 条）：**
-按语言统计仓库数量，取 Top 5 语言各为一层，其余归"其他"层，共 6 层，每层 **20 条**。
+**Language 层（共 180 条）：**
+按语言统计仓库数量，取 Top 5 语言各为一层，其余归"其他"层，共 6 层，每层 **30 条**。
 
-**Stars 层（共 30 条）：**
-实际 corpus 中 stars 分布极度不均（low <1k 约占 70%，mid 1k~10k 约占 29%，high >10k 约占 1%），因此采用**强制均等配额**（非按比例抽样），每档各 **10 条**：
+**Stars 层（共 60 条）：**
+实际 corpus 中 stars 分布极度不均（low <1k 约占 70%，mid 1k~10k 约占 29%，high >10k 约占 1%），因此采用**强制均等配额**（非按比例抽样），每档各 **20 条**：
 
 | 档位 | 定义 | 配额 | 备注 |
 |------|------|------|------|
-| low | stars < 1000 | 10 条 | 代表长尾项目 |
-| mid | 1000 ≤ stars < 10000 | 10 条 | 代表主流项目 |
-| high | stars ≥ 10000 | 10 条 | 最具辨识度，面试最常被问到 |
+| low | stars < 1000 | 20 条 | 代表长尾项目 |
+| mid | 1000 ≤ stars < 10000 | 20 条 | 代表主流项目 |
+| high | stars ≥ 10000 | 20 条 | 最具辨识度，面试最常被问到 |
 
-**去重规则：** Language 层和 Stars 层独立抽样，若同一 repo 出现在两层中，保留在 Language 层，Stars 层重新抽取补足配额。最终测试集恰好 **150 条**，无重复 repo。
+**随机层（共 160 条）：**
+从全量 corpus 中随机抽样，不按任何维度过滤，确保测试集同时具备统计代表性（不只是多样性覆盖）。
+
+**去重规则：** 三层独立抽样，若同一 repo 出现在多层中，优先级为 Language 层 > Stars 层 > 随机层，低优先级层重新抽取补足配额。最终测试集恰好 **400 条**，无重复 repo。
 
 ### 3.2 Query 生成 Prompt
 
@@ -130,8 +133,8 @@ README 摘要: {readme_snippet}
 
 ### 3.4 成本估算
 
-- 约 150 次 GLM API 调用（每次 ~200 input tokens + ~50 output tokens）
-- 预计总 token 消耗 < 40k tokens，GLM 免费额度内可完成
+- 约 400 次 GLM API 调用（每次 ~200 input tokens + ~50 output tokens）
+- 预计总 token 消耗 ~100k tokens，GLM 免费额度内可完成
 
 ---
 
@@ -234,20 +237,20 @@ README 摘要：{readme_snippet，最多 300 字符}
 
 **Soft Precision@5** = `(ground truth 命中数 + LLM judge 为 1 的数量) / len(retrieved_ids)`
 
-**成本控制：** 只对 ground truth 未命中的结果调用 judge（平均每条 query 约 4 次调用），总计 ~600 次调用。每次调用约 150 input tokens + 5 output tokens，总计约 93k tokens。注意：中文字符计 token 方式因模型而异，实际消耗可能略超此估算，需在 GLM 免费额度内确认。
+**成本控制：** 只对 ground truth 未命中的结果调用 judge（平均每条 query 约 4 次调用），总计 ~1600 次调用。每次调用约 150 input tokens + 5 output tokens，总计约 248k tokens。注意：中文字符计 token 方式因模型而异，实际消耗可能略超此估算，运行前需确认 GLM 免费额度是否充足。
 
 **错误处理：** judge 调用失败（网络超时、API 错误）时，该位置记录 `llm_judge: null`，排除在 soft precision 计算之外（不计入分子也不计入分母）。
 
 ### 4.5 低分样本输出（人工抽查）
 
-将 LLM judge 打分最低（soft precision 最低）的 **30 条** query 及其 Top-5 结果写入 `report.json` 的 `low_score_samples` 字段，供人工逐条核查。
+将 LLM judge 打分最低（soft precision 最低）的 **50 条** query 及其 Top-5 结果写入 `report.json` 的 `low_score_samples` 字段，供人工逐条核查（400 条测试集取 50 条约为 12.5%，抽查比例与 150 条时保持一致）。
 
 ### 4.6 终端摘要输出
 
 ```
 === RAG Evaluation Report ===
 Date: 2026-04-21
-Total queries: 150
+Total queries: 400
 
 --- Core Metrics ---
 Precision@5 (hard):  0.XX
@@ -275,7 +278,7 @@ Low-score samples (30): see report.json → low_score_samples
 ```json
 {
   "date": "2026-04-21",
-  "total_queries": 150,
+  "total_queries": 400,
   "metrics": {
     "precision_at_5": 0.62,
     "recall_at_5": 0.71,
@@ -296,9 +299,9 @@ Low-score samples (30): see report.json → low_score_samples
     "JavaScript": {"precision_at_5": 0.58, "count": 20}
   },
   "by_stars_tier": {
-    "high": {"precision_at_5": 0.70, "count": 10},
-    "mid": {"precision_at_5": 0.61, "count": 10},
-    "low": {"precision_at_5": 0.55, "count": 10}
+    "high": {"precision_at_5": 0.70, "count": 20},
+    "mid": {"precision_at_5": 0.61, "count": 20},
+    "low": {"precision_at_5": 0.55, "count": 20}
   },
   "low_score_samples": [
     {
@@ -345,6 +348,6 @@ Low-score samples (30): see report.json → low_score_samples
 
 运行评估后，可以这样回答面试官的问题：
 
-- **"检索效果怎么样？"** → "我构建了 150 条分层测试集，Precision@5 约 X%，MRR 约 X%"
+- **"检索效果怎么样？"** → "我构建了 400 条分层测试集（覆盖 6 个语言层、3 个星数档、160 条随机样本），Precision@5 约 X%，MRR 约 X%"
 - **"BM25 和向量检索哪个更有用？"** → "BM25 贡献约 X%，Pinecone 贡献约 X%，约 X% 结果由两路共同命中，说明混合检索有实际价值"
 - **"怎么保证评估结果可信？"** → "用 LLM 自动生成测试集后，人工抽查了 30 条低分样本验证 judge 可信度"
