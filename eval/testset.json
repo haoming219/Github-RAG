@@ -1,0 +1,5202 @@
+[
+  {
+    "query": "我想找一个可以用图示化方式展示Linux内核的库。",
+    "relevant_repo_ids": [
+      "ytcoode/linux-kernel-illustrated"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "ytcoode/linux-kernel-illustrated"
+    }
+  },
+  {
+    "query": "我想找一个用于计算周期介质中光子带结构的库。",
+    "relevant_repo_ids": [
+      "NanoComp/mpb"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "NanoComp/mpb"
+    }
+  },
+  {
+    "query": "我想找一个用 Ruby 实现的 SQLite 数据库库。",
+    "relevant_repo_ids": [
+      "digital-fabric/extralite"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "digital-fabric/extralite"
+    }
+  },
+  {
+    "query": "我想找一个用 PicoRuby 开发的键盘固件库。",
+    "relevant_repo_ids": [
+      "picoruby/prk_firmware"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "picoruby/prk_firmware"
+    }
+  },
+  {
+    "query": "我想找一个可以在Playstation Vita上运行的Quake移植库。",
+    "relevant_repo_ids": [
+      "Rinnegatamante/vitaQuake"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "Rinnegatamante/vitaQuake"
+    }
+  },
+  {
+    "query": "我想找一个与研究相关的恶意软件分析库。",
+    "relevant_repo_ids": [
+      "NoviceLive/research-rootkit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "NoviceLive/research-rootkit"
+    }
+  },
+  {
+    "query": "我想找一个可以用 Go 编写的 PHP 扩展库，支持 Zend API。",
+    "relevant_repo_ids": [
+      "kitech/php-go"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "kitech/php-go"
+    }
+  },
+  {
+    "query": "我想找一个用来处理内核相关任务的库。",
+    "relevant_repo_ids": [
+      "mfruba/kernel"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "mfruba/kernel"
+    }
+  },
+  {
+    "query": "我想找一个支持 LoRa 网络节点的库。",
+    "relevant_repo_ids": [
+      "Lora-net/LoRaMac-node"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "lang_C",
+      "source_repo": "Lora-net/LoRaMac-node"
+    }
+  },
+  {
+    "query": "有没有可以绕过用户模式访问控制的库？",
+    "relevant_repo_ids": [
+      "RedSection/OffensivePH"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "RedSection/OffensivePH"
+    }
+  },
+  {
+    "query": "我想找一个类似于 macOS Dock 的 System 7 应用程序库。",
+    "relevant_repo_ids": [
+      "retrospectmike/MacDock"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "retrospectmike/MacDock"
+    }
+  },
+  {
+    "query": "我想找一个支持远程管理 Transmission BitTorrent 客户端的 GTK 库。",
+    "relevant_repo_ids": [
+      "transmission-remote-gtk/transmission-remote-gtk"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "transmission-remote-gtk/transmission-remote-gtk"
+    }
+  },
+  {
+    "query": "我想找一个用 C++ 编写的电子书渲染库。",
+    "relevant_repo_ids": [
+      "readium/readium-sdk"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "readium/readium-sdk"
+    }
+  },
+  {
+    "query": "我想找一个用于PS4游戏转存的库。",
+    "relevant_repo_ids": [
+      "xvortex/ps4-dumper-vtx"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "xvortex/ps4-dumper-vtx"
+    }
+  },
+  {
+    "query": "我想找一个用于分析和展示调试信息的工具库。",
+    "relevant_repo_ids": [
+      "acmel/dwarves"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "acmel/dwarves"
+    }
+  },
+  {
+    "query": "有没有支持高性能无锁SYN cookie的防洪库？",
+    "relevant_repo_ids": [
+      "github/synsanity"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "github/synsanity"
+    }
+  },
+  {
+    "query": "我想找一个适用于MSX电脑的磁盘操作系统库。",
+    "relevant_repo_ids": [
+      "Konamiman/Nextor"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "Konamiman/Nextor"
+    }
+  },
+  {
+    "query": "我想找一个用于构建 PostgreSQL 可信语言扩展的框架。",
+    "relevant_repo_ids": [
+      "aws/pg_tle"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "aws/pg_tle"
+    }
+  },
+  {
+    "query": "我想找一个可以在 Unix 系统上运行 Windows 程序的库。",
+    "relevant_repo_ids": [
+      "wine-mirror/wine"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "lang_C",
+      "source_repo": "wine-mirror/wine"
+    }
+  },
+  {
+    "query": "我想找一个用于处理 WebSocket 缓存的库。",
+    "relevant_repo_ids": [
+      "websockets/bufferutil"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "websockets/bufferutil"
+    }
+  },
+  {
+    "query": "我想找一个用于传感器融合的开源库。",
+    "relevant_repo_ids": [
+      "memsindustrygroup/Open-Source-Sensor-Fusion"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "memsindustrygroup/Open-Source-Sensor-Fusion"
+    }
+  },
+  {
+    "query": "我想找一个用于系统调用跟踪的库，最好是简单易用的。",
+    "relevant_repo_ids": [
+      "nelhage/ministrace"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "nelhage/ministrace"
+    }
+  },
+  {
+    "query": "我想找一个用 Ruby 编写的高效 XML 解析库。",
+    "relevant_repo_ids": [
+      "ohler55/ox"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "ohler55/ox"
+    }
+  },
+  {
+    "query": "我想找一个可以将 Caps Lock 映射为 Escape 键的工具或库。",
+    "relevant_repo_ids": [
+      "susam/uncap"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "lang_C",
+      "source_repo": "susam/uncap"
+    }
+  },
+  {
+    "query": "我想找一个支持PDF处理的Python库。",
+    "relevant_repo_ids": [
+      "JacKeTUs/universal-pidff"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "JacKeTUs/universal-pidff"
+    }
+  },
+  {
+    "query": "我想找一个支持 ergoDOX 键盘的固件库。",
+    "relevant_repo_ids": [
+      "benblazak/ergodox-firmware"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "benblazak/ergodox-firmware"
+    }
+  },
+  {
+    "query": "我想找一个支持CPU和GPU向量化的库。",
+    "relevant_repo_ids": [
+      "agenium-scale/nsimd"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "agenium-scale/nsimd"
+    }
+  },
+  {
+    "query": "我想找一个支持多线程的 MySQL 备份工具。",
+    "relevant_repo_ids": [
+      "mydumper/mydumper"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "lang_C",
+      "source_repo": "mydumper/mydumper"
+    }
+  },
+  {
+    "query": "我想找一个用来探索混沌理论的Python库。",
+    "relevant_repo_ids": [
+      "rudyrucker/chaos"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "rudyrucker/chaos"
+    }
+  },
+  {
+    "query": "我想找一个支持故障注入的文件系统库。",
+    "relevant_repo_ids": [
+      "ligurio/unreliablefs"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "lang_C",
+      "source_repo": "ligurio/unreliablefs"
+    }
+  },
+  {
+    "query": "我想找一个可以提供国内视频源的 IPTV 库。",
+    "relevant_repo_ids": [
+      "FanchangWang/iptv"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "FanchangWang/iptv"
+    }
+  },
+  {
+    "query": "我想找一个能提升 Laravel 应用性能的库。",
+    "relevant_repo_ids": [
+      "laravel/octane"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "lang_PHP",
+      "source_repo": "laravel/octane"
+    }
+  },
+  {
+    "query": "我想找一个可以用来创建独特Magento网站的页面构建器库。",
+    "relevant_repo_ids": [
+      "Goomento/PageBuilder"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "Goomento/PageBuilder"
+    }
+  },
+  {
+    "query": "我想找一个关于容器、监控和日志管理的教程库。",
+    "relevant_repo_ids": [
+      "56kcloud/Training"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "56kcloud/Training"
+    }
+  },
+  {
+    "query": "我想找一个可以合并多个一对多关系的 PHP 库。",
+    "relevant_repo_ids": [
+      "korridor/laravel-has-many-merged"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "korridor/laravel-has-many-merged"
+    }
+  },
+  {
+    "query": "我想找一个支持多房间的实时浏览器聊天应用的 Node.js 库。",
+    "relevant_repo_ids": [
+      "isaacsu/twich"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "isaacsu/twich"
+    }
+  },
+  {
+    "query": "我想找一个可以自动扫描 Joomla! 或 WordPress 文件以检测恶意软件的安全库。",
+    "relevant_repo_ids": [
+      "btoplak/Joomla-Anti-Malware-Scan-Script--JAMSS-"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "btoplak/Joomla-Anti-Malware-Scan-Script--JAMSS-"
+    }
+  },
+  {
+    "query": "我想找一个可以自定义蓝图网站的开源项目。",
+    "relevant_repo_ids": [
+      "blueprintue/blueprintue-self-hosted-edition"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "blueprintue/blueprintue-self-hosted-edition"
+    }
+  },
+  {
+    "query": "我想找一个可以在Heroku上部署WordPress的模板项目。",
+    "relevant_repo_ids": [
+      "mhoofman/wordpress-heroku"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "lang_PHP",
+      "source_repo": "mhoofman/wordpress-heroku"
+    }
+  },
+  {
+    "query": "我想找一个可以用来为Laravel应用程序进行性能分析的PHP库。",
+    "relevant_repo_ids": [
+      "laracraft-tech/laravel-xhprof"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "laracraft-tech/laravel-xhprof"
+    }
+  },
+  {
+    "query": "我想找一个可以处理国际电话号码的PHP库。",
+    "relevant_repo_ids": [
+      "Log1x/acf-phone-number"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "Log1x/acf-phone-number"
+    }
+  },
+  {
+    "query": "我想找一个用于处理PayPal即时支付通知的CodeIgniter库。",
+    "relevant_repo_ids": [
+      "snowplow-archive/codeigniter-paypal-ipn"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "snowplow-archive/codeigniter-paypal-ipn"
+    }
+  },
+  {
+    "query": "我想找一个用PHP编写的数据库管理工具定制库。",
+    "relevant_repo_ids": [
+      "dg/adminer"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "dg/adminer"
+    }
+  },
+  {
+    "query": "我想找一个用于编辑电子邮件模板的库，最好是支持Filament的。",
+    "relevant_repo_ids": [
+      "visualbuilder/email-templates"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "visualbuilder/email-templates"
+    }
+  },
+  {
+    "query": "我想找一个灵活强大的数据库抽象库，最好有类似PDO的API。",
+    "relevant_repo_ids": [
+      "cakephp/database"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "cakephp/database"
+    }
+  },
+  {
+    "query": "有没有适用于WordPress的智能媒体增强库？",
+    "relevant_repo_ids": [
+      "humanmade/smart-media"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "humanmade/smart-media"
+    }
+  },
+  {
+    "query": "我想找一个可以解析、构建和操作URL的库。",
+    "relevant_repo_ids": [
+      "spatie/url"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "spatie/url"
+    }
+  },
+  {
+    "query": "我想找一个免费的个人自动发卡解决方案的开源库。",
+    "relevant_repo_ids": [
+      "szvone/vfkphp"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "szvone/vfkphp"
+    }
+  },
+  {
+    "query": "我想找一个用PHP实现的网络扫描工具。",
+    "relevant_repo_ids": [
+      "willdurand/nmap"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "willdurand/nmap"
+    }
+  },
+  {
+    "query": "我想找一个用于自托管持续集成和部署的开源库。",
+    "relevant_repo_ids": [
+      "Piplin/Piplin"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "lang_PHP",
+      "source_repo": "Piplin/Piplin"
+    }
+  },
+  {
+    "query": "我想找一个可以访问Instagram私人API的Python库。",
+    "relevant_repo_ids": [
+      "NicklasWallgren/instagram-api"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "NicklasWallgren/instagram-api"
+    }
+  },
+  {
+    "query": "我想找一个结合 Kirby 和 Vue.js 的项目库。",
+    "relevant_repo_ids": [
+      "jmheretik/kirby-vue-starterkit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "jmheretik/kirby-vue-starterkit"
+    }
+  },
+  {
+    "query": "我想找一个可以从 Laravel 应用程序部署和执行 AWS Lambda 函数的库。",
+    "relevant_repo_ids": [
+      "aarondfrancis/sidecar"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "aarondfrancis/sidecar"
+    }
+  },
+  {
+    "query": "我想找一个简单美观的 PHP 目录索引库。",
+    "relevant_repo_ids": [
+      "lorenzos/Minixed"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "lorenzos/Minixed"
+    }
+  },
+  {
+    "query": "我想找一个支持微服务架构的 PHP 库，最好集成 gRPC 和 Zipkin。",
+    "relevant_repo_ids": [
+      "henter/php-zipkin-demo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "henter/php-zipkin-demo"
+    }
+  },
+  {
+    "query": "我想找一个能提供实时库存数据的地图库。",
+    "relevant_repo_ids": [
+      "kiang/pharmacies"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "kiang/pharmacies"
+    }
+  },
+  {
+    "query": "我想找一个适用于 Laravel 的美观错误页面库。",
+    "relevant_repo_ids": [
+      "facade/ignition"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "lang_PHP",
+      "source_repo": "facade/ignition"
+    }
+  },
+  {
+    "query": "我想找一个用 PHP 编写的 NES 模拟器库。",
+    "relevant_repo_ids": [
+      "hasegawa-tomoki/php-terminal-nes-emulator"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "hasegawa-tomoki/php-terminal-nes-emulator"
+    }
+  },
+  {
+    "query": "我想找一个可以为Leboncoin.fr提供邮件和RSS提醒的库。",
+    "relevant_repo_ids": [
+      "Blount/Cheky"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "Blount/Cheky"
+    }
+  },
+  {
+    "query": "我想找一个提供安全相关库和标准化安全防御实现的工具库。",
+    "relevant_repo_ids": [
+      "padraic/SecurityMultiTool"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "lang_PHP",
+      "source_repo": "padraic/SecurityMultiTool"
+    }
+  },
+  {
+    "query": "我想找一个用于 Replicate 的 Python 库。",
+    "relevant_repo_ids": [
+      "replicate/replicate-python"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "replicate/replicate-python"
+    }
+  },
+  {
+    "query": "我想找一个可以进行OSINT扫描的Python库，支持电子邮件、域名和IP地址分析。",
+    "relevant_repo_ids": [
+      "SharadKumar97/OSINT-SPY"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "SharadKumar97/OSINT-SPY"
+    }
+  },
+  {
+    "query": "我想找一个用于自动化解释的机器学习库。",
+    "relevant_repo_ids": [
+      "openai/automated-interpretability"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "openai/automated-interpretability"
+    }
+  },
+  {
+    "query": "我想找一个用 Python 实现经典计算机科学问题的库。",
+    "relevant_repo_ids": [
+      "davecom/ClassicComputerScienceProblemsInPython"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "davecom/ClassicComputerScienceProblemsInPython"
+    }
+  },
+  {
+    "query": "我想找一个适用于机器学习的Python库。",
+    "relevant_repo_ids": [
+      "google/ml_collections"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "google/ml_collections"
+    }
+  },
+  {
+    "query": "有没有关于系统设计的中文翻译资料或项目？",
+    "relevant_repo_ids": [
+      "kevingo/system-design-primer-zh-tw"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "kevingo/system-design-primer-zh-tw"
+    }
+  },
+  {
+    "query": "我想找一个支持单宽连字的编程字体库。",
+    "relevant_repo_ids": [
+      "i-tu/Hasklig"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "i-tu/Hasklig"
+    }
+  },
+  {
+    "query": "我想找一个用于开发 Alexa 技能的 Python 库。",
+    "relevant_repo_ids": [
+      "johnwheeler/flask-ask"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "johnwheeler/flask-ask"
+    }
+  },
+  {
+    "query": "我想找一个可以加速深度神经网络的库，支持通道剪枝功能。",
+    "relevant_repo_ids": [
+      "ethanhe42/channel-pruning"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "ethanhe42/channel-pruning"
+    }
+  },
+  {
+    "query": "我想找一个可以在 Python 中使用 dplyr 语法处理 pandas 和 SQL 的库。",
+    "relevant_repo_ids": [
+      "machow/siuba"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "machow/siuba"
+    }
+  },
+  {
+    "query": "我想找一个可以进行图像级监督下检测多类目标的深度学习库。",
+    "relevant_repo_ids": [
+      "facebookresearch/Detic"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "facebookresearch/Detic"
+    }
+  },
+  {
+    "query": "我想找一个实现SOTA效果的图像分割的PyTorch库。",
+    "relevant_repo_ids": [
+      "openseg-group/OCNet.pytorch"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "openseg-group/OCNet.pytorch"
+    }
+  },
+  {
+    "query": "我想找一个用于处理持久化和不可变数据结构的 Python 库。",
+    "relevant_repo_ids": [
+      "tobgu/pyrsistent"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "tobgu/pyrsistent"
+    }
+  },
+  {
+    "query": "我想找一个用于实时车道检测的深度学习库。",
+    "relevant_repo_ids": [
+      "MaybeShewill-CV/lanenet-lane-detection"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "MaybeShewill-CV/lanenet-lane-detection"
+    }
+  },
+  {
+    "query": "我想找一个用于自然语言处理的Python库。",
+    "relevant_repo_ids": [
+      "Lynten/stanford-corenlp"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "Lynten/stanford-corenlp"
+    }
+  },
+  {
+    "query": "我想找一个适用于Apple Silicon Mac的聊天界面库，最好是基于MLX框架的。",
+    "relevant_repo_ids": [
+      "qnguyen3/chat-with-mlx"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "qnguyen3/chat-with-mlx"
+    }
+  },
+  {
+    "query": "我想找一个能将KITTI数据集转换为ROS包文件的工具。",
+    "relevant_repo_ids": [
+      "tomas789/kitti2bag"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "tomas789/kitti2bag"
+    }
+  },
+  {
+    "query": "我想找一个用于无配对跨域图像转换的深度学习库。",
+    "relevant_repo_ids": [
+      "jerryli27/TwinGAN"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "jerryli27/TwinGAN"
+    }
+  },
+  {
+    "query": "我想找一个用 Python 实现的 Raspberry Pi 摄像头模块接口库。",
+    "relevant_repo_ids": [
+      "waveform80/picamera"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "waveform80/picamera"
+    }
+  },
+  {
+    "query": "我想找一个可以通过SSH转发的透明代理服务器库，支持Linux和MacOS。",
+    "relevant_repo_ids": [
+      "sshuttle/sshuttle"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "lang_Python",
+      "source_repo": "sshuttle/sshuttle"
+    }
+  },
+  {
+    "query": "我想找一个可以通过摄像头检测驼背的开源项目。",
+    "relevant_repo_ids": [
+      "pyskell/slouchy"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "pyskell/slouchy"
+    }
+  },
+  {
+    "query": "我想找一个用 TensorFlow 实现的分离人声与音乐的深度学习库。",
+    "relevant_repo_ids": [
+      "andabi/music-source-separation"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "andabi/music-source-separation"
+    }
+  },
+  {
+    "query": "我想找一个可以将图片转换为ASCII艺术的库。",
+    "relevant_repo_ids": [
+      "vietnh1009/ASCII-generator"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "vietnh1009/ASCII-generator"
+    }
+  },
+  {
+    "query": "我想找一个用于存储和管理外星行星数据的库。",
+    "relevant_repo_ids": [
+      "OpenExoplanetCatalogue/open_exoplanet_catalogue"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "OpenExoplanetCatalogue/open_exoplanet_catalogue"
+    }
+  },
+  {
+    "query": "我想找一个用于交易策略的技术指标库，可以与频率交易框架兼容。",
+    "relevant_repo_ids": [
+      "freqtrade/technical"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "freqtrade/technical"
+    }
+  },
+  {
+    "query": "我想找一个支持深度学习的Python库。",
+    "relevant_repo_ids": [
+      "keras-team/keras-contrib"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "keras-team/keras-contrib"
+    }
+  },
+  {
+    "query": "我想找一个用于城市场景重建和模拟的3D图形库。",
+    "relevant_repo_ids": [
+      "ziyc/drivestudio"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "ziyc/drivestudio"
+    }
+  },
+  {
+    "query": "我想找一个用于统一多模态学习的库。",
+    "relevant_repo_ids": [
+      "invictus717/MetaTransformer"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "invictus717/MetaTransformer"
+    }
+  },
+  {
+    "query": "我想找一个可以反向工程未知定义的 Protocol Buffers 的工具。",
+    "relevant_repo_ids": [
+      "mildsunrise/protobuf-inspector"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "lang_Python",
+      "source_repo": "mildsunrise/protobuf-inspector"
+    }
+  },
+  {
+    "query": "有没有可以自动化测试网页视觉差异的库？",
+    "relevant_repo_ids": [
+      "bslatkin/dpxdt"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "lang_Python",
+      "source_repo": "bslatkin/dpxdt"
+    }
+  },
+  {
+    "query": "我想找一个适用于 PHP 的高性能 GRPC 服务器库。",
+    "relevant_repo_ids": [
+      "spiral-modules/php-grpc"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "spiral-modules/php-grpc"
+    }
+  },
+  {
+    "query": "有没有支持管理多个 Go 版本的命令行工具？",
+    "relevant_repo_ids": [
+      "voidint/g"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "voidint/g"
+    }
+  },
+  {
+    "query": "我想找一个可以测试OpenSSL Heartbleed漏洞的工具库。",
+    "relevant_repo_ids": [
+      "titanous/heartbleeder"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "titanous/heartbleeder"
+    }
+  },
+  {
+    "query": "我想找一个适合团队使用的跨平台密码管理库，支持离线模式。",
+    "relevant_repo_ids": [
+      "gopasspw/gopass"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "gopasspw/gopass"
+    }
+  },
+  {
+    "query": "我想找一个基于etcd层次结构的反向代理库。",
+    "relevant_repo_ids": [
+      "arkenio/gogeta"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "arkenio/gogeta"
+    }
+  },
+  {
+    "query": "我想找一个支持GB28181协议的SIP服务器库。",
+    "relevant_repo_ids": [
+      "panjjo/gosip"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "panjjo/gosip"
+    }
+  },
+  {
+    "query": "我想找一个用于扩展云原生基础设施的 Web Assembly 工具库。",
+    "relevant_repo_ids": [
+      "solo-io/wasm"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "solo-io/wasm"
+    }
+  },
+  {
+    "query": "我想找一个支持 Geoip 和 Geosite 规则的库。",
+    "relevant_repo_ids": [
+      "lyc8503/sing-box-rules"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "lyc8503/sing-box-rules"
+    }
+  },
+  {
+    "query": "我想找一个支持容错的以太坊 RPC 代理库。",
+    "relevant_repo_ids": [
+      "erpc/erpc"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "erpc/erpc"
+    }
+  },
+  {
+    "query": "我想找一个用于构建系统的库，支持高效的电气化管理。",
+    "relevant_repo_ids": [
+      "dreadl0ck/zeus"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "dreadl0ck/zeus"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 编写的 Matrix 服务器库。",
+    "relevant_repo_ids": [
+      "element-hq/dendrite"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "element-hq/dendrite"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言写的高性能断路器和代理服务器库。",
+    "relevant_repo_ids": [
+      "jiajunhuang/guard"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "jiajunhuang/guard"
+    }
+  },
+  {
+    "query": "我想找一个可以根据构建体积自动添加或移除实例的库。",
+    "relevant_repo_ids": [
+      "drone/autoscaler"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "drone/autoscaler"
+    }
+  },
+  {
+    "query": "我想找一个用Go语言开发的文件共享平台库。",
+    "relevant_repo_ids": [
+      "pydio/cells"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "pydio/cells"
+    }
+  },
+  {
+    "query": "我想找一个用于监控和可视化 AWS CloudTrail 数据的库。",
+    "relevant_repo_ids": [
+      "AppliedTrust/traildash"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "AppliedTrust/traildash"
+    }
+  },
+  {
+    "query": "我想找一个处理容器镜像的库。",
+    "relevant_repo_ids": [
+      "containers/image"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "containers/image"
+    }
+  },
+  {
+    "query": "我想找一个支持 Redis 的 Go 语言库。",
+    "relevant_repo_ids": [
+      "CodisLabs/redis-port"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "CodisLabs/redis-port"
+    }
+  },
+  {
+    "query": "我想找一个用于 MongoDB 的 Go 语言对象文档映射库。",
+    "relevant_repo_ids": [
+      "zebresel-com/mongodm"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "zebresel-com/mongodm"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言实现的快速人脸检测和眼睛定位库。",
+    "relevant_repo_ids": [
+      "esimov/pigo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "esimov/pigo"
+    }
+  },
+  {
+    "query": "有没有支持读取和写入 Parquet 文件的 Go 语言库？",
+    "relevant_repo_ids": [
+      "fraugster/parquet-go"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "fraugster/parquet-go"
+    }
+  },
+  {
+    "query": "我想找一个可以下载YouTube直播的Python库。",
+    "relevant_repo_ids": [
+      "Kethsar/ytarchive"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "Kethsar/ytarchive"
+    }
+  },
+  {
+    "query": "我想找一个支持定制化开发的微信 SDK，最好是用 Go 语言写的。",
+    "relevant_repo_ids": [
+      "eatmoreapple/openwechat"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "eatmoreapple/openwechat"
+    }
+  },
+  {
+    "query": "我想找一个用于物联网边缘的数据流处理引擎的轻量级库。",
+    "relevant_repo_ids": [
+      "lf-edge/ekuiper"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "lf-edge/ekuiper"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 写的简单博客系统。",
+    "relevant_repo_ids": [
+      "jlelse/GoBlog"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "jlelse/GoBlog"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言开发的快速加密货币交易机器人库。",
+    "relevant_repo_ids": [
+      "rodrigo-brito/ninjabot"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "rodrigo-brito/ninjabot"
+    }
+  },
+  {
+    "query": "有没有支持OCI镜像格式的Go语言库？",
+    "relevant_repo_ids": [
+      "opencontainers/image-spec"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "lang_Go",
+      "source_repo": "opencontainers/image-spec"
+    }
+  },
+  {
+    "query": "我想找一个可以进行多人协作的 GitHub 任务管理工具。",
+    "relevant_repo_ids": [
+      "google/triage-party"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "google/triage-party"
+    }
+  },
+  {
+    "query": "我想找一个可以在线玩Codenames的库。",
+    "relevant_repo_ids": [
+      "jbowens/codenames"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "jbowens/codenames"
+    }
+  },
+  {
+    "query": "我想找一个关于架构和设计文档的库。",
+    "relevant_repo_ids": [
+      "nats-io/nats-architecture-and-design"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "nats-io/nats-architecture-and-design"
+    }
+  },
+  {
+    "query": "我想找一个支持字符串比较和编辑距离算法的库。",
+    "relevant_repo_ids": [
+      "hbollon/go-edlib"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "lang_Go",
+      "source_repo": "hbollon/go-edlib"
+    }
+  },
+  {
+    "query": "我想找一些用 Swift 开发的开源 iOS 示例应用，以便学习和参考。",
+    "relevant_repo_ids": [
+      "jogendra/example-ios-apps"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "mid",
+      "stratum": "lang_Swift",
+      "source_repo": "jogendra/example-ios-apps"
+    }
+  },
+  {
+    "query": "有没有支持 Metal 的粒子系统库，适用于 OS X 和 iOS 开发？",
+    "relevant_repo_ids": [
+      "FlexMonkey/MetalKit-Particles"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "FlexMonkey/MetalKit-Particles"
+    }
+  },
+  {
+    "query": "我想找一个适用于苹果平台的绘图库，最好能作为PencilKit的后备使用。",
+    "relevant_repo_ids": [
+      "horita-yuya/Draw"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "horita-yuya/Draw"
+    }
+  },
+  {
+    "query": "我想找一个能实现简单图像和视频滤镜的库。",
+    "relevant_repo_ids": [
+      "john-rocky/SemanticImage"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "john-rocky/SemanticImage"
+    }
+  },
+  {
+    "query": "我想找一个用于iOS的UISplitViewController示例库。",
+    "relevant_repo_ids": [
+      "NatashaTheRobot/UISplitViewControllerDemo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "NatashaTheRobot/UISplitViewControllerDemo"
+    }
+  },
+  {
+    "query": "我想找一个可以自定义的 Swift Toast 视图库。",
+    "relevant_repo_ids": [
+      "BastiaanJansen/toast-swift"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "BastiaanJansen/toast-swift"
+    }
+  },
+  {
+    "query": "我想找一个支持自定义UI的iOS OTP文本输入框的Swift库。",
+    "relevant_repo_ids": [
+      "AbdelrhmanKamalEliwa/AEOTPTextField"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "AbdelrhmanKamalEliwa/AEOTPTextField"
+    }
+  },
+  {
+    "query": "我想找一个用 SwiftUI 和 GraphQL 开发的 Elden Ring 相关库。",
+    "relevant_repo_ids": [
+      "Dimillian/The-Roundtable"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "Dimillian/The-Roundtable"
+    }
+  },
+  {
+    "query": "我想找一个支持 Combine 的时间线处理库。",
+    "relevant_repo_ids": [
+      "icanzilb/TimelaneCombine"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "icanzilb/TimelaneCombine"
+    }
+  },
+  {
+    "query": "我想找一个可以将 JSON 转换为 Swift 结构体的 macOS 应用。",
+    "relevant_repo_ids": [
+      "zadr/j2s"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "zadr/j2s"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 编写的可自定义的 iOS 水平选择器库。",
+    "relevant_repo_ids": [
+      "abhi-dave/ADDatePicker"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "abhi-dave/ADDatePicker"
+    }
+  },
+  {
+    "query": "我想找一个支持滑动手势的库，可以实现流行的过渡效果。",
+    "relevant_repo_ids": [
+      "tattn/SwipeTransition"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "tattn/SwipeTransition"
+    }
+  },
+  {
+    "query": "我想找一个可以用于构建数据驱动UI的库，最好不依赖Rx。",
+    "relevant_repo_ids": [
+      "nalexn/minimalist"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "nalexn/minimalist"
+    }
+  },
+  {
+    "query": "我想找一个用于 iOS 的定位追踪库。",
+    "relevant_repo_ids": [
+      "traccar/traccar-client-ios"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "traccar/traccar-client-ios"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 处理 SQLite 的库。",
+    "relevant_repo_ids": [
+      "ryanfowler/SwiftData"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "ryanfowler/SwiftData"
+    }
+  },
+  {
+    "query": "我想找一个用 SwiftUI 创建菜单栏扩展的轻量级工具。",
+    "relevant_repo_ids": [
+      "lfroms/fluid-menu-bar-extra"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "lfroms/fluid-menu-bar-extra"
+    }
+  },
+  {
+    "query": "我想找一个支持韩文输入的MacOS输入法库。",
+    "relevant_repo_ids": [
+      "navilera/NavilIMEforMac"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "navilera/NavilIMEforMac"
+    }
+  },
+  {
+    "query": "我想找一个使用 Swift 开发的图像滑动组件库。",
+    "relevant_repo_ids": [
+      "frederik-jacques/TNImageSliderViewController"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "frederik-jacques/TNImageSliderViewController"
+    }
+  },
+  {
+    "query": "我想找一个用于 Swift 的 Actor 模型库。",
+    "relevant_repo_ids": [
+      "tomekc/SwiftActors"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "tomekc/SwiftActors"
+    }
+  },
+  {
+    "query": "我想找一个与iOS开发相关的教程或项目库。",
+    "relevant_repo_ids": [
+      "kodecocodes/rwi-materials"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "kodecocodes/rwi-materials"
+    }
+  },
+  {
+    "query": "我想找一个用Swift编写的恶搞库，能帮助我实现一些有趣的功能。",
+    "relevant_repo_ids": [
+      "sindresorhus/evil.swift"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "sindresorhus/evil.swift"
+    }
+  },
+  {
+    "query": "我想找一个可以学习和克隆应用商店的项目库。",
+    "relevant_repo_ids": [
+      "nitin-agam/AppStore-Clone"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "nitin-agam/AppStore-Clone"
+    }
+  },
+  {
+    "query": "我想找一个可以精确测量视图位置的 iOS 库。",
+    "relevant_repo_ids": [
+      "daisuke0131/ViewMonitor"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "daisuke0131/ViewMonitor"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 实现的抽象代数结构的库。",
+    "relevant_repo_ids": [
+      "typelift/Algebra"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "typelift/Algebra"
+    }
+  },
+  {
+    "query": "我想找一个用于测试REST API的开发者工具库。",
+    "relevant_repo_ids": [
+      "MuShare/Httper-iOS"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "MuShare/Httper-iOS"
+    }
+  },
+  {
+    "query": "我想找一个支持 Socket IO 的 iOS 应用库。",
+    "relevant_repo_ids": [
+      "appcoda/SocketIOChat"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "appcoda/SocketIOChat"
+    }
+  },
+  {
+    "query": "我想找一个用 SwiftUI 开发的天气应用库。",
+    "relevant_repo_ids": [
+      "bpisano/Weather"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "bpisano/Weather"
+    }
+  },
+  {
+    "query": "我想找一个可以在 macOS 上安装输入法的工具。",
+    "relevant_repo_ids": [
+      "fcitx-contrib/fcitx5-macos-installer"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "fcitx-contrib/fcitx5-macos-installer"
+    }
+  },
+  {
+    "query": "我想找一个用 SwiftUI 开发的小说阅读库。",
+    "relevant_repo_ids": [
+      "jayden320/swiftui-shuqi-reader"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "jayden320/swiftui-shuqi-reader"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 实现的通用网络层库。",
+    "relevant_repo_ids": [
+      "Shubham0812/Generic-Network-Layer_iOS"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "lang_Swift",
+      "source_repo": "Shubham0812/Generic-Network-Layer_iOS"
+    }
+  },
+  {
+    "query": "我想找一个可以在 iOS 上播放 Icecast 网络广播的开源库。",
+    "relevant_repo_ids": [
+      "hamedh/Radio"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "hamedh/Radio"
+    }
+  },
+  {
+    "query": "我想找一个简化 Android M 系统权限管理的库，有什么推荐吗？",
+    "relevant_repo_ids": [
+      "googlesamples/easypermissions"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "googlesamples/easypermissions"
+    }
+  },
+  {
+    "query": "我想找一个可以在 iOS 上通过 HTTP 开发原生应用的库。",
+    "relevant_repo_ids": [
+      "Jasonette/JASONETTE-iOS"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "Jasonette/JASONETTE-iOS"
+    }
+  },
+  {
+    "query": "我想找一个可以生成层次数据火焰图的D3.js插件。",
+    "relevant_repo_ids": [
+      "spiermar/d3-flame-graph"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "spiermar/d3-flame-graph"
+    }
+  },
+  {
+    "query": "我想找一个可以在浏览器中添加视频配音翻译的扩展库。",
+    "relevant_repo_ids": [
+      "ilyhalight/voice-over-translation"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "ilyhalight/voice-over-translation"
+    }
+  },
+  {
+    "query": "有没有适用于 iOS 和 Mac 的多变量和 A/B 测试库推荐？",
+    "relevant_repo_ids": [
+      "mattt/SkyLab"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "mattt/SkyLab"
+    }
+  },
+  {
+    "query": "我想找一个用于自动化视频捕获和分发的开源库。",
+    "relevant_repo_ids": [
+      "opencast/opencast"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "opencast/opencast"
+    }
+  },
+  {
+    "query": "有没有支持无广告视频播放的客户端库？",
+    "relevant_repo_ids": [
+      "fire3/sailorcast"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "fire3/sailorcast"
+    }
+  },
+  {
+    "query": "我想找一个用来学习远程过程调用原理的最小实现库。",
+    "relevant_repo_ids": [
+      "yeecode/EasyRPC"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "yeecode/EasyRPC"
+    }
+  },
+  {
+    "query": "我想找一个可以灵活定位和调整大小的 Android 布局组件库。",
+    "relevant_repo_ids": [
+      "androidx/constraintlayout"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "androidx/constraintlayout"
+    }
+  },
+  {
+    "query": "我想找一个可以对文本进行高级统计分析的 Objective-C 库。",
+    "relevant_repo_ids": [
+      "rnystrom/RNTextStatistics"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "rnystrom/RNTextStatistics"
+    }
+  },
+  {
+    "query": "我想找一个支持版本更新弹窗的轻量级库，有哪些推荐？",
+    "relevant_repo_ids": [
+      "yangchong211/YCUpdateApp"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "yangchong211/YCUpdateApp"
+    }
+  },
+  {
+    "query": "我想找一个可以跨平台设置环境变量的 Node.js 库。",
+    "relevant_repo_ids": [
+      "kentcdodds/cross-env"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "kentcdodds/cross-env"
+    }
+  },
+  {
+    "query": "我想找一个用于 iOS 的 3D 球形标签云库。",
+    "relevant_repo_ids": [
+      "dongxinb/DBSphereTagCloud"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "dongxinb/DBSphereTagCloud"
+    }
+  },
+  {
+    "query": "我想找一个可以高效浏览图片的库，最好是易于扩展和低耦合的。",
+    "relevant_repo_ids": [
+      "szlsay/STPhotoBrowser"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "szlsay/STPhotoBrowser"
+    }
+  },
+  {
+    "query": "我想找一个支持RTMP和HLS协议的Android直播播放库。",
+    "relevant_repo_ids": [
+      "ksvc/KSYMediaPlayer_Android"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "ksvc/KSYMediaPlayer_Android"
+    }
+  },
+  {
+    "query": "我想找一个用于处理 XML 的 Java 库。",
+    "relevant_repo_ids": [
+      "dom4j/dom4j"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "dom4j/dom4j"
+    }
+  },
+  {
+    "query": "我想找一个可以为我的 Java 应用构建容器镜像的库。",
+    "relevant_repo_ids": [
+      "GoogleContainerTools/jib"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "high",
+      "stratum": "lang_other",
+      "source_repo": "GoogleContainerTools/jib"
+    }
+  },
+  {
+    "query": "我想找一个支持自定义导航控制器的 Swift 库。",
+    "relevant_repo_ids": [
+      "iTofu/LCNavigationController"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "iTofu/LCNavigationController"
+    }
+  },
+  {
+    "query": "我想找一个可以快速构建聊天界面的 React 组件库。",
+    "relevant_repo_ids": [
+      "chatscope/chat-ui-kit-react"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "chatscope/chat-ui-kit-react"
+    }
+  },
+  {
+    "query": "我想找一个可以帮助我学习Docker和Kubernetes的在线课程库。",
+    "relevant_repo_ids": [
+      "BretFisher/udemy-docker-mastery"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "BretFisher/udemy-docker-mastery"
+    }
+  },
+  {
+    "query": "我想找一个适用于 Node.js 的实用库，能帮助我学习和实践。",
+    "relevant_repo_ids": [
+      "azat-co/practicalnode"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "azat-co/practicalnode"
+    }
+  },
+  {
+    "query": "我想找一个可以实现拼布布局的UICollectionViewLayout库。",
+    "relevant_repo_ids": [
+      "bryceredd/RFQuiltLayout"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "bryceredd/RFQuiltLayout"
+    }
+  },
+  {
+    "query": "我想找一个支持ChatGPT API对接的Java库。",
+    "relevant_repo_ids": [
+      "fuzhengwei/chatbot-api"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "fuzhengwei/chatbot-api"
+    }
+  },
+  {
+    "query": "我想找一个支持滑动打开和关闭行的 React Native 列表组件。",
+    "relevant_repo_ids": [
+      "jemise111/react-native-swipe-list-view"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "jemise111/react-native-swipe-list-view"
+    }
+  },
+  {
+    "query": "有没有适用于 React 的 Apollo Client 集成库？",
+    "relevant_repo_ids": [
+      "apollographql/react-apollo"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "apollographql/react-apollo"
+    }
+  },
+  {
+    "query": "我想找一个用于Android的相机功能示例库。",
+    "relevant_repo_ids": [
+      "googlearchive/android-Camera2Basic"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "googlearchive/android-Camera2Basic"
+    }
+  },
+  {
+    "query": "有没有支持使用 Puppeteer 生成 PDF 的 JavaScript 库？",
+    "relevant_repo_ids": [
+      "marcbachmann/node-html-pdf"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "lang_other",
+      "source_repo": "marcbachmann/node-html-pdf"
+    }
+  },
+  {
+    "query": "我想找一个可以实现可观察模式的事件库，最好避免使用通知或代理。",
+    "relevant_repo_ids": [
+      "uber/signals-ios"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "uber/signals-ios"
+    }
+  },
+  {
+    "query": "我想找一个可以实现折叠单元格的 Swift 库。",
+    "relevant_repo_ids": [
+      "liufengting/FTFoldingTableView"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "lang_other",
+      "source_repo": "liufengting/FTFoldingTableView"
+    }
+  },
+  {
+    "query": "我想找一个用于基因组 k-mer 计数的 Python 库。",
+    "relevant_repo_ids": [
+      "marbl/meryl"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "marbl/meryl"
+    }
+  },
+  {
+    "query": "有没有适用于 PHP 的 Microsoft Graph 库？",
+    "relevant_repo_ids": [
+      "microsoftgraph/msgraph-sdk-php"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "microsoftgraph/msgraph-sdk-php"
+    }
+  },
+  {
+    "query": "我想找一个用于生成符合PDS标准的PHP项目或微包的库。",
+    "relevant_repo_ids": [
+      "jonathantorres/construct"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "jonathantorres/construct"
+    }
+  },
+  {
+    "query": "我想找一个可以获取网络接口信息的 Swift 库。",
+    "relevant_repo_ids": [
+      "svdo/swift-netutils"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "svdo/swift-netutils"
+    }
+  },
+  {
+    "query": "我想找一个用于优化和调整 Windows 10/11 的工具库。",
+    "relevant_repo_ids": [
+      "nyxiereal/XToolbox"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "nyxiereal/XToolbox"
+    }
+  },
+  {
+    "query": "我想找一个可以将 XLS 和 XLSX 文件转换为 Java 对象的库。",
+    "relevant_repo_ids": [
+      "ozlerhakan/poiji"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "ozlerhakan/poiji"
+    }
+  },
+  {
+    "query": "我想找一个用于 iOS 的内存使用监控库。",
+    "relevant_repo_ids": [
+      "shu223/Stats"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "shu223/Stats"
+    }
+  },
+  {
+    "query": "我想找一个支持模糊搜索的 PHP 库。",
+    "relevant_repo_ids": [
+      "loilo/Fuse"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "loilo/Fuse"
+    }
+  },
+  {
+    "query": "我想找一个可以自定义画笔宽度和颜色的绘图库，支持截图功能。",
+    "relevant_repo_ids": [
+      "RiccardoMoro/FreeDrawView"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "RiccardoMoro/FreeDrawView"
+    }
+  },
+  {
+    "query": "我想找一个用于处理CloudFormation模板的Go语言库。",
+    "relevant_repo_ids": [
+      "awslabs/goformation"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "awslabs/goformation"
+    }
+  },
+  {
+    "query": "我想找一个实现 iCalendar 协议的开源库。",
+    "relevant_repo_ids": [
+      "libical/libical"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "libical/libical"
+    }
+  },
+  {
+    "query": "我想找一个用于监控和追踪的 PHP 库。",
+    "relevant_repo_ids": [
+      "open-telemetry/opentelemetry-php"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "open-telemetry/opentelemetry-php"
+    }
+  },
+  {
+    "query": "我想找一个支持Realtek 8192芯片的驱动程序，适用于Linux内核3.11。",
+    "relevant_repo_ids": [
+      "pvaret/rtl8192cu-fixes"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "pvaret/rtl8192cu-fixes"
+    }
+  },
+  {
+    "query": "我想找一个简单快速的PHP框架，能够避免使用Laravel和Smarty的库。",
+    "relevant_repo_ids": [
+      "dvaknheo/duckphp"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "dvaknheo/duckphp"
+    }
+  },
+  {
+    "query": "我想找一个可以一键安装和测试移动应用的库。",
+    "relevant_repo_ids": [
+      "Shopify/tophat"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "Shopify/tophat"
+    }
+  },
+  {
+    "query": "有没有支持伊斯兰教法合规的区块链项目？",
+    "relevant_repo_ids": [
+      "haqq-network/haqq"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "haqq-network/haqq"
+    }
+  },
+  {
+    "query": "我想找一个支持 Raspberry Pi Pico 的 C/C++ 库。",
+    "relevant_repo_ids": [
+      "raspberrypi/pico-extras"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "raspberrypi/pico-extras"
+    }
+  },
+  {
+    "query": "我想找一个类似 Reeder 3 的 ActionSheet 库。",
+    "relevant_repo_ids": [
+      "r-plus/AAActivityAction"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "r-plus/AAActivityAction"
+    }
+  },
+  {
+    "query": "我想找一个用于管理 PEAR 通道服务器的库。",
+    "relevant_repo_ids": [
+      "fabpot-graveyard/Pirum"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "fabpot-graveyard/Pirum"
+    }
+  },
+  {
+    "query": "我想找一个用来显示角色标签的库，最好能支持多种字体样式。",
+    "relevant_repo_ids": [
+      "hulsizer/YetiCharacterLabelExample"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "stars_low",
+      "source_repo": "hulsizer/YetiCharacterLabelExample"
+    }
+  },
+  {
+    "query": "我想找一个可以实现炫酷滚动效果的 jQuery 插件。",
+    "relevant_repo_ids": [
+      "johnpolacek/scrollorama"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "johnpolacek/scrollorama"
+    }
+  },
+  {
+    "query": "我想找一个用于快速搭建React应用的脚手架库。",
+    "relevant_repo_ids": [
+      "bodyno/react-starter-kit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "bodyno/react-starter-kit"
+    }
+  },
+  {
+    "query": "我想找一个支持 Material Design 的 Android 新闻阅读库。",
+    "relevant_repo_ids": [
+      "hidroh/materialistic"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "hidroh/materialistic"
+    }
+  },
+  {
+    "query": "我想找一个支持自动补全功能的 Kubernetes 客户端库。",
+    "relevant_repo_ids": [
+      "c-bata/kube-prompt"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "c-bata/kube-prompt"
+    }
+  },
+  {
+    "query": "我想找一个实现差异比较功能的库。",
+    "relevant_repo_ids": [
+      "sebastianbergmann/diff"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "sebastianbergmann/diff"
+    }
+  },
+  {
+    "query": "我想找一个可以从零开始解析微信应用的库。",
+    "relevant_repo_ids": [
+      "lefex/iWeChat"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "lefex/iWeChat"
+    }
+  },
+  {
+    "query": "我想找一个用于 Python 的 Facebook 聊天库。",
+    "relevant_repo_ids": [
+      "fbchat-dev/fbchat"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "fbchat-dev/fbchat"
+    }
+  },
+  {
+    "query": "我想找一个可以简化富文本字符串创建的 Swift 库。",
+    "relevant_repo_ids": [
+      "delba/TextAttributes"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "delba/TextAttributes"
+    }
+  },
+  {
+    "query": "我想找一个用于学习 FastAPI 的教程或库。",
+    "relevant_repo_ids": [
+      "ChristopherGS/ultimate-fastapi-tutorial"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "ChristopherGS/ultimate-fastapi-tutorial"
+    }
+  },
+  {
+    "query": "我想找一个支持Android测试的Java或Kotlin库。",
+    "relevant_repo_ids": [
+      "googlesamples/android-testing-templates"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "googlesamples/android-testing-templates"
+    }
+  },
+  {
+    "query": "我想找一个支持 Viber 聊天机器人的 AI 库。",
+    "relevant_repo_ids": [
+      "fossasia/susi_viberbot"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "fossasia/susi_viberbot"
+    }
+  },
+  {
+    "query": "有没有用于提示用户评价iPhone和Mac应用的库？",
+    "relevant_repo_ids": [
+      "nicklockwood/iRate"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "nicklockwood/iRate"
+    }
+  },
+  {
+    "query": "我想找一个可以优化资源管理和加速推理的Stable Diffusion WebUI库。",
+    "relevant_repo_ids": [
+      "lllyasviel/stable-diffusion-webui-forge"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "lllyasviel/stable-diffusion-webui-forge"
+    }
+  },
+  {
+    "query": "我想找一个支持类型特定集合和快速访问的 Java 库。",
+    "relevant_repo_ids": [
+      "vigna/fastutil"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "vigna/fastutil"
+    }
+  },
+  {
+    "query": "我想找一个用于构建快速3D网页应用和游戏的JavaScript库。",
+    "relevant_repo_ids": [
+      "WhitestormJS/whs.js"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "WhitestormJS/whs.js"
+    }
+  },
+  {
+    "query": "我想找一个支持热重载功能的Java库。",
+    "relevant_repo_ids": [
+      "spring-projects/spring-loaded"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "spring-projects/spring-loaded"
+    }
+  },
+  {
+    "query": "我想找一个支持在 Electron 应用中编译 JS 和 CSS 的库。",
+    "relevant_repo_ids": [
+      "electron-userland/electron-compile"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "electron-userland/electron-compile"
+    }
+  },
+  {
+    "query": "我想找一个可以通过SSH连接远程文件系统的库。",
+    "relevant_repo_ids": [
+      "libfuse/sshfs"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "libfuse/sshfs"
+    }
+  },
+  {
+    "query": "我想找一个简单易用的 iOS 弹出菜单库，支持横竖屏显示。",
+    "relevant_repo_ids": [
+      "liufengting/FTPopOverMenu"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "liufengting/FTPopOverMenu"
+    }
+  },
+  {
+    "query": "我想找一个可以从 Google 位置数据生成交互式地理热图的库。",
+    "relevant_repo_ids": [
+      "luka1199/geo-heatmap"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "stars_mid",
+      "source_repo": "luka1199/geo-heatmap"
+    }
+  },
+  {
+    "query": "我想找一个用于计算机视觉的图像和视频标注库，最好支持大规模数据处理。",
+    "relevant_repo_ids": [
+      "cvat-ai/cvat"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "cvat-ai/cvat"
+    }
+  },
+  {
+    "query": "我想找一个轻量型的HTTP服务器库，最好能支持CGI。",
+    "relevant_repo_ids": [
+      "EZLippi/Tinyhttpd"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "EZLippi/Tinyhttpd"
+    }
+  },
+  {
+    "query": "我想找一个支持版本控制的SQL数据库库，可以像Git一样操作。",
+    "relevant_repo_ids": [
+      "dolthub/dolt"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "dolthub/dolt"
+    }
+  },
+  {
+    "query": "我想找一个可以将视频流输入到播放器的Python库。",
+    "relevant_repo_ids": [
+      "streamlink/streamlink"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "streamlink/streamlink"
+    }
+  },
+  {
+    "query": "我想找一个用 Pytorch 实现的文本生成图像的库。",
+    "relevant_repo_ids": [
+      "lucidrains/DALLE2-pytorch"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "lucidrains/DALLE2-pytorch"
+    }
+  },
+  {
+    "query": "我想找一个用于快速安全消息传递的Android库。",
+    "relevant_repo_ids": [
+      "DrKLO/Telegram"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "DrKLO/Telegram"
+    }
+  },
+  {
+    "query": "我想找一个用于人脸修复的深度学习库。",
+    "relevant_repo_ids": [
+      "TencentARC/GFPGAN"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "TencentARC/GFPGAN"
+    }
+  },
+  {
+    "query": "有没有支持多媒体播放和流媒体处理的开源库？",
+    "relevant_repo_ids": [
+      "videolan/vlc"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "videolan/vlc"
+    }
+  },
+  {
+    "query": "我想找一个用于 Git 命令的简单终端 UI 库，有哪些推荐？",
+    "relevant_repo_ids": [
+      "jesseduffield/lazygit"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "jesseduffield/lazygit"
+    }
+  },
+  {
+    "query": "我想找一个支持SSH和Telnet的跨平台终端库。",
+    "relevant_repo_ids": [
+      "kingToolbox/WindTerm"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "kingToolbox/WindTerm"
+    }
+  },
+  {
+    "query": "我想找一个可以用于脚本和自动化的 Mac App Store 命令行工具。",
+    "relevant_repo_ids": [
+      "mas-cli/mas"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "mas-cli/mas"
+    }
+  },
+  {
+    "query": "我想找一个可以搜索和播放中国多平台音乐的桌面应用库。",
+    "relevant_repo_ids": [
+      "listen1/listen1_desktop"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "listen1/listen1_desktop"
+    }
+  },
+  {
+    "query": "我想找一个用Python编写的Matrix协议的服务器实现库。",
+    "relevant_repo_ids": [
+      "matrix-org/synapse"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "matrix-org/synapse"
+    }
+  },
+  {
+    "query": "我想找一个帮助理解 JavaScript 基础概念的学习资源。",
+    "relevant_repo_ids": [
+      "stephentian/33-js-concepts"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "stephentian/33-js-concepts"
+    }
+  },
+  {
+    "query": "我想找一个能通过用户名收集个人信息的库。",
+    "relevant_repo_ids": [
+      "soxoj/maigret"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "soxoj/maigret"
+    }
+  },
+  {
+    "query": "我想找一个用于网页浏览器自动化的库，有推荐的吗？",
+    "relevant_repo_ids": [
+      "SeleniumHQ/selenium"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "SeleniumHQ/selenium"
+    }
+  },
+  {
+    "query": "我想找一个可以自动记录时间的跨平台开源工具，支持隐私保护。",
+    "relevant_repo_ids": [
+      "ActivityWatch/activitywatch"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "ActivityWatch/activitywatch"
+    }
+  },
+  {
+    "query": "我想找一个可以把镜子变成智能助手的开源项目。",
+    "relevant_repo_ids": [
+      "MagicMirrorOrg/MagicMirror"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "MagicMirrorOrg/MagicMirror"
+    }
+  },
+  {
+    "query": "我想找一个用于计算机视觉的 Python 库，包含数据集、模型和图像转换功能。",
+    "relevant_repo_ids": [
+      "pytorch/vision"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "pytorch/vision"
+    }
+  },
+  {
+    "query": "我想找一个用于移动后端开发的 Swift 框架。",
+    "relevant_repo_ids": [
+      "PerfectlySoft/Perfect"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "high",
+      "stratum": "stars_high",
+      "source_repo": "PerfectlySoft/Perfect"
+    }
+  },
+  {
+    "query": "我想找一个支持高性能MySQL路由的中间件库。",
+    "relevant_repo_ids": [
+      "session-replay-tools/cetus"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "session-replay-tools/cetus"
+    }
+  },
+  {
+    "query": "我想找一个使用 PHP 的内容管理系统库。",
+    "relevant_repo_ids": [
+      "sulu/sulu-demo"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sulu/sulu-demo"
+    }
+  },
+  {
+    "query": "我想找一个可以控制HomeKit设备的菜单栏工具。",
+    "relevant_repo_ids": [
+      "sonsongithub/HomeConMenu"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sonsongithub/HomeConMenu"
+    }
+  },
+  {
+    "query": "我想找一个可以播放SID音乐的库，最好是在线的。",
+    "relevant_repo_ids": [
+      "Chordian/deepsid"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "Chordian/deepsid"
+    }
+  },
+  {
+    "query": "我想找一个能生成 gopher 链接以利用 SSRF 和获得 RCE 的工具。",
+    "relevant_repo_ids": [
+      "tarunkant/Gopherus"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "tarunkant/Gopherus"
+    }
+  },
+  {
+    "query": "我想找一个支持以太坊挖矿的代理库。",
+    "relevant_repo_ids": [
+      "sammy007/ether-proxy"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sammy007/ether-proxy"
+    }
+  },
+  {
+    "query": "我想找一个适用于IT和安全团队的开源平台，支持API和GitOps。",
+    "relevant_repo_ids": [
+      "fleetdm/fleet"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "fleetdm/fleet"
+    }
+  },
+  {
+    "query": "我想找一个支持会话锁定和防止会话固定的 PHP Redis 处理库。",
+    "relevant_repo_ids": [
+      "1ma/RedisSessionHandler"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "1ma/RedisSessionHandler"
+    }
+  },
+  {
+    "query": "我想找一个用于科学计算和神经网络的JAX库。",
+    "relevant_repo_ids": [
+      "patrick-kidger/equinox"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "patrick-kidger/equinox"
+    }
+  },
+  {
+    "query": "我想找一个支持文本分类和序列标注的开源注释工具。",
+    "relevant_repo_ids": [
+      "doccano/doccano"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "doccano/doccano"
+    }
+  },
+  {
+    "query": "我想找一个可以自动更新IP数据库的库。",
+    "relevant_repo_ids": [
+      "out0fmemory/qqwry.dat"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "out0fmemory/qqwry.dat"
+    }
+  },
+  {
+    "query": "我想找一个可以实现多平台签到的 Android 库。",
+    "relevant_repo_ids": [
+      "bjc5233/autojs"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "bjc5233/autojs"
+    }
+  },
+  {
+    "query": "我想找一个可以恢复丢失数据的开源工具。",
+    "relevant_repo_ids": [
+      "cgsecurity/testdisk"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "cgsecurity/testdisk"
+    }
+  },
+  {
+    "query": "我想找一个用于 React.js 开发的 IDE。",
+    "relevant_repo_ids": [
+      "eveningkid/reacto"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "eveningkid/reacto"
+    }
+  },
+  {
+    "query": "我想找一个可以浏览和管理文件的网页库。",
+    "relevant_repo_ids": [
+      "cakebox/cakebox"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "cakebox/cakebox"
+    }
+  },
+  {
+    "query": "有没有推荐的高质量Telegram学习群组或频道？",
+    "relevant_repo_ids": [
+      "jackhawks/rectg"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "jackhawks/rectg"
+    }
+  },
+  {
+    "query": "我想找一个用于学习 Go 语言的练习库。",
+    "relevant_repo_ids": [
+      "cdarwin/go-koans"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "cdarwin/go-koans"
+    }
+  },
+  {
+    "query": "我想找一个可以跟踪自动布局反馈循环的库。",
+    "relevant_repo_ids": [
+      "rsrbk/LayoutLoopHunter"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "rsrbk/LayoutLoopHunter"
+    }
+  },
+  {
+    "query": "我想找一个支持可自定义标签流显示的库，能同时适应纵向和横向滚动。",
+    "relevant_repo_ids": [
+      "zekunyan/TTGTagCollectionView"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "zekunyan/TTGTagCollectionView"
+    }
+  },
+  {
+    "query": "我想找一个用于训练前馈人工神经网络的C语言库。",
+    "relevant_repo_ids": [
+      "codeplea/genann"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "codeplea/genann"
+    }
+  },
+  {
+    "query": "我想找一个可以上传文件到阿里云盘的工具库。",
+    "relevant_repo_ids": [
+      "aoaostar/alidrive-uploader"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "aoaostar/alidrive-uploader"
+    }
+  },
+  {
+    "query": "我想找一个用于开发 iOS 应用和静态库的项目模板库。",
+    "relevant_repo_ids": [
+      "davidmorford/BuildKit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "davidmorford/BuildKit"
+    }
+  },
+  {
+    "query": "我想找一个能让我的 Next.js 应用离线工作的库。",
+    "relevant_repo_ids": [
+      "hanford/next-offline"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "hanford/next-offline"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言写的后端工程库。",
+    "relevant_repo_ids": [
+      "sikozonpc/GopherSocial"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sikozonpc/GopherSocial"
+    }
+  },
+  {
+    "query": "我想找一个可以从正则表达式匹配中构造对象的库。",
+    "relevant_repo_ids": [
+      "Flight-School/RegularExpressionDecoder"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "Flight-School/RegularExpressionDecoder"
+    }
+  },
+  {
+    "query": "我想找一个可以在终端使用的 SQL IDE 库。",
+    "relevant_repo_ids": [
+      "tconbeer/harlequin"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "tconbeer/harlequin"
+    }
+  },
+  {
+    "query": "我想找一个可以绕过小米HyperOS社区限制的工具或库。",
+    "relevant_repo_ids": [
+      "MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass"
+    }
+  },
+  {
+    "query": "我想找一个用于 iOS 的密码输入和验证的库。",
+    "relevant_repo_ids": [
+      "TimOliver/TOPasscodeViewController"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "TimOliver/TOPasscodeViewController"
+    }
+  },
+  {
+    "query": "我想找一个用 Cython 实现的 Python MapReduce 库。",
+    "relevant_repo_ids": [
+      "bwhite/hadoopy"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "bwhite/hadoopy"
+    }
+  },
+  {
+    "query": "我想找一个提高 iOS 项目 UI 开发效率的库。",
+    "relevant_repo_ids": [
+      "Tencent/QMUI_iOS"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Tencent/QMUI_iOS"
+    }
+  },
+  {
+    "query": "我想找一个支持 HyperLogLog 数据结构的 PostgreSQL 扩展库。",
+    "relevant_repo_ids": [
+      "citusdata/postgresql-hll"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "citusdata/postgresql-hll"
+    }
+  },
+  {
+    "query": "我想找一个用于开发web3工具的库，最好有详细的步骤指南。",
+    "relevant_repo_ids": [
+      "web3ToolBoxDev/toolBoxClient"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "web3ToolBoxDev/toolBoxClient"
+    }
+  },
+  {
+    "query": "我想找一个用于半监督学习的 Python 库。",
+    "relevant_repo_ids": [
+      "google-research/mixmatch"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "google-research/mixmatch"
+    }
+  },
+  {
+    "query": "我想找一个实现 ANSI Common Lisp 的库。",
+    "relevant_repo_ids": [
+      "nptcl/npt"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "nptcl/npt"
+    }
+  },
+  {
+    "query": "我想找一个轻量级的WYSIWYG JavaScript编辑器，最好小于10kB。",
+    "relevant_repo_ids": [
+      "Alex-D/Trumbowyg"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Alex-D/Trumbowyg"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言实现的键值数据库库。",
+    "relevant_repo_ids": [
+      "golang/leveldb"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "golang/leveldb"
+    }
+  },
+  {
+    "query": "我想找一个可以自动识别图形验证码并与Burp Suite集成的插件。",
+    "relevant_repo_ids": [
+      "bit4woo/reCAPTCHA"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "bit4woo/reCAPTCHA"
+    }
+  },
+  {
+    "query": "有没有提供即时 logo 搜索的库？",
+    "relevant_repo_ids": [
+      "kogg/instant-logos"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "kogg/instant-logos"
+    }
+  },
+  {
+    "query": "我想找一个可以将内容状态导入导出为HTML或Markdown的库。",
+    "relevant_repo_ids": [
+      "sstur/draft-js-utils"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sstur/draft-js-utils"
+    }
+  },
+  {
+    "query": "我想找一个用于学习Java基础的库，最好是针对Java 8的。",
+    "relevant_repo_ids": [
+      "learning-zone/java-basics"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "learning-zone/java-basics"
+    }
+  },
+  {
+    "query": "我想找一个基于 Go 语言的游戏服务器框架。",
+    "relevant_repo_ids": [
+      "cherry-game/cherry"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "cherry-game/cherry"
+    }
+  },
+  {
+    "query": "我想找一个支持坐标系转换的库，能处理GCJ-02、WGS-84和BD-09格式。",
+    "relevant_repo_ids": [
+      "JackZhouCn/JZLocationConverter-Swift"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "JackZhouCn/JZLocationConverter-Swift"
+    }
+  },
+  {
+    "query": "我想找一个支持REST和JSON的Swift或Obj-C HTTP库。",
+    "relevant_repo_ids": [
+      "postmates/PMHTTP"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "postmates/PMHTTP"
+    }
+  },
+  {
+    "query": "我想找一个适用于M5StickC的Arduino库。",
+    "relevant_repo_ids": [
+      "m5stack/M5StickC"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "m5stack/M5StickC"
+    }
+  },
+  {
+    "query": "我想找一个可以在终端运行的 PHP 调试工具，方便调试代码。",
+    "relevant_repo_ids": [
+      "renatocassino/dephpugger"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "renatocassino/dephpugger"
+    }
+  },
+  {
+    "query": "我想找一个实现滑动窗口算法的Golang库，用于分布式限流。",
+    "relevant_repo_ids": [
+      "RussellLuo/slidingwindow"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "RussellLuo/slidingwindow"
+    }
+  },
+  {
+    "query": "我想找一个支持函数式编程的教程或者示例库。",
+    "relevant_repo_ids": [
+      "campoy/justforfunc"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "campoy/justforfunc"
+    }
+  },
+  {
+    "query": "有没有支持优雅连接 JSON API 的 Swift 库？",
+    "relevant_repo_ids": [
+      "freshOS/ws-deprecated"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "freshOS/ws-deprecated"
+    }
+  },
+  {
+    "query": "我想找一个可以在Win10和Win11上使用的按键映射库，最好支持虚拟游戏手柄功能。",
+    "relevant_repo_ids": [
+      "Zalafina/QKeyMapper"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "Zalafina/QKeyMapper"
+    }
+  },
+  {
+    "query": "我想找一个解析 YAML 前置数据的库。",
+    "relevant_repo_ids": [
+      "spatie/yaml-front-matter"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "spatie/yaml-front-matter"
+    }
+  },
+  {
+    "query": "我想找一个可以自定义的进度条库，支持动画效果和Objective-C。",
+    "relevant_repo_ids": [
+      "MatiBot/MBCircularProgressBar"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "MatiBot/MBCircularProgressBar"
+    }
+  },
+  {
+    "query": "我想找一个可以录制视频和音频的库，支持选择照片或拍照的功能。",
+    "relevant_repo_ids": [
+      "DayCrazy/publishImageAndVideoAnsRecord"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "DayCrazy/publishImageAndVideoAnsRecord"
+    }
+  },
+  {
+    "query": "我想找一个可以在ESP32上使用的SSH客户端和服务器的Arduino库。",
+    "relevant_repo_ids": [
+      "ewpa/LibSSH-ESP32"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "ewpa/LibSSH-ESP32"
+    }
+  },
+  {
+    "query": "我想找一个支持在视图中添加头部并能固定导航栏的库。",
+    "relevant_repo_ids": [
+      "w446108264/ScrollableLayout"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "w446108264/ScrollableLayout"
+    }
+  },
+  {
+    "query": "我想找一个支持任意精度计算的C语言库。",
+    "relevant_repo_ids": [
+      "lcn2/calc"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "lcn2/calc"
+    }
+  },
+  {
+    "query": "我想找一个适用于安卓和iOS的网络广告拦截库。",
+    "relevant_repo_ids": [
+      "blokadaorg/fem"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "blokadaorg/fem"
+    }
+  },
+  {
+    "query": "我想找一个可以将FB2文件转换成epub、mobi和azw3格式的库。",
+    "relevant_repo_ids": [
+      "rupor-github/fb2converter"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "rupor-github/fb2converter"
+    }
+  },
+  {
+    "query": "我想找一个现代化的 Python Web 框架，方便开发者使用的库。",
+    "relevant_repo_ids": [
+      "MasoniteFramework/masonite"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "MasoniteFramework/masonite"
+    }
+  },
+  {
+    "query": "我想找一个使用 Swift 3.0 的电子签名库。",
+    "relevant_repo_ids": [
+      "felipesantolim/SHFSignature"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "felipesantolim/SHFSignature"
+    }
+  },
+  {
+    "query": "我想找一个用于监控和管理时间序列数据的高性能数据库库。",
+    "relevant_repo_ids": [
+      "VictoriaMetrics/VictoriaMetrics"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "high",
+      "stratum": "random",
+      "source_repo": "VictoriaMetrics/VictoriaMetrics"
+    }
+  },
+  {
+    "query": "我想找一个可以通过语音与AI聊天的浏览器扩展。",
+    "relevant_repo_ids": [
+      "C-Nedelcu/talk-to-chatgpt"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "C-Nedelcu/talk-to-chatgpt"
+    }
+  },
+  {
+    "query": "我想找一个用于动画自定义过渡的库，最好支持简单扩展和设置。",
+    "relevant_repo_ids": [
+      "cemolcay/TransitionManager"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "cemolcay/TransitionManager"
+    }
+  },
+  {
+    "query": "我想找一个支持视频录制和推流的直播SDK库。",
+    "relevant_repo_ids": [
+      "WangShuo1143368701/WSLiveDemo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "WangShuo1143368701/WSLiveDemo"
+    }
+  },
+  {
+    "query": "我想找一个支持 TinyMCE 和 CKEditor 的文件管理库。",
+    "relevant_repo_ids": [
+      "helios-ag/FMElfinderBundle"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "helios-ag/FMElfinderBundle"
+    }
+  },
+  {
+    "query": "我想找一个可以将UIPickerView转为直列表的Swift库，支持多列表和自定义字体颜色。",
+    "relevant_repo_ids": [
+      "xiaozhuxiong121/PGPickerView"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "xiaozhuxiong121/PGPickerView"
+    }
+  },
+  {
+    "query": "我想找一个用于虚拟现实性能优化的库。",
+    "relevant_repo_ids": [
+      "fholger/vrperfkit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "fholger/vrperfkit"
+    }
+  },
+  {
+    "query": "我想找一个用于处理已废弃项目的库。",
+    "relevant_repo_ids": [
+      "17px/typecho-theme-Moz"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "17px/typecho-theme-Moz"
+    }
+  },
+  {
+    "query": "我想找一个可以用 YAML 文件管理 Bash 命令的库。",
+    "relevant_repo_ids": [
+      "wagoodman/bashful"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "wagoodman/bashful"
+    }
+  },
+  {
+    "query": "我想找一个用 Meteor 构建的示例应用程序。",
+    "relevant_repo_ids": [
+      "DiscoverMeteor/Microscope"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "DiscoverMeteor/Microscope"
+    }
+  },
+  {
+    "query": "我想找一个小型的 MVC 框架，适合快速开发的项目。",
+    "relevant_repo_ids": [
+      "AliasIO/Swiftlet"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "AliasIO/Swiftlet"
+    }
+  },
+  {
+    "query": "我想找一个支持云原生环境的高性能分布式文件系统库。",
+    "relevant_repo_ids": [
+      "juicedata/juicefs"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "high",
+      "stratum": "random",
+      "source_repo": "juicedata/juicefs"
+    }
+  },
+  {
+    "query": "我想找一个可以在 Kubernetes 上部署的云平台库。",
+    "relevant_repo_ids": [
+      "cloudfoundry/korifi"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "cloudfoundry/korifi"
+    }
+  },
+  {
+    "query": "我想找一个用Go语言实现的Cuckoo Filter库，最好比Bloom Filter更优。",
+    "relevant_repo_ids": [
+      "irfansharif/cfilter"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "irfansharif/cfilter"
+    }
+  },
+  {
+    "query": "我想找一个用于学习 Spring Boot 3 的开源库。",
+    "relevant_repo_ids": [
+      "eugenp/tutorials"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "high",
+      "stratum": "random",
+      "source_repo": "eugenp/tutorials"
+    }
+  },
+  {
+    "query": "我想找一个可以将 PostgreSQL 数据库转换为事件流的库。",
+    "relevant_repo_ids": [
+      "tmc/pqstream"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "tmc/pqstream"
+    }
+  },
+  {
+    "query": "我想找一个可以帮助我在互联网上寻找栖息之地的库。",
+    "relevant_repo_ids": [
+      "AlanDecode/Typecho-Theme-RAW"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "AlanDecode/Typecho-Theme-RAW"
+    }
+  },
+  {
+    "query": "我想找一个用于 MongoDB 数据备份的库。",
+    "relevant_repo_ids": [
+      "percona/percona-backup-mongodb"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "percona/percona-backup-mongodb"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言编写的示例程序库。",
+    "relevant_repo_ids": [
+      "adonovan/gopl.io"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "adonovan/gopl.io"
+    }
+  },
+  {
+    "query": "我想找一个用于自托管视频会议的开源项目。",
+    "relevant_repo_ids": [
+      "wirow-io/wirow-server"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "wirow-io/wirow-server"
+    }
+  },
+  {
+    "query": "我想找一个可以从 Go 源文件生成 PlantUML 图的库。",
+    "relevant_repo_ids": [
+      "bykof/go-plantuml"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "bykof/go-plantuml"
+    }
+  },
+  {
+    "query": "我想找一个用于转译电子邮件模板的库。",
+    "relevant_repo_ids": [
+      "lorenzo/pinky"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "lorenzo/pinky"
+    }
+  },
+  {
+    "query": "我想找一个与Hyper-V研究相关的库，支持最新的虚拟化技术。",
+    "relevant_repo_ids": [
+      "msuiche/LiveCloudKd"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "msuiche/LiveCloudKd"
+    }
+  },
+  {
+    "query": "我想找一个用Go语言编写的Whois信息解析库。",
+    "relevant_repo_ids": [
+      "likexian/whois-parser"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "likexian/whois-parser"
+    }
+  },
+  {
+    "query": "我想找一个用于 web fuzzing 的库，有哪些推荐的项目吗？",
+    "relevant_repo_ids": [
+      "nixawk/fuzzdb"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "nixawk/fuzzdb"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 实现的 GUI 库，能够显示各种弹窗和通知。",
+    "relevant_repo_ids": [
+      "peterprokop/SwiftOverlays"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "peterprokop/SwiftOverlays"
+    }
+  },
+  {
+    "query": "我想找一个支持图像处理的深度学习库。",
+    "relevant_repo_ids": [
+      "huawei-noah/VanillaNet"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "huawei-noah/VanillaNet"
+    }
+  },
+  {
+    "query": "我想找一个支持快速开发响应式网站的 Joomla 框架库。",
+    "relevant_repo_ids": [
+      "templaza/astroid-framework"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "templaza/astroid-framework"
+    }
+  },
+  {
+    "query": "我想找一个收集各种类别macOS软件的开源项目。",
+    "relevant_repo_ids": [
+      "jaywcjlove/awesome-mac"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "high",
+      "stratum": "random",
+      "source_repo": "jaywcjlove/awesome-mac"
+    }
+  },
+  {
+    "query": "我想找一个用于iOS的Couchbase Lite示例库。",
+    "relevant_repo_ids": [
+      "couchbaselabs/Grocery-Sync-iOS"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "couchbaselabs/Grocery-Sync-iOS"
+    }
+  },
+  {
+    "query": "我想找一个可以获取IP地址安全信息的库。",
+    "relevant_repo_ids": [
+      "jreisinger/checkip"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "jreisinger/checkip"
+    }
+  },
+  {
+    "query": "我想找一个用于 MySQL 和 MariaDB 数据库复制管理的工具库。",
+    "relevant_repo_ids": [
+      "signal18/replication-manager"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "signal18/replication-manager"
+    }
+  },
+  {
+    "query": "我想找一个使用 React 的 JavaScript 库，可以帮助我解决 CORS 问题。",
+    "relevant_repo_ids": [
+      "chetannada/Namaste-React"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "chetannada/Namaste-React"
+    }
+  },
+  {
+    "query": "我想找一个用 Swift 实现的 UICollectionView 下拉刷新动画库。",
+    "relevant_repo_ids": [
+      "fruitcoder/ReplaceAnimation"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "fruitcoder/ReplaceAnimation"
+    }
+  },
+  {
+    "query": "我想找一个可以在Hadoop或AWS上运行MapReduce作业的库。",
+    "relevant_repo_ids": [
+      "Yelp/mrjob"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Yelp/mrjob"
+    }
+  },
+  {
+    "query": "我想找一个支持 PSR-11 兼容的 PHP 依赖注入容器库。",
+    "relevant_repo_ids": [
+      "bitExpert/disco"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "bitExpert/disco"
+    }
+  },
+  {
+    "query": "我想找一个用于音乐合成的C语言库。",
+    "relevant_repo_ids": [
+      "onitama/mucom88"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "onitama/mucom88"
+    }
+  },
+  {
+    "query": "我想找一个可以实现多线程下载功能的 Android 库。",
+    "relevant_repo_ids": [
+      "Aspsine/MultiThreadDownload"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "Aspsine/MultiThreadDownload"
+    }
+  },
+  {
+    "query": "我想找一个可以自动登录京东并进行打卡和签到的库。",
+    "relevant_repo_ids": [
+      "CaoZ/JD-Coin"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "CaoZ/JD-Coin"
+    }
+  },
+  {
+    "query": "我想找一个用于缓存数据的 Go 语言库。",
+    "relevant_repo_ids": [
+      "eko/gocache"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "eko/gocache"
+    }
+  },
+  {
+    "query": "我想找一个支持 Google Cloud 服务的 Swift 库。",
+    "relevant_repo_ids": [
+      "vapor-community/google-cloud-kit"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "vapor-community/google-cloud-kit"
+    }
+  },
+  {
+    "query": "我想找一个可以实时监控CVE和安全工具更新的库。",
+    "relevant_repo_ids": [
+      "yhy0/github-cve-monitor"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "yhy0/github-cve-monitor"
+    }
+  },
+  {
+    "query": "我想找一个可以轻松摇动视图的 Swift 库，最好支持无障碍功能。",
+    "relevant_repo_ids": [
+      "haaakon/SingleLineShakeAnimation"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "haaakon/SingleLineShakeAnimation"
+    }
+  },
+  {
+    "query": "我想找一个用Java、JavaScript、Python、C++或C#编写的HackerRank解题库。",
+    "relevant_repo_ids": [
+      "RyanFehr/HackerRank"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "RyanFehr/HackerRank"
+    }
+  },
+  {
+    "query": "我想找一个用于快速加载PostgreSQL数据的库。",
+    "relevant_repo_ids": [
+      "ossc-db/pg_bulkload"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "ossc-db/pg_bulkload"
+    }
+  },
+  {
+    "query": "我想找一个用Swift编写的自定义UITableView节索引的库。",
+    "relevant_repo_ids": [
+      "0xcj/SectionIndexView"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "0xcj/SectionIndexView"
+    }
+  },
+  {
+    "query": "我想找一个支持离线优先应用的 Redux 库，适用于 Web 和 React Native。",
+    "relevant_repo_ids": [
+      "redux-offline/redux-offline"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "redux-offline/redux-offline"
+    }
+  },
+  {
+    "query": "我想找一个用 Go 语言写的 TCP 反向 Shell 库。",
+    "relevant_repo_ids": [
+      "sysdream/hershell"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sysdream/hershell"
+    }
+  },
+  {
+    "query": "我想找一个支持可编程 PWM 控制的风扇控制库。",
+    "relevant_repo_ids": [
+      "tjko/fanpico"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "tjko/fanpico"
+    }
+  },
+  {
+    "query": "我想找一个用于网络可观察性的eBPF库。",
+    "relevant_repo_ids": [
+      "netobserv/netobserv-ebpf-agent"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "netobserv/netobserv-ebpf-agent"
+    }
+  },
+  {
+    "query": "我想找一个用于智能KVM切换的库，有哪些推荐？",
+    "relevant_repo_ids": [
+      "jfedor2/screen-hopper"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "jfedor2/screen-hopper"
+    }
+  },
+  {
+    "query": "我想找一个用于 Node.js 的聊天 API 库，可以与 Facebook 聊天功能兼容。",
+    "relevant_repo_ids": [
+      "Schmavery/facebook-chat-api"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Schmavery/facebook-chat-api"
+    }
+  },
+  {
+    "query": "我想找一个强大的开发工具包，可以帮助我提高开发效率。",
+    "relevant_repo_ids": [
+      "phorgeit/phorge"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "phorgeit/phorge"
+    }
+  },
+  {
+    "query": "我想找一个可以帮助我创建iOS“今日”和“分享”扩展的库。",
+    "relevant_repo_ids": [
+      "atomicbird/iOS-Extension-Demo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "atomicbird/iOS-Extension-Demo"
+    }
+  },
+  {
+    "query": "我想找一个用于物联网安全的密码技术库，最好是用C语言开发的。",
+    "relevant_repo_ids": [
+      "iotwuxi/iot_security"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "iotwuxi/iot_security"
+    }
+  },
+  {
+    "query": "我想找一个用于分布式数据库基准测试的库。",
+    "relevant_repo_ids": [
+      "etcd-io/dbtester"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "etcd-io/dbtester"
+    }
+  },
+  {
+    "query": "我想找一个支持测试驱动开发的 Go 语言库。",
+    "relevant_repo_ids": [
+      "larien/aprenda-go-com-testes"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "larien/aprenda-go-com-testes"
+    }
+  },
+  {
+    "query": "我想找一个可以自定义 Argo CD 行为的插件库。",
+    "relevant_repo_ids": [
+      "crumbhole/argocd-lovely-plugin"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "crumbhole/argocd-lovely-plugin"
+    }
+  },
+  {
+    "query": "我想找一个能展示Twitter漏洞示例的库。",
+    "relevant_repo_ids": [
+      "yeswehack/vulnerable-code-snippets"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "yeswehack/vulnerable-code-snippets"
+    }
+  },
+  {
+    "query": "我想找一个支持Symfony的Websocket服务器库，有没有推荐的？",
+    "relevant_repo_ids": [
+      "GeniusesOfSymfony/WebSocketBundle"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "GeniusesOfSymfony/WebSocketBundle"
+    }
+  },
+  {
+    "query": "我想找一个适合程序员的编程游戏库。",
+    "relevant_repo_ids": [
+      "tpoindex/crobots"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "tpoindex/crobots"
+    }
+  },
+  {
+    "query": "我想找一个支持多种 LLM 模型集成的轻量级 API 库。",
+    "relevant_repo_ids": [
+      "iimeta/fastapi"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "iimeta/fastapi"
+    }
+  },
+  {
+    "query": "我想找一个用于访问和展示圣训的库。",
+    "relevant_repo_ids": [
+      "sunnah-com/website"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "sunnah-com/website"
+    }
+  },
+  {
+    "query": "我想找一个用于安卓开发的屏幕适配工具库。",
+    "relevant_repo_ids": [
+      "yatoooon/AndroidScreenAdaptation"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "yatoooon/AndroidScreenAdaptation"
+    }
+  },
+  {
+    "query": "我想找一个可以驱动和控制伺服电机的库，最好支持编码器和PID调速。",
+    "relevant_repo_ids": [
+      "Clear492g/ServoMotorDriver-STM32"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "Clear492g/ServoMotorDriver-STM32"
+    }
+  },
+  {
+    "query": "我想找一个可以在 iOS 中实现 storyboard 之间链接的库。",
+    "relevant_repo_ids": [
+      "rob-brown/RBStoryboardLink"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "rob-brown/RBStoryboardLink"
+    }
+  },
+  {
+    "query": "我想找一个用于管理Kamailio的Web界面库。",
+    "relevant_repo_ids": [
+      "asipto/siremis-php"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "asipto/siremis-php"
+    }
+  },
+  {
+    "query": "我想找一个轻量级的扫描器库，用于提交概念验证模块。",
+    "relevant_repo_ids": [
+      "detectify/ugly-duckling"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "detectify/ugly-duckling"
+    }
+  },
+  {
+    "query": "有没有可以优化和处理资产的 PHP 库？",
+    "relevant_repo_ids": [
+      "meenie/munee"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "meenie/munee"
+    }
+  },
+  {
+    "query": "我想找一个用 PHP 编写的文件系统监视库。",
+    "relevant_repo_ids": [
+      "phprtc/watcher"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "phprtc/watcher"
+    }
+  },
+  {
+    "query": "我想找一个用 PHP 和 React 开发的游戏服务器管理库。",
+    "relevant_repo_ids": [
+      "pterodactyl/panel"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "pterodactyl/panel"
+    }
+  },
+  {
+    "query": "我想找一个用于开发网站的Python库。",
+    "relevant_repo_ids": [
+      "python/pythondotorg"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "python/pythondotorg"
+    }
+  },
+  {
+    "query": "我想找一个用于通过电话或短信验证用户的库。",
+    "relevant_repo_ids": [
+      "worksome/verify-by-phone"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "worksome/verify-by-phone"
+    }
+  },
+  {
+    "query": "我想找一个用于访问跟踪的iOS应用开发库。",
+    "relevant_repo_ids": [
+      "hypertrack/visits-ios"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "hypertrack/visits-ios"
+    }
+  },
+  {
+    "query": "我想找一个可以在 Node.js 控制台显示颜色的库。",
+    "relevant_repo_ids": [
+      "Marak/colors.js"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Marak/colors.js"
+    }
+  },
+  {
+    "query": "我想找一个使用 Laravel 构建论坛的开源项目。",
+    "relevant_repo_ids": [
+      "laracasts/Lets-Build-a-Forum-in-Laravel"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "laracasts/Lets-Build-a-Forum-in-Laravel"
+    }
+  },
+  {
+    "query": "我想找一个简单易用的 Python 正则表达式库。",
+    "relevant_repo_ids": [
+      "VerbalExpressions/PythonVerbalExpressions"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "VerbalExpressions/PythonVerbalExpressions"
+    }
+  },
+  {
+    "query": "我想找一个可以在 iOS 和 tvOS 上显示树形结构的库。",
+    "relevant_repo_ids": [
+      "Augustyniak/RATreeView"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Objective-C",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "Augustyniak/RATreeView"
+    }
+  },
+  {
+    "query": "我想找一个可以评估数学和布尔表达式的 Java 库。",
+    "relevant_repo_ids": [
+      "ezylang/EvalEx"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "ezylang/EvalEx"
+    }
+  },
+  {
+    "query": "我想找一个可以在安卓系统上显示logcat缓冲区的库。",
+    "relevant_repo_ids": [
+      "jgilfelt/GhostLog"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "jgilfelt/GhostLog"
+    }
+  },
+  {
+    "query": "我想找一个用于监控的 PHP 库。",
+    "relevant_repo_ids": [
+      "DataDog/dd-trace-php"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "DataDog/dd-trace-php"
+    }
+  },
+  {
+    "query": "我想找一个可以快速收集Java 8代码片段的库。",
+    "relevant_repo_ids": [
+      "hellokaton/30-seconds-of-java8"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "hellokaton/30-seconds-of-java8"
+    }
+  },
+  {
+    "query": "我想找一个基于Spring Boot和MyBatis的分布式服务框架库。",
+    "relevant_repo_ids": [
+      "dearbinge/dubbo-spring-boot-mybatis-redis"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "dearbinge/dubbo-spring-boot-mybatis-redis"
+    }
+  },
+  {
+    "query": "我想找一个用于管理样本和MIDI设备的库。",
+    "relevant_repo_ids": [
+      "dagargo/elektroid"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "dagargo/elektroid"
+    }
+  },
+  {
+    "query": "有没有支持 GTFS Realtime 协议的语言库推荐？",
+    "relevant_repo_ids": [
+      "MobilityData/gtfs-realtime-bindings"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "MobilityData/gtfs-realtime-bindings"
+    }
+  },
+  {
+    "query": "我想找一个基于树莓派的逻辑分析仪库。",
+    "relevant_repo_ids": [
+      "richardghirst/Panalyzer"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "richardghirst/Panalyzer"
+    }
+  },
+  {
+    "query": "有没有支持生成网站地图的 Typecho 插件？",
+    "relevant_repo_ids": [
+      "wusongbuaa/typecho-sitemap"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "wusongbuaa/typecho-sitemap"
+    }
+  },
+  {
+    "query": "我想找一个可以将 Postgres 数据高效复制到数据仓库和存储的库。",
+    "relevant_repo_ids": [
+      "PeerDB-io/peerdb"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "PeerDB-io/peerdb"
+    }
+  },
+  {
+    "query": "我想找一个适合团队使用的问答平台库，最好支持社区论坛和知识管理功能。",
+    "relevant_repo_ids": [
+      "apache/answer"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Go",
+      "stars_tier": "high",
+      "stratum": "random",
+      "source_repo": "apache/answer"
+    }
+  },
+  {
+    "query": "我想找一个用于教堂管理的开源软件库。",
+    "relevant_repo_ids": [
+      "ChurchCRM/CRM"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "PHP",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "ChurchCRM/CRM"
+    }
+  },
+  {
+    "query": "我想找一个可以轻松添加图片编辑功能的iOS库。",
+    "relevant_repo_ids": [
+      "wordpress-mobile/MediaEditor-iOS"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "wordpress-mobile/MediaEditor-iOS"
+    }
+  },
+  {
+    "query": "我想找一个可以在每次请求时自动更换IP的Burp Suite扩展。",
+    "relevant_repo_ids": [
+      "RhinoSecurityLabs/IPRotate_Burp_Extension"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "RhinoSecurityLabs/IPRotate_Burp_Extension"
+    }
+  },
+  {
+    "query": "我想找一个使用 Python 的终端功能库。",
+    "relevant_repo_ids": [
+      "erikrose/blessings"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "erikrose/blessings"
+    }
+  },
+  {
+    "query": "我想找一个可以在 GitHub 热力图上绘图的库。",
+    "relevant_repo_ids": [
+      "ben174/git-draw"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "JavaScript",
+      "stars_tier": "mid",
+      "stratum": "random",
+      "source_repo": "ben174/git-draw"
+    }
+  },
+  {
+    "query": "我想找一个用于数字音频工作站的音效插件库。",
+    "relevant_repo_ids": [
+      "stargatedaw/stargate"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Python",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "stargatedaw/stargate"
+    }
+  },
+  {
+    "query": "我想找一个适用于16位和32位微控制器的实时内核库。",
+    "relevant_repo_ids": [
+      "dimonomid/tneo"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "dimonomid/tneo"
+    }
+  },
+  {
+    "query": "有没有实现RPC后门功能的库？",
+    "relevant_repo_ids": [
+      "eladshamir/RPC-Backdoor"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "C",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "eladshamir/RPC-Backdoor"
+    }
+  },
+  {
+    "query": "我想找一个可以实现多控制器列表和分类切换的iOS库。",
+    "relevant_repo_ids": [
+      "CoderLinLee/LLSegmentViewController"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "CoderLinLee/LLSegmentViewController"
+    }
+  },
+  {
+    "query": "我想找一个支持 Darcula 风格的 Java UI 库。",
+    "relevant_repo_ids": [
+      "bulenkov/Darcula"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "bulenkov/Darcula"
+    }
+  },
+  {
+    "query": "我想找一个支持流媒体和物联网的网络库。",
+    "relevant_repo_ids": [
+      "alibaba/alibaba-rsocket-broker"
+    ],
+    "query_type": "semantic",
+    "meta": {
+      "language": "Java",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "alibaba/alibaba-rsocket-broker"
+    }
+  },
+  {
+    "query": "我想找一个用于分享位置信息的库。",
+    "relevant_repo_ids": [
+      "igroomgrim/CLLocationManager-Singleton-in-Swift"
+    ],
+    "query_type": "keyword",
+    "meta": {
+      "language": "Swift",
+      "stars_tier": "low",
+      "stratum": "random",
+      "source_repo": "igroomgrim/CLLocationManager-Singleton-in-Swift"
+    }
+  }
+]
