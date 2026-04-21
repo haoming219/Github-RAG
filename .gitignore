@@ -26,3 +26,6 @@ frontend/.env.local
 # OS
 .DS_Store
 Thumbs.db
+
+# Eval output (per-run artifact, not committed)
+eval/report.json
