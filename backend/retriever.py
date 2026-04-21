@@ -44,8 +44,9 @@ def hybrid_search(
     language: str = "",
     min_stars: int = 0,
     topics: list[str] = None,
-    top_k: int = 5
-) -> list[dict]:
+    top_k: int = 5,
+    return_debug: bool = False
+) -> "list[dict] | tuple[list[dict], dict]":
     if topics is None:
         topics = []
     _load_artifacts()
@@ -97,7 +98,8 @@ def hybrid_search(
     if not pinecone_ranked and not bm25_ranked:
         return []
 
-    fused = _rrf(ranked_lists)[:top_k]
+    fused_all = _rrf(ranked_lists)
+    fused = fused_all[:top_k]
 
     results = []
     seen_parents = set()
@@ -112,4 +114,11 @@ def hybrid_search(
         if len(results) >= top_k:
             break
 
+    if return_debug:
+        debug_info = {
+            "pinecone_candidate_ids": [_chunk_metadata[i]["parent_id"] for i in pinecone_ranked],
+            "bm25_candidate_ids": [_chunk_metadata[i]["parent_id"] for i in bm25_ranked],
+            "fused_ranked_ids": [_chunk_metadata[i]["parent_id"] for i in fused_all[:top_k * 3]],
+        }
+        return results, debug_info
     return results
