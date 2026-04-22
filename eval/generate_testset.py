@@ -144,16 +144,16 @@ def _make_glm_client() -> OpenAI:
 QUERY_TYPE_CYCLE = ["semantic", "keyword"]
 
 PROMPT_TEMPLATE = """\
-你是一个 GitHub 用户。根据以下开源仓库的信息，生成一条自然语言搜索查询。
-要求：
-1. 查询类型：{query_type}（语义型：用"我想找一个做X的Y语言库" / 关键词型：用"有没有支持Z feature的项目"）
-2. 不能出现仓库名称或组织名称
-3. 查询应是用户会真实输入的问题，50字以内
-4. 只输出查询文本，不要任何解释
+You are a GitHub user. Based on the following open-source repository information, generate a natural language search query in English.
+Requirements:
+1. Query type: {query_type} (semantic: e.g. "a Python library for doing X" / keyword: e.g. "project that supports Z feature")
+2. Do NOT include the repository name or organization name
+3. The query should be something a real user would type, under 20 words
+4. Output only the query text, no explanation
 
-仓库信息：
+Repository info:
 Description: {description}
-README 摘要: {readme_snippet}"""
+README snippet: {readme_snippet}"""
 
 
 def _generate_query(client: OpenAI, description: str, readme_snippet: str, query_type: str) -> str:

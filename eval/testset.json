@@ -1,6 +1,6 @@
 [
   {
-    "query": "我想找一个可以用图示化方式展示Linux内核的库。",
+    "query": "a tool to visualize the Linux kernel using diagrams",
     "relevant_repo_ids": [
       "ytcoode/linux-kernel-illustrated"
     ],
@@ -13,7 +13,7 @@
     }
   },
   {
-    "query": "我想找一个用于计算周期介质中光子带结构的库。",
+    "query": "tool for computing photonic band structures in periodic media",
     "relevant_repo_ids": [
       "NanoComp/mpb"
     ],
@@ -26,7 +26,7 @@
     }
   },
   {
-    "query": "我想找一个用 Ruby 实现的 SQLite 数据库库。",
+    "query": "a Ruby library for working with SQLite databases",
     "relevant_repo_ids": [
       "digital-fabric/extralite"
     ],
@@ -39,7 +39,7 @@
     }
   },
   {
-    "query": "我想找一个用 PicoRuby 开发的键盘固件库。",
+    "query": "keyboard firmware platform using PicoRuby",
     "relevant_repo_ids": [
       "picoruby/prk_firmware"
     ],
@@ -52,7 +52,7 @@
     }
   },
   {
-    "query": "我想找一个可以在Playstation Vita上运行的Quake移植库。",
+    "query": "a game port of Quake for the Playstation Vita",
     "relevant_repo_ids": [
       "Rinnegatamante/vitaQuake"
     ],
@@ -65,7 +65,7 @@
     }
   },
   {
-    "query": "我想找一个与研究相关的恶意软件分析库。",
+    "query": "\"library for researching rootkits and enhancing security\"",
     "relevant_repo_ids": [
       "NoviceLive/research-rootkit"
     ],
@@ -78,7 +78,7 @@
     }
   },
   {
-    "query": "我想找一个可以用 Go 编写的 PHP 扩展库，支持 Zend API。",
+    "query": "a PHP extension for integrating with Go using Zend API",
     "relevant_repo_ids": [
       "kitech/php-go"
     ],
@@ -91,7 +91,7 @@
     }
   },
   {
-    "query": "我想找一个用来处理内核相关任务的库。",
+    "query": "\"Python library for kernel methods in machine learning\"",
     "relevant_repo_ids": [
       "mfruba/kernel"
     ],
@@ -104,7 +104,7 @@
     }
   },
   {
-    "query": "我想找一个支持 LoRa 网络节点的库。",
+    "query": "\"documentation for a LoRa network node implementation\"",
     "relevant_repo_ids": [
       "Lora-net/LoRaMac-node"
     ],
@@ -117,7 +117,7 @@
     }
   },
   {
-    "query": "有没有可以绕过用户模式访问控制的库？",
+    "query": "\"tool to bypass user-mode access controls using Process Hacker driver\"",
     "relevant_repo_ids": [
       "RedSection/OffensivePH"
     ],
@@ -130,7 +130,7 @@
     }
   },
   {
-    "query": "我想找一个类似于 macOS Dock 的 System 7 应用程序库。",
+    "query": "A customizable dock application for classic Mac OS System 7.",
     "relevant_repo_ids": [
       "retrospectmike/MacDock"
     ],
@@ -143,7 +143,7 @@
     }
   },
   {
-    "query": "我想找一个支持远程管理 Transmission BitTorrent 客户端的 GTK 库。",
+    "query": "GTK client for managing Transmission BitTorrent remotely via HTTP RPC protocol",
     "relevant_repo_ids": [
       "transmission-remote-gtk/transmission-remote-gtk"
     ],
@@ -156,7 +156,7 @@
     }
   },
   {
-    "query": "我想找一个用 C++ 编写的电子书渲染库。",
+    "query": "\"a C++ library for rendering ePub files\"",
     "relevant_repo_ids": [
       "readium/readium-sdk"
     ],
@@ -169,7 +169,7 @@
     }
   },
   {
-    "query": "我想找一个用于PS4游戏转存的库。",
+    "query": "PS4 game dumper tool for extracting game data",
     "relevant_repo_ids": [
       "xvortex/ps4-dumper-vtx"
     ],
@@ -182,7 +182,7 @@
     }
   },
   {
-    "query": "我想找一个用于分析和展示调试信息的工具库。",
+    "query": "a tool for analyzing DWARF debugging information in binaries",
     "relevant_repo_ids": [
       "acmel/dwarves"
     ],
@@ -195,7 +195,7 @@
     }
   },
   {
-    "query": "有没有支持高性能无锁SYN cookie的防洪库？",
+    "query": "high performance lockless SYN cookies for SYN flood mitigation in netfilter",
     "relevant_repo_ids": [
       "github/synsanity"
     ],
@@ -208,7 +208,7 @@
     }
   },
   {
-    "query": "我想找一个适用于MSX电脑的磁盘操作系统库。",
+    "query": "a disk operating system for MSX computers",
     "relevant_repo_ids": [
       "Konamiman/Nextor"
     ],
@@ -221,7 +221,7 @@
     }
   },
   {
-    "query": "我想找一个用于构建 PostgreSQL 可信语言扩展的框架。",
+    "query": "\"framework for creating secure language extensions in PostgreSQL\"",
     "relevant_repo_ids": [
       "aws/pg_tle"
     ],
@@ -234,7 +234,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 Unix 系统上运行 Windows 程序的库。",
+    "query": "a tool to run Windows applications on Unix systems",
     "relevant_repo_ids": [
       "wine-mirror/wine"
     ],
@@ -247,7 +247,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理 WebSocket 缓存的库。",
+    "query": "\"utils for managing WebSocket buffers\"",
     "relevant_repo_ids": [
       "websockets/bufferutil"
     ],
@@ -260,7 +260,7 @@
     }
   },
   {
-    "query": "我想找一个用于传感器融合的开源库。",
+    "query": "a library for open source sensor fusion applications",
     "relevant_repo_ids": [
       "memsindustrygroup/Open-Source-Sensor-Fusion"
     ],
@@ -273,7 +273,7 @@
     }
   },
   {
-    "query": "我想找一个用于系统调用跟踪的库，最好是简单易用的。",
+    "query": "minimal implementation of strace tool for system call tracing",
     "relevant_repo_ids": [
       "nelhage/ministrace"
     ],
@@ -286,7 +286,7 @@
     }
   },
   {
-    "query": "我想找一个用 Ruby 编写的高效 XML 解析库。",
+    "query": "a Ruby library for parsing XML efficiently",
     "relevant_repo_ids": [
       "ohler55/ox"
     ],
@@ -299,7 +299,7 @@
     }
   },
   {
-    "query": "我想找一个可以将 Caps Lock 映射为 Escape 键的工具或库。",
+    "query": "\"how to remap Caps Lock to Escape key on my keyboard\"",
     "relevant_repo_ids": [
       "susam/uncap"
     ],
@@ -312,7 +312,7 @@
     }
   },
   {
-    "query": "我想找一个支持PDF处理的Python库。",
+    "query": "a universal PDF tool for editing and managing documents",
     "relevant_repo_ids": [
       "JacKeTUs/universal-pidff"
     ],
@@ -325,7 +325,7 @@
     }
   },
   {
-    "query": "我想找一个支持 ergoDOX 键盘的固件库。",
+    "query": "firmware for customizable mechanical keyboards",
     "relevant_repo_ids": [
       "benblazak/ergodox-firmware"
     ],
@@ -338,7 +338,7 @@
     }
   },
   {
-    "query": "我想找一个支持CPU和GPU向量化的库。",
+    "query": "a vectorization library for CPUs and GPUs",
     "relevant_repo_ids": [
       "agenium-scale/nsimd"
     ],
@@ -351,7 +351,7 @@
     }
   },
   {
-    "query": "我想找一个支持多线程的 MySQL 备份工具。",
+    "query": "\"Open source MySQL backup tool with multithreading support\"",
     "relevant_repo_ids": [
       "mydumper/mydumper"
     ],
@@ -364,7 +364,7 @@
     }
   },
   {
-    "query": "我想找一个用来探索混沌理论的Python库。",
+    "query": "a software tool for exploring chaos theory and its concepts",
     "relevant_repo_ids": [
       "rudyrucker/chaos"
     ],
@@ -377,7 +377,7 @@
     }
   },
   {
-    "query": "我想找一个支持故障注入的文件系统库。",
+    "query": "\"FUSE-based filesystem for fault injection testing\"",
     "relevant_repo_ids": [
       "ligurio/unreliablefs"
     ],
@@ -390,7 +390,7 @@
     }
   },
   {
-    "query": "我想找一个可以提供国内视频源的 IPTV 库。",
+    "query": "a tool for accessing domestic IPTV video sources",
     "relevant_repo_ids": [
       "FanchangWang/iptv"
     ],
@@ -403,7 +403,7 @@
     }
   },
   {
-    "query": "我想找一个能提升 Laravel 应用性能的库。",
+    "query": "Laravel performance optimization tool",
     "relevant_repo_ids": [
       "laravel/octane"
     ],
@@ -416,7 +416,7 @@
     }
   },
   {
-    "query": "我想找一个可以用来创建独特Magento网站的页面构建器库。",
+    "query": "a free page builder extension for creating Magento websites with animations and custom designs",
     "relevant_repo_ids": [
       "Goomento/PageBuilder"
     ],
@@ -429,7 +429,7 @@
     }
   },
   {
-    "query": "我想找一个关于容器、监控和日志管理的教程库。",
+    "query": "tutorials for container monitoring and logging in cloud and DevOps",
     "relevant_repo_ids": [
       "56kcloud/Training"
     ],
@@ -442,7 +442,7 @@
     }
   },
   {
-    "query": "我想找一个可以合并多个一对多关系的 PHP 库。",
+    "query": "a custom Eloquent relationship for merging multiple hasMany relationships",
     "relevant_repo_ids": [
       "korridor/laravel-has-many-merged"
     ],
@@ -455,7 +455,7 @@
     }
   },
   {
-    "query": "我想找一个支持多房间的实时浏览器聊天应用的 Node.js 库。",
+    "query": "real-time chat application with multiple rooms using node.js and php",
     "relevant_repo_ids": [
       "isaacsu/twich"
     ],
@@ -468,7 +468,7 @@
     }
   },
   {
-    "query": "我想找一个可以自动扫描 Joomla! 或 WordPress 文件以检测恶意软件的安全库。",
+    "query": "a security tool to scan Joomla and WordPress for malware and trojans",
     "relevant_repo_ids": [
       "btoplak/Joomla-Anti-Malware-Scan-Script--JAMSS-"
     ],
@@ -481,7 +481,7 @@
     }
   },
   {
-    "query": "我想找一个可以自定义蓝图网站的开源项目。",
+    "query": "\"how to host a blueprintUE website for my company\"",
     "relevant_repo_ids": [
       "blueprintue/blueprintue-self-hosted-edition"
     ],
@@ -494,7 +494,7 @@
     }
   },
   {
-    "query": "我想找一个可以在Heroku上部署WordPress的模板项目。",
+    "query": "a template project for deploying WordPress applications to Heroku",
     "relevant_repo_ids": [
       "mhoofman/wordpress-heroku"
     ],
@@ -507,7 +507,7 @@
     }
   },
   {
-    "query": "我想找一个可以用来为Laravel应用程序进行性能分析的PHP库。",
+    "query": "Laravel profiling tool for easy XHProf setup",
     "relevant_repo_ids": [
       "laracraft-tech/laravel-xhprof"
     ],
@@ -520,7 +520,7 @@
     }
   },
   {
-    "query": "我想找一个可以处理国际电话号码的PHP库。",
+    "query": "a phone number field library that integrates libphonenumber and intl-tel-input",
     "relevant_repo_ids": [
       "Log1x/acf-phone-number"
     ],
@@ -533,7 +533,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理PayPal即时支付通知的CodeIgniter库。",
+    "query": "CodeIgniter library for integrating PayPal IPN notifications",
     "relevant_repo_ids": [
       "snowplow-archive/codeigniter-paypal-ipn"
     ],
@@ -546,7 +546,7 @@
     }
   },
   {
-    "query": "我想找一个用PHP编写的数据库管理工具定制库。",
+    "query": "a PHP tool for customizing database management interfaces",
     "relevant_repo_ids": [
       "dg/adminer"
     ],
@@ -559,7 +559,7 @@
     }
   },
   {
-    "query": "我想找一个用于编辑电子邮件模板的库，最好是支持Filament的。",
+    "query": "Email template editor for creating customizable designs",
     "relevant_repo_ids": [
       "visualbuilder/email-templates"
     ],
@@ -572,7 +572,7 @@
     }
   },
   {
-    "query": "我想找一个灵活强大的数据库抽象库，最好有类似PDO的API。",
+    "query": "a flexible database abstraction library with a PDO-like API",
     "relevant_repo_ids": [
       "cakephp/database"
     ],
@@ -585,7 +585,7 @@
     }
   },
   {
-    "query": "有没有适用于WordPress的智能媒体增强库？",
+    "query": "WordPress plugin for smart media enhancements and optimizations",
     "relevant_repo_ids": [
       "humanmade/smart-media"
     ],
@@ -598,7 +598,7 @@
     }
   },
   {
-    "query": "我想找一个可以解析、构建和操作URL的库。",
+    "query": "A library for parsing and manipulating URLs in my application",
     "relevant_repo_ids": [
       "spatie/url"
     ],
@@ -611,7 +611,7 @@
     }
   },
   {
-    "query": "我想找一个免费的个人自动发卡解决方案的开源库。",
+    "query": "\"open source personal automatic card issuing solution\"",
     "relevant_repo_ids": [
       "szvone/vfkphp"
     ],
@@ -624,7 +624,7 @@
     }
   },
   {
-    "query": "我想找一个用PHP实现的网络扫描工具。",
+    "query": "a PHP library for using Nmap functionalities",
     "relevant_repo_ids": [
       "willdurand/nmap"
     ],
@@ -637,7 +637,7 @@
     }
   },
   {
-    "query": "我想找一个用于自托管持续集成和部署的开源库。",
+    "query": "self-hosted continuous integration and deployment system",
     "relevant_repo_ids": [
       "Piplin/Piplin"
     ],
@@ -650,7 +650,7 @@
     }
   },
   {
-    "query": "我想找一个可以访问Instagram私人API的Python库。",
+    "query": "a library for accessing the Instagram private API",
     "relevant_repo_ids": [
       "NicklasWallgren/instagram-api"
     ],
@@ -663,7 +663,7 @@
     }
   },
   {
-    "query": "我想找一个结合 Kirby 和 Vue.js 的项目库。",
+    "query": "\"Kirby integration with Vue.js for building dynamic websites\"",
     "relevant_repo_ids": [
       "jmheretik/kirby-vue-starterkit"
     ],
@@ -676,7 +676,7 @@
     }
   },
   {
-    "query": "我想找一个可以从 Laravel 应用程序部署和执行 AWS Lambda 函数的库。",
+    "query": "a Laravel package for deploying AWS Lambda functions",
     "relevant_repo_ids": [
       "aarondfrancis/sidecar"
     ],
@@ -689,7 +689,7 @@
     }
   },
   {
-    "query": "我想找一个简单美观的 PHP 目录索引库。",
+    "query": "PHP directory indexer with a simple and attractive design",
     "relevant_repo_ids": [
       "lorenzos/Minixed"
     ],
@@ -702,7 +702,7 @@
     }
   },
   {
-    "query": "我想找一个支持微服务架构的 PHP 库，最好集成 gRPC 和 Zipkin。",
+    "query": "\"how to use Laravel with go-micro and gRPC for microservices\"",
     "relevant_repo_ids": [
       "henter/php-zipkin-demo"
     ],
@@ -715,7 +715,7 @@
     }
   },
   {
-    "query": "我想找一个能提供实时库存数据的地图库。",
+    "query": "real-time pharmacy inventory map for COVID-19 mask shortages",
     "relevant_repo_ids": [
       "kiang/pharmacies"
     ],
@@ -728,7 +728,7 @@
     }
   },
   {
-    "query": "我想找一个适用于 Laravel 的美观错误页面库。",
+    "query": "a Laravel package for creating custom error pages",
     "relevant_repo_ids": [
       "facade/ignition"
     ],
@@ -741,7 +741,7 @@
     }
   },
   {
-    "query": "我想找一个用 PHP 编写的 NES 模拟器库。",
+    "query": "\"PHP emulator for playing NES games in the terminal\"",
     "relevant_repo_ids": [
       "hasegawa-tomoki/php-terminal-nes-emulator"
     ],
@@ -754,7 +754,7 @@
     }
   },
   {
-    "query": "我想找一个可以为Leboncoin.fr提供邮件和RSS提醒的库。",
+    "query": "Email and RSS alerts for Leboncoin.fr",
     "relevant_repo_ids": [
       "Blount/Cheky"
     ],
@@ -767,7 +767,7 @@
     }
   },
   {
-    "query": "我想找一个提供安全相关库和标准化安全防御实现的工具库。",
+    "query": "multitool library for recommended security libraries and standardised security implementations",
     "relevant_repo_ids": [
       "padraic/SecurityMultiTool"
     ],
@@ -780,7 +780,7 @@
     }
   },
   {
-    "query": "我想找一个用于 Replicate 的 Python 库。",
+    "query": "a Python client for using Replicate services",
     "relevant_repo_ids": [
       "replicate/replicate-python"
     ],
@@ -793,7 +793,7 @@
     }
   },
   {
-    "query": "我想找一个可以进行OSINT扫描的Python库，支持电子邮件、域名和IP地址分析。",
+    "query": "\"tool for OSINT scanning email, domain, IP address, and organization\"",
     "relevant_repo_ids": [
       "SharadKumar97/OSINT-SPY"
     ],
@@ -806,7 +806,7 @@
     }
   },
   {
-    "query": "我想找一个用于自动化解释的机器学习库。",
+    "query": "a library for automated interpretability in machine learning models",
     "relevant_repo_ids": [
       "openai/automated-interpretability"
     ],
@@ -819,7 +819,7 @@
     }
   },
   {
-    "query": "我想找一个用 Python 实现经典计算机科学问题的库。",
+    "query": "Python solutions for classic computer science problems",
     "relevant_repo_ids": [
       "davecom/ClassicComputerScienceProblemsInPython"
     ],
@@ -832,7 +832,7 @@
     }
   },
   {
-    "query": "我想找一个适用于机器学习的Python库。",
+    "query": "a Python library for machine learning collections and use cases",
     "relevant_repo_ids": [
       "google/ml_collections"
     ],
@@ -845,7 +845,7 @@
     }
   },
   {
-    "query": "有没有关于系统设计的中文翻译资料或项目？",
+    "query": "Chinese translation project for system design primer.",
     "relevant_repo_ids": [
       "kevingo/system-design-primer-zh-tw"
     ],
@@ -858,7 +858,7 @@
     }
   },
   {
-    "query": "我想找一个支持单宽连字的编程字体库。",
+    "query": "a code font that enhances readability with monospaced ligatures for programming languages",
     "relevant_repo_ids": [
       "i-tu/Hasklig"
     ],
@@ -871,7 +871,7 @@
     }
   },
   {
-    "query": "我想找一个用于开发 Alexa 技能的 Python 库。",
+    "query": "Python library for creating Alexa skills",
     "relevant_repo_ids": [
       "johnwheeler/flask-ask"
     ],
@@ -884,7 +884,7 @@
     }
   },
   {
-    "query": "我想找一个可以加速深度神经网络的库，支持通道剪枝功能。",
+    "query": "a method for accelerating deep neural networks using channel pruning",
     "relevant_repo_ids": [
       "ethanhe42/channel-pruning"
     ],
@@ -897,7 +897,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 Python 中使用 dplyr 语法处理 pandas 和 SQL 的库。",
+    "query": "Python library for dplyr style data manipulation with pandas and SQL",
     "relevant_repo_ids": [
       "machow/siuba"
     ],
@@ -910,7 +910,7 @@
     }
   },
   {
-    "query": "我想找一个可以进行图像级监督下检测多类目标的深度学习库。",
+    "query": "a tool for detecting multiple classes in images using supervision",
     "relevant_repo_ids": [
       "facebookresearch/Detic"
     ],
@@ -923,7 +923,7 @@
     }
   },
   {
-    "query": "我想找一个实现SOTA效果的图像分割的PyTorch库。",
+    "query": "Python library for state-of-the-art segmentation benchmarks",
     "relevant_repo_ids": [
       "openseg-group/OCNet.pytorch"
     ],
@@ -936,7 +936,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理持久化和不可变数据结构的 Python 库。",
+    "query": "a Python library for persistent and immutable data structures",
     "relevant_repo_ids": [
       "tobgu/pyrsistent"
     ],
@@ -949,7 +949,7 @@
     }
   },
   {
-    "query": "我想找一个用于实时车道检测的深度学习库。",
+    "query": "\"real-time lane detection using lanenet model\"",
     "relevant_repo_ids": [
       "MaybeShewill-CV/lanenet-lane-detection"
     ],
@@ -962,7 +962,7 @@
     }
   },
   {
-    "query": "我想找一个用于自然语言处理的Python库。",
+    "query": "a Python library for using Stanford CoreNLP in my projects",
     "relevant_repo_ids": [
       "Lynten/stanford-corenlp"
     ],
@@ -975,7 +975,7 @@
     }
   },
   {
-    "query": "我想找一个适用于Apple Silicon Mac的聊天界面库，最好是基于MLX框架的。",
+    "query": "\"chat UI for LLMs on Apple Silicon Mac\"",
     "relevant_repo_ids": [
       "qnguyen3/chat-with-mlx"
     ],
@@ -988,7 +988,7 @@
     }
   },
   {
-    "query": "我想找一个能将KITTI数据集转换为ROS包文件的工具。",
+    "query": "a tool to convert KITTI dataset to ROS bag files easily",
     "relevant_repo_ids": [
       "tomas789/kitti2bag"
     ],
@@ -1001,7 +1001,7 @@
     }
   },
   {
-    "query": "我想找一个用于无配对跨域图像转换的深度学习库。",
+    "query": "\"unpaired cross-domain image translation using GANs\"",
     "relevant_repo_ids": [
       "jerryli27/TwinGAN"
     ],
@@ -1014,7 +1014,7 @@
     }
   },
   {
-    "query": "我想找一个用 Python 实现的 Raspberry Pi 摄像头模块接口库。",
+    "query": "\"Python library to interface with Raspberry Pi camera module\"",
     "relevant_repo_ids": [
       "waveform80/picamera"
     ],
@@ -1027,7 +1027,7 @@
     }
   },
   {
-    "query": "我想找一个可以通过SSH转发的透明代理服务器库，支持Linux和MacOS。",
+    "query": "\"transparent proxy server that forwards traffic over SSH without admin access\"",
     "relevant_repo_ids": [
       "sshuttle/sshuttle"
     ],
@@ -1040,7 +1040,7 @@
     }
   },
   {
-    "query": "我想找一个可以通过摄像头检测驼背的开源项目。",
+    "query": "a tool that uses a webcam to monitor and correct slouching posture",
     "relevant_repo_ids": [
       "pyskell/slouchy"
     ],
@@ -1053,7 +1053,7 @@
     }
   },
   {
-    "query": "我想找一个用 TensorFlow 实现的分离人声与音乐的深度学习库。",
+    "query": "\"TensorFlow library for separating singing voice from background music\"",
     "relevant_repo_ids": [
       "andabi/music-source-separation"
     ],
@@ -1066,7 +1066,7 @@
     }
   },
   {
-    "query": "我想找一个可以将图片转换为ASCII艺术的库。",
+    "query": "a tool that converts images and videos into ASCII art",
     "relevant_repo_ids": [
       "vietnh1009/ASCII-generator"
     ],
@@ -1079,7 +1079,7 @@
     }
   },
   {
-    "query": "我想找一个用于存储和管理外星行星数据的库。",
+    "query": "\"data repository for exoplanet information\"",
     "relevant_repo_ids": [
       "OpenExoplanetCatalogue/open_exoplanet_catalogue"
     ],
@@ -1092,7 +1092,7 @@
     }
   },
   {
-    "query": "我想找一个用于交易策略的技术指标库，可以与频率交易框架兼容。",
+    "query": "a collection of trading indicators for cryptocurrency trading strategies",
     "relevant_repo_ids": [
       "freqtrade/technical"
     ],
@@ -1105,7 +1105,7 @@
     }
   },
   {
-    "query": "我想找一个支持深度学习的Python库。",
+    "query": "Keras contributions from the community for deep learning projects",
     "relevant_repo_ids": [
       "keras-team/keras-contrib"
     ],
@@ -1118,7 +1118,7 @@
     }
   },
   {
-    "query": "我想找一个用于城市场景重建和模拟的3D图形库。",
+    "query": "a framework for 3D urban scene reconstruction and simulation",
     "relevant_repo_ids": [
       "ziyc/drivestudio"
     ],
@@ -1131,7 +1131,7 @@
     }
   },
   {
-    "query": "我想找一个用于统一多模态学习的库。",
+    "query": "\"library for unified multimodal learning using meta-transformers\"",
     "relevant_repo_ids": [
       "invictus717/MetaTransformer"
     ],
@@ -1144,7 +1144,7 @@
     }
   },
   {
-    "query": "我想找一个可以反向工程未知定义的 Protocol Buffers 的工具。",
+    "query": "a tool for reverse-engineering unknown Protocol Buffers definitions",
     "relevant_repo_ids": [
       "mildsunrise/protobuf-inspector"
     ],
@@ -1157,7 +1157,7 @@
     }
   },
   {
-    "query": "有没有可以自动化测试网页视觉差异的库？",
+    "query": "\"tool for automated visual regression testing of web pages during deployment\"",
     "relevant_repo_ids": [
       "bslatkin/dpxdt"
     ],
@@ -1170,7 +1170,7 @@
     }
   },
   {
-    "query": "我想找一个适用于 PHP 的高性能 GRPC 服务器库。",
+    "query": "a fast GRPC server for PHP applications",
     "relevant_repo_ids": [
       "spiral-modules/php-grpc"
     ],
@@ -1183,7 +1183,7 @@
     }
   },
   {
-    "query": "有没有支持管理多个 Go 版本的命令行工具？",
+    "query": "command-line tool for managing multiple Go versions",
     "relevant_repo_ids": [
       "voidint/g"
     ],
@@ -1196,7 +1196,7 @@
     }
   },
   {
-    "query": "我想找一个可以测试OpenSSL Heartbleed漏洞的工具库。",
+    "query": "a tool for testing the Heartbleed vulnerability in OpenSSL",
     "relevant_repo_ids": [
       "titanous/heartbleeder"
     ],
@@ -1209,7 +1209,7 @@
     }
   },
   {
-    "query": "我想找一个适合团队使用的跨平台密码管理库，支持离线模式。",
+    "query": "password manager for teams that works offline and on multiple operating systems",
     "relevant_repo_ids": [
       "gopasspw/gopass"
     ],
@@ -1222,7 +1222,7 @@
     }
   },
   {
-    "query": "我想找一个基于etcd层次结构的反向代理库。",
+    "query": "a reverse proxy that uses etcd for configuration management",
     "relevant_repo_ids": [
       "arkenio/gogeta"
     ],
@@ -1235,7 +1235,7 @@
     }
   },
   {
-    "query": "我想找一个支持GB28181协议的SIP服务器库。",
+    "query": "\"Python library for SIP server supporting GB28181 and ZLMediaKit\"",
     "relevant_repo_ids": [
       "panjjo/gosip"
     ],
@@ -1248,7 +1248,7 @@
     }
   },
   {
-    "query": "我想找一个用于扩展云原生基础设施的 Web Assembly 工具库。",
+    "query": "tools for developing Web Assembly applications in cloud-native environments",
     "relevant_repo_ids": [
       "solo-io/wasm"
     ],
@@ -1261,7 +1261,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Geoip 和 Geosite 规则的库。",
+    "query": "Geoip and Geosite enhanced rules for network applications",
     "relevant_repo_ids": [
       "lyc8503/sing-box-rules"
     ],
@@ -1274,7 +1274,7 @@
     }
   },
   {
-    "query": "我想找一个支持容错的以太坊 RPC 代理库。",
+    "query": "\"a fault-tolerant RPC proxy for Ethereum\"",
     "relevant_repo_ids": [
       "erpc/erpc"
     ],
@@ -1287,7 +1287,7 @@
     }
   },
   {
-    "query": "我想找一个用于构建系统的库，支持高效的电气化管理。",
+    "query": "\"build system for efficient project management\"",
     "relevant_repo_ids": [
       "dreadl0ck/zeus"
     ],
@@ -1300,7 +1300,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 编写的 Matrix 服务器库。",
+    "query": "a second-generation homeserver for Matrix written in Go",
     "relevant_repo_ids": [
       "element-hq/dendrite"
     ],
@@ -1313,7 +1313,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言写的高性能断路器和代理服务器库。",
+    "query": "high performance circuit breaker proxy server in Go",
     "relevant_repo_ids": [
       "jiajunhuang/guard"
     ],
@@ -1326,7 +1326,7 @@
     }
   },
   {
-    "query": "我想找一个可以根据构建体积自动添加或移除实例的库。",
+    "query": "a tool that manages instances based on build volume",
     "relevant_repo_ids": [
       "drone/autoscaler"
     ],
@@ -1339,7 +1339,7 @@
     }
   },
   {
-    "query": "我想找一个用Go语言开发的文件共享平台库。",
+    "query": "content collaboration platform for file sharing and organization",
     "relevant_repo_ids": [
       "pydio/cells"
     ],
@@ -1352,7 +1352,7 @@
     }
   },
   {
-    "query": "我想找一个用于监控和可视化 AWS CloudTrail 数据的库。",
+    "query": "a dashboard for monitoring AWS CloudTrail logs",
     "relevant_repo_ids": [
       "AppliedTrust/traildash"
     ],
@@ -1365,7 +1365,7 @@
     }
   },
   {
-    "query": "我想找一个处理容器镜像的库。",
+    "query": "library for managing container images",
     "relevant_repo_ids": [
       "containers/image"
     ],
@@ -1378,7 +1378,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Redis 的 Go 语言库。",
+    "query": "\"Redis porting library for seamless migration and compatibility\"",
     "relevant_repo_ids": [
       "CodisLabs/redis-port"
     ],
@@ -1391,7 +1391,7 @@
     }
   },
   {
-    "query": "我想找一个用于 MongoDB 的 Go 语言对象文档映射库。",
+    "query": "golang ODM for MongoDB",
     "relevant_repo_ids": [
       "zebresel-com/mongodm"
     ],
@@ -1404,7 +1404,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言实现的快速人脸检测和眼睛定位库。",
+    "query": "a Go library for fast face detection and eye localization",
     "relevant_repo_ids": [
       "esimov/pigo"
     ],
@@ -1417,7 +1417,7 @@
     }
   },
   {
-    "query": "有没有支持读取和写入 Parquet 文件的 Go 语言库？",
+    "query": "Go library for reading and writing parquet files in the Hadoop ecosystem",
     "relevant_repo_ids": [
       "fraugster/parquet-go"
     ],
@@ -1430,7 +1430,7 @@
     }
   },
   {
-    "query": "我想找一个可以下载YouTube直播的Python库。",
+    "query": "a tool to download YouTube livestreams",
     "relevant_repo_ids": [
       "Kethsar/ytarchive"
     ],
@@ -1443,7 +1443,7 @@
     }
   },
   {
-    "query": "我想找一个支持定制化开发的微信 SDK，最好是用 Go 语言写的。",
+    "query": "Golang SDK for developing features with personal WeChat accounts",
     "relevant_repo_ids": [
       "eatmoreapple/openwechat"
     ],
@@ -1456,7 +1456,7 @@
     }
   },
   {
-    "query": "我想找一个用于物联网边缘的数据流处理引擎的轻量级库。",
+    "query": "a lightweight data stream processing engine for IoT edge devices",
     "relevant_repo_ids": [
       "lf-edge/ekuiper"
     ],
@@ -1469,7 +1469,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 写的简单博客系统。",
+    "query": "a blogging system built with Go",
     "relevant_repo_ids": [
       "jlelse/GoBlog"
     ],
@@ -1482,7 +1482,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言开发的快速加密货币交易机器人库。",
+    "query": "a fast cryptocurrency trading bot platform written in Go",
     "relevant_repo_ids": [
       "rodrigo-brito/ninjabot"
     ],
@@ -1495,7 +1495,7 @@
     }
   },
   {
-    "query": "有没有支持OCI镜像格式的Go语言库？",
+    "query": "\"Go library for working with OCI container image format\"",
     "relevant_repo_ids": [
       "opencontainers/image-spec"
     ],
@@ -1508,7 +1508,7 @@
     }
   },
   {
-    "query": "我想找一个可以进行多人协作的 GitHub 任务管理工具。",
+    "query": "a tool for collaborative GitHub issue triage with multiple users",
     "relevant_repo_ids": [
       "google/triage-party"
     ],
@@ -1521,7 +1521,7 @@
     }
   },
   {
-    "query": "我想找一个可以在线玩Codenames的库。",
+    "query": "online codenames game multiplayer",
     "relevant_repo_ids": [
       "jbowens/codenames"
     ],
@@ -1534,7 +1534,7 @@
     }
   },
   {
-    "query": "我想找一个关于架构和设计文档的库。",
+    "query": "a tool for managing architecture and design documentation",
     "relevant_repo_ids": [
       "nats-io/nats-architecture-and-design"
     ],
@@ -1547,7 +1547,7 @@
     }
   },
   {
-    "query": "我想找一个支持字符串比较和编辑距离算法的库。",
+    "query": "string comparison and edit distance algorithms library in Python",
     "relevant_repo_ids": [
       "hbollon/go-edlib"
     ],
@@ -1560,7 +1560,7 @@
     }
   },
   {
-    "query": "我想找一些用 Swift 开发的开源 iOS 示例应用，以便学习和参考。",
+    "query": "examples of open source iOS apps built with Swift for beginners",
     "relevant_repo_ids": [
       "jogendra/example-ios-apps"
     ],
@@ -1573,7 +1573,7 @@
     }
   },
   {
-    "query": "有没有支持 Metal 的粒子系统库，适用于 OS X 和 iOS 开发？",
+    "query": "\"Metal ParticleLab component for OS X and iOS development\"",
     "relevant_repo_ids": [
       "FlexMonkey/MetalKit-Particles"
     ],
@@ -1586,7 +1586,7 @@
     }
   },
   {
-    "query": "我想找一个适用于苹果平台的绘图库，最好能作为PencilKit的后备使用。",
+    "query": "A drawing library for Apple that supports PencilKit features",
     "relevant_repo_ids": [
       "horita-yuya/Draw"
     ],
@@ -1599,7 +1599,7 @@
     }
   },
   {
-    "query": "我想找一个能实现简单图像和视频滤镜的库。",
+    "query": "image and video filter library for easy use",
     "relevant_repo_ids": [
       "john-rocky/SemanticImage"
     ],
@@ -1612,7 +1612,7 @@
     }
   },
   {
-    "query": "我想找一个用于iOS的UISplitViewController示例库。",
+    "query": "iOS example project demonstrating UISplitViewController functionality",
     "relevant_repo_ids": [
       "NatashaTheRobot/UISplitViewControllerDemo"
     ],
@@ -1625,7 +1625,7 @@
     }
   },
   {
-    "query": "我想找一个可以自定义的 Swift Toast 视图库。",
+    "query": "\"customizable Swift Toast view for iOS development\"",
     "relevant_repo_ids": [
       "BastiaanJansen/toast-swift"
     ],
@@ -1638,7 +1638,7 @@
     }
   },
   {
-    "query": "我想找一个支持自定义UI的iOS OTP文本输入框的Swift库。",
+    "query": "a customizable OTP text field library for iOS in Swift",
     "relevant_repo_ids": [
       "AbdelrhmanKamalEliwa/AEOTPTextField"
     ],
@@ -1651,7 +1651,7 @@
     }
   },
   {
-    "query": "我想找一个用 SwiftUI 和 GraphQL 开发的 Elden Ring 相关库。",
+    "query": "\"companion app for Elden Ring using SwiftUI and GraphQL\"",
     "relevant_repo_ids": [
       "Dimillian/The-Roundtable"
     ],
@@ -1664,7 +1664,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Combine 的时间线处理库。",
+    "query": "a tool for integrating timelane with combine in Swift",
     "relevant_repo_ids": [
       "icanzilb/TimelaneCombine"
     ],
@@ -1677,7 +1677,7 @@
     }
   },
   {
-    "query": "我想找一个可以将 JSON 转换为 Swift 结构体的 macOS 应用。",
+    "query": "macOS app for converting JSON to Swift structs",
     "relevant_repo_ids": [
       "zadr/j2s"
     ],
@@ -1690,7 +1690,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 编写的可自定义的 iOS 水平选择器库。",
+    "query": "a customizable horizontal picker view library for iOS in Swift",
     "relevant_repo_ids": [
       "abhi-dave/ADDatePicker"
     ],
@@ -1703,7 +1703,7 @@
     }
   },
   {
-    "query": "我想找一个支持滑动手势的库，可以实现流行的过渡效果。",
+    "query": "library for implementing trendy swipe gesture transitions",
     "relevant_repo_ids": [
       "tattn/SwipeTransition"
     ],
@@ -1716,7 +1716,7 @@
     }
   },
   {
-    "query": "我想找一个可以用于构建数据驱动UI的库，最好不依赖Rx。",
+    "query": "a library for creating data-driven user interfaces without using Rx",
     "relevant_repo_ids": [
       "nalexn/minimalist"
     ],
@@ -1729,7 +1729,7 @@
     }
   },
   {
-    "query": "我想找一个用于 iOS 的定位追踪库。",
+    "query": "iOS client for Traccar GPS tracking system",
     "relevant_repo_ids": [
       "traccar/traccar-client-ios"
     ],
@@ -1742,7 +1742,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 处理 SQLite 的库。",
+    "query": "a Swift library for easy SQLite database management",
     "relevant_repo_ids": [
       "ryanfowler/SwiftData"
     ],
@@ -1755,7 +1755,7 @@
     }
   },
   {
-    "query": "我想找一个用 SwiftUI 创建菜单栏扩展的轻量级工具。",
+    "query": "\"tool for creating menu bar extras using SwiftUI\"",
     "relevant_repo_ids": [
       "lfroms/fluid-menu-bar-extra"
     ],
@@ -1768,7 +1768,7 @@
     }
   },
   {
-    "query": "我想找一个支持韩文输入的MacOS输入法库。",
+    "query": "Hangul input method for MacOS users",
     "relevant_repo_ids": [
       "navilera/NavilIMEforMac"
     ],
@@ -1781,7 +1781,7 @@
     }
   },
   {
-    "query": "我想找一个使用 Swift 开发的图像滑动组件库。",
+    "query": "Swift image slider component using UICollectionView",
     "relevant_repo_ids": [
       "frederik-jacques/TNImageSliderViewController"
     ],
@@ -1794,7 +1794,7 @@
     }
   },
   {
-    "query": "我想找一个用于 Swift 的 Actor 模型库。",
+    "query": "a Swift library for implementing the Actor model",
     "relevant_repo_ids": [
       "tomekc/SwiftActors"
     ],
@@ -1807,7 +1807,7 @@
     }
   },
   {
-    "query": "我想找一个与iOS开发相关的教程或项目库。",
+    "query": "iOS development resources and projects for tutorials",
     "relevant_repo_ids": [
       "kodecocodes/rwi-materials"
     ],
@@ -1820,7 +1820,7 @@
     }
   },
   {
-    "query": "我想找一个用Swift编写的恶搞库，能帮助我实现一些有趣的功能。",
+    "query": "a Swift library for creating mischievous or unconventional code",
     "relevant_repo_ids": [
       "sindresorhus/evil.swift"
     ],
@@ -1833,7 +1833,7 @@
     }
   },
   {
-    "query": "我想找一个可以学习和克隆应用商店的项目库。",
+    "query": "clone of AppStore app tutorial",
     "relevant_repo_ids": [
       "nitin-agam/AppStore-Clone"
     ],
@@ -1846,7 +1846,7 @@
     }
   },
   {
-    "query": "我想找一个可以精确测量视图位置的 iOS 库。",
+    "query": "a library to accurately measure view positions in iOS apps",
     "relevant_repo_ids": [
       "daisuke0131/ViewMonitor"
     ],
@@ -1859,7 +1859,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 实现的抽象代数结构的库。",
+    "query": "Swift library for abstract algebraic structures",
     "relevant_repo_ids": [
       "typelift/Algebra"
     ],
@@ -1872,7 +1872,7 @@
     }
   },
   {
-    "query": "我想找一个用于测试REST API的开发者工具库。",
+    "query": "a tool for developers to test REST APIs",
     "relevant_repo_ids": [
       "MuShare/Httper-iOS"
     ],
@@ -1885,7 +1885,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Socket IO 的 iOS 应用库。",
+    "query": "iOS app demo using Socket IO for real-time communication",
     "relevant_repo_ids": [
       "appcoda/SocketIOChat"
     ],
@@ -1898,7 +1898,7 @@
     }
   },
   {
-    "query": "我想找一个用 SwiftUI 开发的天气应用库。",
+    "query": "a SwiftUI application for checking weather updates",
     "relevant_repo_ids": [
       "bpisano/Weather"
     ],
@@ -1911,7 +1911,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 macOS 上安装输入法的工具。",
+    "query": "macOS installer for Fcitx5 input method",
     "relevant_repo_ids": [
       "fcitx-contrib/fcitx5-macos-installer"
     ],
@@ -1924,7 +1924,7 @@
     }
   },
   {
-    "query": "我想找一个用 SwiftUI 开发的小说阅读库。",
+    "query": "a SwiftUI application for reading online novels",
     "relevant_repo_ids": [
       "jayden320/swiftui-shuqi-reader"
     ],
@@ -1937,7 +1937,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 实现的通用网络层库。",
+    "query": "Swift library for generic network layer implementation",
     "relevant_repo_ids": [
       "Shubham0812/Generic-Network-Layer_iOS"
     ],
@@ -1950,7 +1950,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 iOS 上播放 Icecast 网络广播的开源库。",
+    "query": "an iOS app to play Icecast Internet radio stations",
     "relevant_repo_ids": [
       "hamedh/Radio"
     ],
@@ -1963,7 +1963,7 @@
     }
   },
   {
-    "query": "我想找一个简化 Android M 系统权限管理的库，有什么推荐吗？",
+    "query": "Android library to simplify system permissions for Android M and above",
     "relevant_repo_ids": [
       "googlesamples/easypermissions"
     ],
@@ -1976,7 +1976,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 iOS 上通过 HTTP 开发原生应用的库。",
+    "query": "\"Native iOS app that communicates over HTTP\"",
     "relevant_repo_ids": [
       "Jasonette/JASONETTE-iOS"
     ],
@@ -1989,7 +1989,7 @@
     }
   },
   {
-    "query": "我想找一个可以生成层次数据火焰图的D3.js插件。",
+    "query": "D3.js plugin for creating flame graphs from hierarchical data",
     "relevant_repo_ids": [
       "spiermar/d3-flame-graph"
     ],
@@ -2002,7 +2002,7 @@
     }
   },
   {
-    "query": "我想找一个可以在浏览器中添加视频配音翻译的扩展库。",
+    "query": "a browser extension for adding voice-over translations to videos",
     "relevant_repo_ids": [
       "ilyhalight/voice-over-translation"
     ],
@@ -2015,7 +2015,7 @@
     }
   },
   {
-    "query": "有没有适用于 iOS 和 Mac 的多变量和 A/B 测试库推荐？",
+    "query": "A library for multivariate and A/B testing on iOS and Mac devices",
     "relevant_repo_ids": [
       "mattt/SkyLab"
     ],
@@ -2028,7 +2028,7 @@
     }
   },
   {
-    "query": "我想找一个用于自动化视频捕获和分发的开源库。",
+    "query": "a free tool for automated video capture and distribution at scale",
     "relevant_repo_ids": [
       "opencast/opencast"
     ],
@@ -2041,7 +2041,7 @@
     }
   },
   {
-    "query": "有没有支持无广告视频播放的客户端库？",
+    "query": "ad-free video client for streaming Sohu, Youku, iQIYI, and LeTV",
     "relevant_repo_ids": [
       "fire3/sailorcast"
     ],
@@ -2054,7 +2054,7 @@
     }
   },
   {
-    "query": "我想找一个用来学习远程过程调用原理的最小实现库。",
+    "query": "a minimal implementation of Remote Procedure Call for learning purposes",
     "relevant_repo_ids": [
       "yeecode/EasyRPC"
     ],
@@ -2067,7 +2067,7 @@
     }
   },
   {
-    "query": "我想找一个可以灵活定位和调整大小的 Android 布局组件库。",
+    "query": "\"Android layout component for flexible widget positioning and sizing\"",
     "relevant_repo_ids": [
       "androidx/constraintlayout"
     ],
@@ -2080,7 +2080,7 @@
     }
   },
   {
-    "query": "我想找一个可以对文本进行高级统计分析的 Objective-C 库。",
+    "query": "a Swift library for advanced text statistics and analysis",
     "relevant_repo_ids": [
       "rnystrom/RNTextStatistics"
     ],
@@ -2093,7 +2093,7 @@
     }
   },
   {
-    "query": "我想找一个支持版本更新弹窗的轻量级库，有哪些推荐？",
+    "query": "lightweight version update dialog with progress bar and custom download path support",
     "relevant_repo_ids": [
       "yangchong211/YCUpdateApp"
     ],
@@ -2106,7 +2106,7 @@
     }
   },
   {
-    "query": "我想找一个可以跨平台设置环境变量的 Node.js 库。",
+    "query": "\"a tool for setting environment variables in scripts across different platforms\"",
     "relevant_repo_ids": [
       "kentcdodds/cross-env"
     ],
@@ -2119,7 +2119,7 @@
     }
   },
   {
-    "query": "我想找一个用于 iOS 的 3D 球形标签云库。",
+    "query": "\"3D spherical tag cloud view for iOS applications\"",
     "relevant_repo_ids": [
       "dongxinb/DBSphereTagCloud"
     ],
@@ -2132,7 +2132,7 @@
     }
   },
   {
-    "query": "我想找一个可以高效浏览图片的库，最好是易于扩展和低耦合的。",
+    "query": "a lightweight image browser inspired by Sina Weibo with easy extensibility",
     "relevant_repo_ids": [
       "szlsay/STPhotoBrowser"
     ],
@@ -2145,7 +2145,7 @@
     }
   },
   {
-    "query": "我想找一个支持RTMP和HLS协议的Android直播播放库。",
+    "query": "Android SDK for live streaming that supports RTMP, HTTP-FLV, and HLS protocols.",
     "relevant_repo_ids": [
       "ksvc/KSYMediaPlayer_Android"
     ],
@@ -2158,7 +2158,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理 XML 的 Java 库。",
+    "query": "a flexible XML framework for Java development",
     "relevant_repo_ids": [
       "dom4j/dom4j"
     ],
@@ -2171,7 +2171,7 @@
     }
   },
   {
-    "query": "我想找一个可以为我的 Java 应用构建容器镜像的库。",
+    "query": "\"tool to build container images for Java applications\"",
     "relevant_repo_ids": [
       "GoogleContainerTools/jib"
     ],
@@ -2184,7 +2184,7 @@
     }
   },
   {
-    "query": "我想找一个支持自定义导航控制器的 Swift 库。",
+    "query": "a popular navigation controller for iOS development",
     "relevant_repo_ids": [
       "iTofu/LCNavigationController"
     ],
@@ -2197,7 +2197,7 @@
     }
   },
   {
-    "query": "我想找一个可以快速构建聊天界面的 React 组件库。",
+    "query": "\"open source React components for building chat user interfaces\"",
     "relevant_repo_ids": [
       "chatscope/chat-ui-kit-react"
     ],
@@ -2210,7 +2210,7 @@
     }
   },
   {
-    "query": "我想找一个可以帮助我学习Docker和Kubernetes的在线课程库。",
+    "query": "a comprehensive course for mastering Docker and Kubernetes deployment and management",
     "relevant_repo_ids": [
       "BretFisher/udemy-docker-mastery"
     ],
@@ -2223,7 +2223,7 @@
     }
   },
   {
-    "query": "我想找一个适用于 Node.js 的实用库，能帮助我学习和实践。",
+    "query": "\"Node.js practical guide and code examples for beginners\"",
     "relevant_repo_ids": [
       "azat-co/practicalnode"
     ],
@@ -2236,7 +2236,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现拼布布局的UICollectionViewLayout库。",
+    "query": "a UICollectionViewLayout subclass for creating quilting patterns in iOS apps",
     "relevant_repo_ids": [
       "bryceredd/RFQuiltLayout"
     ],
@@ -2249,7 +2249,7 @@
     }
   },
   {
-    "query": "我想找一个支持ChatGPT API对接的Java库。",
+    "query": "\"open source project for ChatGPT API integration and Docker deployment\"",
     "relevant_repo_ids": [
       "fuzhengwei/chatbot-api"
     ],
@@ -2262,7 +2262,7 @@
     }
   },
   {
-    "query": "我想找一个支持滑动打开和关闭行的 React Native 列表组件。",
+    "query": "\"React Native component for swipeable ListView rows\"",
     "relevant_repo_ids": [
       "jemise111/react-native-swipe-list-view"
     ],
@@ -2275,7 +2275,7 @@
     }
   },
   {
-    "query": "有没有适用于 React 的 Apollo Client 集成库？",
+    "query": "\"React integration for Apollo Client after deprecation\"",
     "relevant_repo_ids": [
       "apollographql/react-apollo"
     ],
@@ -2288,7 +2288,7 @@
     }
   },
   {
-    "query": "我想找一个用于Android的相机功能示例库。",
+    "query": "a sample project for using Android Camera2 API",
     "relevant_repo_ids": [
       "googlearchive/android-Camera2Basic"
     ],
@@ -2301,7 +2301,7 @@
     }
   },
   {
-    "query": "有没有支持使用 Puppeteer 生成 PDF 的 JavaScript 库？",
+    "query": "\"migrate from PhantomJS to headless Chrome or Puppeteer for web automation\"",
     "relevant_repo_ids": [
       "marcbachmann/node-html-pdf"
     ],
@@ -2314,7 +2314,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现可观察模式的事件库，最好避免使用通知或代理。",
+    "query": "a library for implementing the Observable pattern in event-driven applications",
     "relevant_repo_ids": [
       "uber/signals-ios"
     ],
@@ -2327,7 +2327,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现折叠单元格的 Swift 库。",
+    "query": "\"library for implementing folding cells in table views with easy UI customization\"",
     "relevant_repo_ids": [
       "liufengting/FTFoldingTableView"
     ],
@@ -2340,7 +2340,7 @@
     }
   },
   {
-    "query": "我想找一个用于基因组 k-mer 计数的 Python 库。",
+    "query": "a tool for counting genomic k-mers and sequence utilities",
     "relevant_repo_ids": [
       "marbl/meryl"
     ],
@@ -2353,7 +2353,7 @@
     }
   },
   {
-    "query": "有没有适用于 PHP 的 Microsoft Graph 库？",
+    "query": "\"PHP library for integrating with Microsoft Graph API\"",
     "relevant_repo_ids": [
       "microsoftgraph/msgraph-sdk-php"
     ],
@@ -2366,7 +2366,7 @@
     }
   },
   {
-    "query": "我想找一个用于生成符合PDS标准的PHP项目或微包的库。",
+    "query": "a PHP generator for PDS compliant projects or micro-packages",
     "relevant_repo_ids": [
       "jonathantorres/construct"
     ],
@@ -2379,7 +2379,7 @@
     }
   },
   {
-    "query": "我想找一个可以获取网络接口信息的 Swift 库。",
+    "query": "Swift library for retrieving network interface information on iOS and macOS.",
     "relevant_repo_ids": [
       "svdo/swift-netutils"
     ],
@@ -2392,7 +2392,7 @@
     }
   },
   {
-    "query": "我想找一个用于优化和调整 Windows 10/11 的工具库。",
+    "query": "Windows 10/11 optimization tools and tweaking applications collection",
     "relevant_repo_ids": [
       "nyxiereal/XToolbox"
     ],
@@ -2405,7 +2405,7 @@
     }
   },
   {
-    "query": "我想找一个可以将 XLS 和 XLSX 文件转换为 Java 对象的库。",
+    "query": "library to convert XLS and XLSX files to Java objects",
     "relevant_repo_ids": [
       "ozlerhakan/poiji"
     ],
@@ -2418,7 +2418,7 @@
     }
   },
   {
-    "query": "我想找一个用于 iOS 的内存使用监控库。",
+    "query": "a library for monitoring memory usage in iOS applications",
     "relevant_repo_ids": [
       "shu223/Stats"
     ],
@@ -2431,7 +2431,7 @@
     }
   },
   {
-    "query": "我想找一个支持模糊搜索的 PHP 库。",
+    "query": "PHP library for fuzzy search implementation",
     "relevant_repo_ids": [
       "loilo/Fuse"
     ],
@@ -2444,7 +2444,7 @@
     }
   },
   {
-    "query": "我想找一个可以自定义画笔宽度和颜色的绘图库，支持截图功能。",
+    "query": "a drawing tool for customizable freehand sketching and taking screenshots",
     "relevant_repo_ids": [
       "RiccardoMoro/FreeDrawView"
     ],
@@ -2457,7 +2457,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理CloudFormation模板的Go语言库。",
+    "query": "Go library for creating and managing CloudFormation templates",
     "relevant_repo_ids": [
       "awslabs/goformation"
     ],
@@ -2470,7 +2470,7 @@
     }
   },
   {
-    "query": "我想找一个实现 iCalendar 协议的开源库。",
+    "query": "a library for implementing iCalendar protocols in software projects",
     "relevant_repo_ids": [
       "libical/libical"
     ],
@@ -2483,7 +2483,7 @@
     }
   },
   {
-    "query": "我想找一个用于监控和追踪的 PHP 库。",
+    "query": "PHP library for OpenTelemetry instrumentation and monitoring",
     "relevant_repo_ids": [
       "open-telemetry/opentelemetry-php"
     ],
@@ -2496,7 +2496,7 @@
     }
   },
   {
-    "query": "我想找一个支持Realtek 8192芯片的驱动程序，适用于Linux内核3.11。",
+    "query": "driver for Realtek 8192 chipset compatible with kernel 3.11",
     "relevant_repo_ids": [
       "pvaret/rtl8192cu-fixes"
     ],
@@ -2509,7 +2509,7 @@
     }
   },
   {
-    "query": "我想找一个简单快速的PHP框架，能够避免使用Laravel和Smarty的库。",
+    "query": "PHP framework that is simple and fast",
     "relevant_repo_ids": [
       "dvaknheo/duckphp"
     ],
@@ -2522,7 +2522,7 @@
     }
   },
   {
-    "query": "我想找一个可以一键安装和测试移动应用的库。",
+    "query": "a tool for easily installing and testing mobile applications with continuous integration",
     "relevant_repo_ids": [
       "Shopify/tophat"
     ],
@@ -2535,7 +2535,7 @@
     }
   },
   {
-    "query": "有没有支持伊斯兰教法合规的区块链项目？",
+    "query": "\"web3 platform that is Shariah-compliant\"",
     "relevant_repo_ids": [
       "haqq-network/haqq"
     ],
@@ -2548,7 +2548,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Raspberry Pi Pico 的 C/C++ 库。",
+    "query": "a library for working with Raspberry Pi Pico hardware and peripherals",
     "relevant_repo_ids": [
       "raspberrypi/pico-extras"
     ],
@@ -2561,7 +2561,7 @@
     }
   },
   {
-    "query": "我想找一个类似 Reeder 3 的 ActionSheet 库。",
+    "query": "\"ActionSheet implementation similar to Reeder 3\"",
     "relevant_repo_ids": [
       "r-plus/AAActivityAction"
     ],
@@ -2574,7 +2574,7 @@
     }
   },
   {
-    "query": "我想找一个用于管理 PEAR 通道服务器的库。",
+    "query": "a simple tool for managing PEAR channels",
     "relevant_repo_ids": [
       "fabpot-graveyard/Pirum"
     ],
@@ -2587,7 +2587,7 @@
     }
   },
   {
-    "query": "我想找一个用来显示角色标签的库，最好能支持多种字体样式。",
+    "query": "\"example of character labeling in Python\"",
     "relevant_repo_ids": [
       "hulsizer/YetiCharacterLabelExample"
     ],
@@ -2600,7 +2600,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现炫酷滚动效果的 jQuery 插件。",
+    "query": "a jQuery plugin for scroll animations",
     "relevant_repo_ids": [
       "johnpolacek/scrollorama"
     ],
@@ -2613,7 +2613,7 @@
     }
   },
   {
-    "query": "我想找一个用于快速搭建React应用的脚手架库。",
+    "query": "\"starter template for building React apps with Redux and React-Router\"",
     "relevant_repo_ids": [
       "bodyno/react-starter-kit"
     ],
@@ -2626,7 +2626,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Material Design 的 Android 新闻阅读库。",
+    "query": "a material design Android app for reading Hacker News articles",
     "relevant_repo_ids": [
       "hidroh/materialistic"
     ],
@@ -2639,7 +2639,7 @@
     }
   },
   {
-    "query": "我想找一个支持自动补全功能的 Kubernetes 客户端库。",
+    "query": "interactive Kubernetes client with auto-complete feature",
     "relevant_repo_ids": [
       "c-bata/kube-prompt"
     ],
@@ -2652,7 +2652,7 @@
     }
   },
   {
-    "query": "我想找一个实现差异比较功能的库。",
+    "query": "a library for computing text differences",
     "relevant_repo_ids": [
       "sebastianbergmann/diff"
     ],
@@ -2665,7 +2665,7 @@
     }
   },
   {
-    "query": "我想找一个可以从零开始解析微信应用的库。",
+    "query": "\"understanding iOS app development using WeChat as an example\"",
     "relevant_repo_ids": [
       "lefex/iWeChat"
     ],
@@ -2678,7 +2678,7 @@
     }
   },
   {
-    "query": "我想找一个用于 Python 的 Facebook 聊天库。",
+    "query": "Python library for interacting with Facebook Messenger chats",
     "relevant_repo_ids": [
       "fbchat-dev/fbchat"
     ],
@@ -2691,7 +2691,7 @@
     }
   },
   {
-    "query": "我想找一个可以简化富文本字符串创建的 Swift 库。",
+    "query": "\"how to create attributed strings easily in Swift\"",
     "relevant_repo_ids": [
       "delba/TextAttributes"
     ],
@@ -2704,7 +2704,7 @@
     }
   },
   {
-    "query": "我想找一个用于学习 FastAPI 的教程或库。",
+    "query": "a comprehensive tutorial for building applications with FastAPI",
     "relevant_repo_ids": [
       "ChristopherGS/ultimate-fastapi-tutorial"
     ],
@@ -2717,7 +2717,7 @@
     }
   },
   {
-    "query": "我想找一个支持Android测试的Java或Kotlin库。",
+    "query": "\"Android testing tools and frameworks for Java and Kotlin applications\"",
     "relevant_repo_ids": [
       "googlesamples/android-testing-templates"
     ],
@@ -2730,7 +2730,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Viber 聊天机器人的 AI 库。",
+    "query": "a Viber bot for integrating with SUSI AI",
     "relevant_repo_ids": [
       "fossasia/susi_viberbot"
     ],
@@ -2743,7 +2743,7 @@
     }
   },
   {
-    "query": "有没有用于提示用户评价iPhone和Mac应用的库？",
+    "query": "\"library for prompting users to rate iPhone and Mac apps\"",
     "relevant_repo_ids": [
       "nicklockwood/iRate"
     ],
@@ -2756,7 +2756,7 @@
     }
   },
   {
-    "query": "我想找一个可以优化资源管理和加速推理的Stable Diffusion WebUI库。",
+    "query": "a platform to optimize Stable Diffusion WebUI development and resource management",
     "relevant_repo_ids": [
       "lllyasviel/stable-diffusion-webui-forge"
     ],
@@ -2769,7 +2769,7 @@
     }
   },
   {
-    "query": "我想找一个支持类型特定集合和快速访问的 Java 库。",
+    "query": "\"Java library for type-specific collections with low memory usage\"",
     "relevant_repo_ids": [
       "vigna/fastutil"
     ],
@@ -2782,7 +2782,7 @@
     }
   },
   {
-    "query": "我想找一个用于构建快速3D网页应用和游戏的JavaScript库。",
+    "query": "a fast 3D framework for building web applications and games using Three.js",
     "relevant_repo_ids": [
       "WhitestormJS/whs.js"
     ],
@@ -2795,7 +2795,7 @@
     }
   },
   {
-    "query": "我想找一个支持热重载功能的Java库。",
+    "query": "Java agent for reloading class files in a running JVM",
     "relevant_repo_ids": [
       "spring-projects/spring-loaded"
     ],
@@ -2808,7 +2808,7 @@
     }
   },
   {
-    "query": "我想找一个支持在 Electron 应用中编译 JS 和 CSS 的库。",
+    "query": "Looking for a tool to compile JavaScript and CSS for Electron apps.",
     "relevant_repo_ids": [
       "electron-userland/electron-compile"
     ],
@@ -2821,7 +2821,7 @@
     }
   },
   {
-    "query": "我想找一个可以通过SSH连接远程文件系统的库。",
+    "query": "\"mount remote filesystem using SFTP with SSH client\"",
     "relevant_repo_ids": [
       "libfuse/sshfs"
     ],
@@ -2834,7 +2834,7 @@
     }
   },
   {
-    "query": "我想找一个简单易用的 iOS 弹出菜单库，支持横竖屏显示。",
+    "query": "a simple pop over menu for iOS that works in portrait and landscape",
     "relevant_repo_ids": [
       "liufengting/FTPopOverMenu"
     ],
@@ -2847,7 +2847,7 @@
     }
   },
   {
-    "query": "我想找一个可以从 Google 位置数据生成交互式地理热图的库。",
+    "query": "interactive geo heatmap generator for Google location data",
     "relevant_repo_ids": [
       "luka1199/geo-heatmap"
     ],
@@ -2860,7 +2860,7 @@
     }
   },
   {
-    "query": "我想找一个用于计算机视觉的图像和视频标注库，最好支持大规模数据处理。",
+    "query": "a tool for interactive video and image annotation in computer vision",
     "relevant_repo_ids": [
       "cvat-ai/cvat"
     ],
@@ -2873,7 +2873,7 @@
     }
   },
   {
-    "query": "我想找一个轻量型的HTTP服务器库，最好能支持CGI。",
+    "query": "lightweight HTTP server for learning and testing CGI with Perl",
     "relevant_repo_ids": [
       "EZLippi/Tinyhttpd"
     ],
@@ -2886,7 +2886,7 @@
     }
   },
   {
-    "query": "我想找一个支持版本控制的SQL数据库库，可以像Git一样操作。",
+    "query": "a SQL database with Git-like version control features",
     "relevant_repo_ids": [
       "dolthub/dolt"
     ],
@@ -2899,7 +2899,7 @@
     }
   },
   {
-    "query": "我想找一个可以将视频流输入到播放器的Python库。",
+    "query": "\"CLI tool to stream video from various services to a player\"",
     "relevant_repo_ids": [
       "streamlink/streamlink"
     ],
@@ -2912,7 +2912,7 @@
     }
   },
   {
-    "query": "我想找一个用 Pytorch 实现的文本生成图像的库。",
+    "query": "a Pytorch implementation of DALL-E 2 for text-to-image synthesis",
     "relevant_repo_ids": [
       "lucidrains/DALLE2-pytorch"
     ],
@@ -2925,7 +2925,7 @@
     }
   },
   {
-    "query": "我想找一个用于快速安全消息传递的Android库。",
+    "query": "\"open source Android messaging app with a focus on speed and security\"",
     "relevant_repo_ids": [
       "DrKLO/Telegram"
     ],
@@ -2938,7 +2938,7 @@
     }
   },
   {
-    "query": "我想找一个用于人脸修复的深度学习库。",
+    "query": "a tool for restoring faces in images using advanced algorithms",
     "relevant_repo_ids": [
       "TencentARC/GFPGAN"
     ],
@@ -2951,7 +2951,7 @@
     }
   },
   {
-    "query": "有没有支持多媒体播放和流媒体处理的开源库？",
+    "query": "\"open source media player that supports streaming and file conversion\"",
     "relevant_repo_ids": [
       "videolan/vlc"
     ],
@@ -2964,7 +2964,7 @@
     }
   },
   {
-    "query": "我想找一个用于 Git 命令的简单终端 UI 库，有哪些推荐？",
+    "query": "a terminal user interface for git commands on MacOS and Linux",
     "relevant_repo_ids": [
       "jesseduffield/lazygit"
     ],
@@ -2977,7 +2977,7 @@
     }
   },
   {
-    "query": "我想找一个支持SSH和Telnet的跨平台终端库。",
+    "query": "Cross-platform SSH client for DevOps with Sftp and Shell support",
     "relevant_repo_ids": [
       "kingToolbox/WindTerm"
     ],
@@ -2990,7 +2990,7 @@
     }
   },
   {
-    "query": "我想找一个可以用于脚本和自动化的 Mac App Store 命令行工具。",
+    "query": "a command line tool for automating tasks in the Mac App Store",
     "relevant_repo_ids": [
       "mas-cli/mas"
     ],
@@ -3003,7 +3003,7 @@
     }
   },
   {
-    "query": "我想找一个可以搜索和播放中国多平台音乐的桌面应用库。",
+    "query": "music player for multiple Chinese music platforms on Windows, Mac, and Linux",
     "relevant_repo_ids": [
       "listen1/listen1_desktop"
     ],
@@ -3016,7 +3016,7 @@
     }
   },
   {
-    "query": "我想找一个用Python编写的Matrix协议的服务器实现库。",
+    "query": "\"Matrix homeserver implemented in Python with Twisted support\"",
     "relevant_repo_ids": [
       "matrix-org/synapse"
     ],
@@ -3029,7 +3029,7 @@
     }
   },
   {
-    "query": "我想找一个帮助理解 JavaScript 基础概念的学习资源。",
+    "query": "JavaScript concepts every developer should know",
     "relevant_repo_ids": [
       "stephentian/33-js-concepts"
     ],
@@ -3042,7 +3042,7 @@
     }
   },
   {
-    "query": "我想找一个能通过用户名收集个人信息的库。",
+    "query": "a tool to gather information about a person using their username",
     "relevant_repo_ids": [
       "soxoj/maigret"
     ],
@@ -3055,7 +3055,7 @@
     }
   },
   {
-    "query": "我想找一个用于网页浏览器自动化的库，有推荐的吗？",
+    "query": "\"library for automating web browsers using W3C WebDriver\"",
     "relevant_repo_ids": [
       "SeleniumHQ/selenium"
     ],
@@ -3068,7 +3068,7 @@
     }
   },
   {
-    "query": "我想找一个可以自动记录时间的跨平台开源工具，支持隐私保护。",
+    "query": "a free automated time tracking tool that prioritizes privacy and data control",
     "relevant_repo_ids": [
       "ActivityWatch/activitywatch"
     ],
@@ -3081,7 +3081,7 @@
     }
   },
   {
-    "query": "我想找一个可以把镜子变成智能助手的开源项目。",
+    "query": "\"how to create a smart mirror with customizable features\"",
     "relevant_repo_ids": [
       "MagicMirrorOrg/MagicMirror"
     ],
@@ -3094,7 +3094,7 @@
     }
   },
   {
-    "query": "我想找一个用于计算机视觉的 Python 库，包含数据集、模型和图像转换功能。",
+    "query": "a Python library for computer vision datasets and image transformations",
     "relevant_repo_ids": [
       "pytorch/vision"
     ],
@@ -3107,7 +3107,7 @@
     }
   },
   {
-    "query": "我想找一个用于移动后端开发的 Swift 框架。",
+    "query": "\"server-side framework for Swift development and REST services\"",
     "relevant_repo_ids": [
       "PerfectlySoft/Perfect"
     ],
@@ -3120,7 +3120,7 @@
     }
   },
   {
-    "query": "我想找一个支持高性能MySQL路由的中间件库。",
+    "query": "a high-performance middleware for routing between applications and MySQL servers",
     "relevant_repo_ids": [
       "session-replay-tools/cetus"
     ],
@@ -3133,7 +3133,7 @@
     }
   },
   {
-    "query": "我想找一个使用 PHP 的内容管理系统库。",
+    "query": "demo project for Sulu CMS",
     "relevant_repo_ids": [
       "sulu/sulu-demo"
     ],
@@ -3146,7 +3146,7 @@
     }
   },
   {
-    "query": "我想找一个可以控制HomeKit设备的菜单栏工具。",
+    "query": "a tool to manage HomeKit devices from the menu bar",
     "relevant_repo_ids": [
       "sonsongithub/HomeConMenu"
     ],
@@ -3159,7 +3159,7 @@
     }
   },
   {
-    "query": "我想找一个可以播放SID音乐的库，最好是在线的。",
+    "query": "online SID player for High Voltage and Compute's Gazette collections",
     "relevant_repo_ids": [
       "Chordian/deepsid"
     ],
@@ -3172,7 +3172,7 @@
     }
   },
   {
-    "query": "我想找一个能生成 gopher 链接以利用 SSRF 和获得 RCE 的工具。",
+    "query": "a tool for generating gopher links to exploit SSRF vulnerabilities and achieve remote code execution",
     "relevant_repo_ids": [
       "tarunkant/Gopherus"
     ],
@@ -3185,7 +3185,7 @@
     }
   },
   {
-    "query": "我想找一个支持以太坊挖矿的代理库。",
+    "query": "Ethereum mining proxy tool for efficient mining operations",
     "relevant_repo_ids": [
       "sammy007/ether-proxy"
     ],
@@ -3198,7 +3198,7 @@
     }
   },
   {
-    "query": "我想找一个适用于IT和安全团队的开源平台，支持API和GitOps。",
+    "query": "a platform for IT and security teams to manage infrastructure across multiple operating systems",
     "relevant_repo_ids": [
       "fleetdm/fleet"
     ],
@@ -3211,7 +3211,7 @@
     }
   },
   {
-    "query": "我想找一个支持会话锁定和防止会话固定的 PHP Redis 处理库。",
+    "query": "PHP Redis session handler with per-session locking and session fixation protection",
     "relevant_repo_ids": [
       "1ma/RedisSessionHandler"
     ],
@@ -3224,7 +3224,7 @@
     }
   },
   {
-    "query": "我想找一个用于科学计算和神经网络的JAX库。",
+    "query": "a user-friendly library for neural networks and scientific computing with JAX",
     "relevant_repo_ids": [
       "patrick-kidger/equinox"
     ],
@@ -3237,7 +3237,7 @@
     }
   },
   {
-    "query": "我想找一个支持文本分类和序列标注的开源注释工具。",
+    "query": "open source text annotation tool for machine learning tasks like sentiment analysis and entity recognition",
     "relevant_repo_ids": [
       "doccano/doccano"
     ],
@@ -3250,7 +3250,7 @@
     }
   },
   {
-    "query": "我想找一个可以自动更新IP数据库的库。",
+    "query": "a library for automatically updating IP database daily",
     "relevant_repo_ids": [
       "out0fmemory/qqwry.dat"
     ],
@@ -3263,7 +3263,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现多平台签到的 Android 库。",
+    "query": "\"script for automated check-ins on various apps like Baidu Map and JD\"",
     "relevant_repo_ids": [
       "bjc5233/autojs"
     ],
@@ -3276,7 +3276,7 @@
     }
   },
   {
-    "query": "我想找一个可以恢复丢失数据的开源工具。",
+    "query": "a tool for recovering lost partitions and files",
     "relevant_repo_ids": [
       "cgsecurity/testdisk"
     ],
@@ -3289,7 +3289,7 @@
     }
   },
   {
-    "query": "我想找一个用于 React.js 开发的 IDE。",
+    "query": "IDE for developing React.js applications",
     "relevant_repo_ids": [
       "eveningkid/reacto"
     ],
@@ -3302,7 +3302,7 @@
     }
   },
   {
-    "query": "我想找一个可以浏览和管理文件的网页库。",
+    "query": "web interface for browsing and managing files",
     "relevant_repo_ids": [
       "cakebox/cakebox"
     ],
@@ -3315,7 +3315,7 @@
     }
   },
   {
-    "query": "有没有推荐的高质量Telegram学习群组或频道？",
+    "query": "\"Telegram groups and channels for learning and technology resources\"",
     "relevant_repo_ids": [
       "jackhawks/rectg"
     ],
@@ -3328,7 +3328,7 @@
     }
   },
   {
-    "query": "我想找一个用于学习 Go 语言的练习库。",
+    "query": "a set of koans for learning Go programming language",
     "relevant_repo_ids": [
       "cdarwin/go-koans"
     ],
@@ -3341,7 +3341,7 @@
     }
   },
   {
-    "query": "我想找一个可以跟踪自动布局反馈循环的库。",
+    "query": "\"how to track autolayout feedback loops in my application\"",
     "relevant_repo_ids": [
       "rsrbk/LayoutLoopHunter"
     ],
@@ -3354,7 +3354,7 @@
     }
   },
   {
-    "query": "我想找一个支持可自定义标签流显示的库，能同时适应纵向和横向滚动。",
+    "query": "a customizable library for displaying scrollable tags in a view",
     "relevant_repo_ids": [
       "zekunyan/TTGTagCollectionView"
     ],
@@ -3367,7 +3367,7 @@
     }
   },
   {
-    "query": "我想找一个用于训练前馈人工神经网络的C语言库。",
+    "query": "simple neural network library in C for training feedforward artificial neural networks",
     "relevant_repo_ids": [
       "codeplea/genann"
     ],
@@ -3380,7 +3380,7 @@
     }
   },
   {
-    "query": "我想找一个可以上传文件到阿里云盘的工具库。",
+    "query": "a tool for uploading files to Alibaba Cloud Drive",
     "relevant_repo_ids": [
       "aoaostar/alidrive-uploader"
     ],
@@ -3393,7 +3393,7 @@
     }
   },
   {
-    "query": "我想找一个用于开发 iOS 应用和静态库的项目模板库。",
+    "query": "iOS project templates and configurations for easy application and library development",
     "relevant_repo_ids": [
       "davidmorford/BuildKit"
     ],
@@ -3406,7 +3406,7 @@
     }
   },
   {
-    "query": "我想找一个能让我的 Next.js 应用离线工作的库。",
+    "query": "a Next.js application that works offline using service workers",
     "relevant_repo_ids": [
       "hanford/next-offline"
     ],
@@ -3419,7 +3419,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言写的后端工程库。",
+    "query": "Go backend engineering project",
     "relevant_repo_ids": [
       "sikozonpc/GopherSocial"
     ],
@@ -3432,7 +3432,7 @@
     }
   },
   {
-    "query": "我想找一个可以从正则表达式匹配中构造对象的库。",
+    "query": "a decoder for creating objects from regular expression matches",
     "relevant_repo_ids": [
       "Flight-School/RegularExpressionDecoder"
     ],
@@ -3445,7 +3445,7 @@
     }
   },
   {
-    "query": "我想找一个可以在终端使用的 SQL IDE 库。",
+    "query": "SQL IDE for terminal usage",
     "relevant_repo_ids": [
       "tconbeer/harlequin"
     ],
@@ -3458,7 +3458,7 @@
     }
   },
   {
-    "query": "我想找一个可以绕过小米HyperOS社区限制的工具或库。",
+    "query": "how to bypass Xiaomi HyperOS community restrictions on BootLoader unlocked accounts",
     "relevant_repo_ids": [
       "MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass"
     ],
@@ -3471,7 +3471,7 @@
     }
   },
   {
-    "query": "我想找一个用于 iOS 的密码输入和验证的库。",
+    "query": "iOS passcode input and validation view controller library",
     "relevant_repo_ids": [
       "TimOliver/TOPasscodeViewController"
     ],
@@ -3484,7 +3484,7 @@
     }
   },
   {
-    "query": "我想找一个用 Cython 实现的 Python MapReduce 库。",
+    "query": "Python library for implementing MapReduce using Cython",
     "relevant_repo_ids": [
       "bwhite/hadoopy"
     ],
@@ -3497,7 +3497,7 @@
     }
   },
   {
-    "query": "我想找一个提高 iOS 项目 UI 开发效率的库。",
+    "query": "iOS UI development solution to improve project efficiency with rich components and design restoration",
     "relevant_repo_ids": [
       "Tencent/QMUI_iOS"
     ],
@@ -3510,7 +3510,7 @@
     }
   },
   {
-    "query": "我想找一个支持 HyperLogLog 数据结构的 PostgreSQL 扩展库。",
+    "query": "a PostgreSQL extension for HyperLogLog data structures",
     "relevant_repo_ids": [
       "citusdata/postgresql-hll"
     ],
@@ -3523,7 +3523,7 @@
     }
   },
   {
-    "query": "我想找一个用于开发web3工具的库，最好有详细的步骤指南。",
+    "query": "step-by-step guide to develop web3 tools",
     "relevant_repo_ids": [
       "web3ToolBoxDev/toolBoxClient"
     ],
@@ -3536,7 +3536,7 @@
     }
   },
   {
-    "query": "我想找一个用于半监督学习的 Python 库。",
+    "query": "a research project for semi-supervised learning using mixup techniques",
     "relevant_repo_ids": [
       "google-research/mixmatch"
     ],
@@ -3549,7 +3549,7 @@
     }
   },
   {
-    "query": "我想找一个实现 ANSI Common Lisp 的库。",
+    "query": "\"Python library for ANSI Common Lisp implementation\"",
     "relevant_repo_ids": [
       "nptcl/npt"
     ],
@@ -3562,7 +3562,7 @@
     }
   },
   {
-    "query": "我想找一个轻量级的WYSIWYG JavaScript编辑器，最好小于10kB。",
+    "query": "a lightweight WYSIWYG JavaScript editor under 10kB",
     "relevant_repo_ids": [
       "Alex-D/Trumbowyg"
     ],
@@ -3575,7 +3575,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言实现的键值数据库库。",
+    "query": "Go key-value database implementation like LevelDB",
     "relevant_repo_ids": [
       "golang/leveldb"
     ],
@@ -3588,7 +3588,7 @@
     }
   },
   {
-    "query": "我想找一个可以自动识别图形验证码并与Burp Suite集成的插件。",
+    "query": "A Burp Suite plugin that automatically recognizes CAPTCHAs for intruder payloads",
     "relevant_repo_ids": [
       "bit4woo/reCAPTCHA"
     ],
@@ -3601,7 +3601,7 @@
     }
   },
   {
-    "query": "有没有提供即时 logo 搜索的库？",
+    "query": "logos for instant logo search",
     "relevant_repo_ids": [
       "kogg/instant-logos"
     ],
@@ -3614,7 +3614,7 @@
     }
   },
   {
-    "query": "我想找一个可以将内容状态导入导出为HTML或Markdown的库。",
+    "query": "A library to import and export content between HTML and Markdown formats",
     "relevant_repo_ids": [
       "sstur/draft-js-utils"
     ],
@@ -3627,7 +3627,7 @@
     }
   },
   {
-    "query": "我想找一个用于学习Java基础的库，最好是针对Java 8的。",
+    "query": "Java 8 tutorial for beginners with examples and exercises",
     "relevant_repo_ids": [
       "learning-zone/java-basics"
     ],
@@ -3640,7 +3640,7 @@
     }
   },
   {
-    "query": "我想找一个基于 Go 语言的游戏服务器框架。",
+    "query": "\"a game server framework using the actor model in Go\"",
     "relevant_repo_ids": [
       "cherry-game/cherry"
     ],
@@ -3653,7 +3653,7 @@
     }
   },
   {
-    "query": "我想找一个支持坐标系转换的库，能处理GCJ-02、WGS-84和BD-09格式。",
+    "query": "coordinate conversion between GCJ-02, WGS-84, and BD-09 systems",
     "relevant_repo_ids": [
       "JackZhouCn/JZLocationConverter-Swift"
     ],
@@ -3666,7 +3666,7 @@
     }
   },
   {
-    "query": "我想找一个支持REST和JSON的Swift或Obj-C HTTP库。",
+    "query": "a Swift and Objective-C framework for handling RESTful APIs and JSON data",
     "relevant_repo_ids": [
       "postmates/PMHTTP"
     ],
@@ -3679,7 +3679,7 @@
     }
   },
   {
-    "query": "我想找一个适用于M5StickC的Arduino库。",
+    "query": "Arduino library for M5StickC development",
     "relevant_repo_ids": [
       "m5stack/M5StickC"
     ],
@@ -3692,7 +3692,7 @@
     }
   },
   {
-    "query": "我想找一个可以在终端运行的 PHP 调试工具，方便调试代码。",
+    "query": "a terminal-based PHP debugger for easy code debugging",
     "relevant_repo_ids": [
       "renatocassino/dephpugger"
     ],
@@ -3705,7 +3705,7 @@
     }
   },
   {
-    "query": "我想找一个实现滑动窗口算法的Golang库，用于分布式限流。",
+    "query": "Golang library for distributed rate limiting using Sliding Window Algorithm",
     "relevant_repo_ids": [
       "RussellLuo/slidingwindow"
     ],
@@ -3718,7 +3718,7 @@
     }
   },
   {
-    "query": "我想找一个支持函数式编程的教程或者示例库。",
+    "query": "a resource for learning functional programming concepts through video tutorials",
     "relevant_repo_ids": [
       "campoy/justforfunc"
     ],
@@ -3731,7 +3731,7 @@
     }
   },
   {
-    "query": "有没有支持优雅连接 JSON API 的 Swift 库？",
+    "query": "library for connecting to JSON APIs using Alamofire and Promises",
     "relevant_repo_ids": [
       "freshOS/ws-deprecated"
     ],
@@ -3744,7 +3744,7 @@
     }
   },
   {
-    "query": "我想找一个可以在Win10和Win11上使用的按键映射库，最好支持虚拟游戏手柄功能。",
+    "query": "a key mapping tool for Windows 10 and 11 with virtual gamepad support",
     "relevant_repo_ids": [
       "Zalafina/QKeyMapper"
     ],
@@ -3757,7 +3757,7 @@
     }
   },
   {
-    "query": "我想找一个解析 YAML 前置数据的库。",
+    "query": "\"yaml front matter parser for easy data extraction\"",
     "relevant_repo_ids": [
       "spatie/yaml-front-matter"
     ],
@@ -3770,7 +3770,7 @@
     }
   },
   {
-    "query": "我想找一个可以自定义的进度条库，支持动画效果和Objective-C。",
+    "query": "a customizable circular progress bar for iOS with animation support",
     "relevant_repo_ids": [
       "MatiBot/MBCircularProgressBar"
     ],
@@ -3783,7 +3783,7 @@
     }
   },
   {
-    "query": "我想找一个可以录制视频和音频的库，支持选择照片或拍照的功能。",
+    "query": "\"collection of tools for video, audio recording, and photo selection in apps\"",
     "relevant_repo_ids": [
       "DayCrazy/publishImageAndVideoAnsRecord"
     ],
@@ -3796,7 +3796,7 @@
     }
   },
   {
-    "query": "我想找一个可以在ESP32上使用的SSH客户端和服务器的Arduino库。",
+    "query": "a library for using SSH client and server on ESP32 with Arduino",
     "relevant_repo_ids": [
       "ewpa/LibSSH-ESP32"
     ],
@@ -3809,7 +3809,7 @@
     }
   },
   {
-    "query": "我想找一个支持在视图中添加头部并能固定导航栏的库。",
+    "query": "\"library to add a headview and sticky navigator for scrolling views\"",
     "relevant_repo_ids": [
       "w446108264/ScrollableLayout"
     ],
@@ -3822,7 +3822,7 @@
     }
   },
   {
-    "query": "我想找一个支持任意精度计算的C语言库。",
+    "query": "a C-style library for performing arbitrary precision calculations",
     "relevant_repo_ids": [
       "lcn2/calc"
     ],
@@ -3835,7 +3835,7 @@
     }
   },
   {
-    "query": "我想找一个适用于安卓和iOS的网络广告拦截库。",
+    "query": "\"Android and iOS ad blocker library\"",
     "relevant_repo_ids": [
       "blokadaorg/fem"
     ],
@@ -3848,7 +3848,7 @@
     }
   },
   {
-    "query": "我想找一个可以将FB2文件转换成epub、mobi和azw3格式的库。",
+    "query": "a tool to convert FB2 files into various ebook formats like epub and mobi",
     "relevant_repo_ids": [
       "rupor-github/fb2converter"
     ],
@@ -3861,7 +3861,7 @@
     }
   },
   {
-    "query": "我想找一个现代化的 Python Web 框架，方便开发者使用的库。",
+    "query": "Python web framework for modern and developer-friendly applications",
     "relevant_repo_ids": [
       "MasoniteFramework/masonite"
     ],
@@ -3874,7 +3874,7 @@
     }
   },
   {
-    "query": "我想找一个使用 Swift 3.0 的电子签名库。",
+    "query": "\"a Swift 3.0 library for creating signatures\"",
     "relevant_repo_ids": [
       "felipesantolim/SHFSignature"
     ],
@@ -3887,7 +3887,7 @@
     }
   },
   {
-    "query": "我想找一个用于监控和管理时间序列数据的高性能数据库库。",
+    "query": "\"cost-effective monitoring solution for time series data\"",
     "relevant_repo_ids": [
       "VictoriaMetrics/VictoriaMetrics"
     ],
@@ -3900,7 +3900,7 @@
     }
   },
   {
-    "query": "我想找一个可以通过语音与AI聊天的浏览器扩展。",
+    "query": "a voice interface for ChatGPT responses",
     "relevant_repo_ids": [
       "C-Nedelcu/talk-to-chatgpt"
     ],
@@ -3913,7 +3913,7 @@
     }
   },
   {
-    "query": "我想找一个用于动画自定义过渡的库，最好支持简单扩展和设置。",
+    "query": "\"library for easy custom transitions and animations in my project\"",
     "relevant_repo_ids": [
       "cemolcay/TransitionManager"
     ],
@@ -3926,7 +3926,7 @@
     }
   },
   {
-    "query": "我想找一个支持视频录制和推流的直播SDK库。",
+    "query": "\"SDK for live video streaming with recording and filtering features\"",
     "relevant_repo_ids": [
       "WangShuo1143368701/WSLiveDemo"
     ],
@@ -3939,7 +3939,7 @@
     }
   },
   {
-    "query": "我想找一个支持 TinyMCE 和 CKEditor 的文件管理库。",
+    "query": "\"library for integrating ElFinder with TinyMCE, CKEditor, and Summernote editors\"",
     "relevant_repo_ids": [
       "helios-ag/FMElfinderBundle"
     ],
@@ -3952,7 +3952,7 @@
     }
   },
   {
-    "query": "我想找一个可以将UIPickerView转为直列表的Swift库，支持多列表和自定义字体颜色。",
+    "query": "a UIKit component to convert UIPickerView into a straight list with customizable selected label color",
     "relevant_repo_ids": [
       "xiaozhuxiong121/PGPickerView"
     ],
@@ -3965,7 +3965,7 @@
     }
   },
   {
-    "query": "我想找一个用于虚拟现实性能优化的库。",
+    "query": "\"toolkit for optimizing VR performance in applications\"",
     "relevant_repo_ids": [
       "fholger/vrperfkit"
     ],
@@ -3978,7 +3978,7 @@
     }
   },
   {
-    "query": "我想找一个用于处理已废弃项目的库。",
+    "query": "a library for managing deprecated software projects",
     "relevant_repo_ids": [
       "17px/typecho-theme-Moz"
     ],
@@ -3991,7 +3991,7 @@
     }
   },
   {
-    "query": "我想找一个可以用 YAML 文件管理 Bash 命令的库。",
+    "query": "\"bash script tool that uses yaml for quiet command execution\"",
     "relevant_repo_ids": [
       "wagoodman/bashful"
     ],
@@ -4004,7 +4004,7 @@
     }
   },
   {
-    "query": "我想找一个用 Meteor 构建的示例应用程序。",
+    "query": "examples of Meteor applications from a programming book",
     "relevant_repo_ids": [
       "DiscoverMeteor/Microscope"
     ],
@@ -4017,7 +4017,7 @@
     }
   },
   {
-    "query": "我想找一个小型的 MVC 框架，适合快速开发的项目。",
+    "query": "small MVC framework for web development",
     "relevant_repo_ids": [
       "AliasIO/Swiftlet"
     ],
@@ -4030,7 +4030,7 @@
     }
   },
   {
-    "query": "我想找一个支持云原生环境的高性能分布式文件系统库。",
+    "query": "\"a high-performance POSIX file system for cloud storage\"",
     "relevant_repo_ids": [
       "juicedata/juicefs"
     ],
@@ -4043,7 +4043,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 Kubernetes 上部署的云平台库。",
+    "query": "\"how to deploy Cloud Foundry on Kubernetes\"",
     "relevant_repo_ids": [
       "cloudfoundry/korifi"
     ],
@@ -4056,7 +4056,7 @@
     }
   },
   {
-    "query": "我想找一个用Go语言实现的Cuckoo Filter库，最好比Bloom Filter更优。",
+    "query": "a Go implementation of Cuckoo Filters for efficient membership testing",
     "relevant_repo_ids": [
       "irfansharif/cfilter"
     ],
@@ -4069,7 +4069,7 @@
     }
   },
   {
-    "query": "我想找一个用于学习 Spring Boot 3 的开源库。",
+    "query": "\"Spring Boot 3 beginner tutorial with error troubleshooting\"",
     "relevant_repo_ids": [
       "eugenp/tutorials"
     ],
@@ -4082,7 +4082,7 @@
     }
   },
   {
-    "query": "我想找一个可以将 PostgreSQL 数据库转换为事件流的库。",
+    "query": "a tool for converting Postgres database changes into an event stream",
     "relevant_repo_ids": [
       "tmc/pqstream"
     ],
@@ -4095,7 +4095,7 @@
     }
   },
   {
-    "query": "我想找一个可以帮助我在互联网上寻找栖息之地的库。",
+    "query": "“tool for finding a home on the internet”",
     "relevant_repo_ids": [
       "AlanDecode/Typecho-Theme-RAW"
     ],
@@ -4108,7 +4108,7 @@
     }
   },
   {
-    "query": "我想找一个用于 MongoDB 数据备份的库。",
+    "query": "a backup solution for MongoDB databases",
     "relevant_repo_ids": [
       "percona/percona-backup-mongodb"
     ],
@@ -4121,7 +4121,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言编写的示例程序库。",
+    "query": "\"example programs for learning Go programming language\"",
     "relevant_repo_ids": [
       "adonovan/gopl.io"
     ],
@@ -4134,7 +4134,7 @@
     }
   },
   {
-    "query": "我想找一个用于自托管视频会议的开源项目。",
+    "query": "self-hosted platform for video conferencing with full features",
     "relevant_repo_ids": [
       "wirow-io/wirow-server"
     ],
@@ -4147,7 +4147,7 @@
     }
   },
   {
-    "query": "我想找一个可以从 Go 源文件生成 PlantUML 图的库。",
+    "query": "\"tool to create plantuml diagrams from Go source code\"",
     "relevant_repo_ids": [
       "bykof/go-plantuml"
     ],
@@ -4160,7 +4160,7 @@
     }
   },
   {
-    "query": "我想找一个用于转译电子邮件模板的库。",
+    "query": "a tool to convert Foundation for Emails templates into usable formats",
     "relevant_repo_ids": [
       "lorenzo/pinky"
     ],
@@ -4173,7 +4173,7 @@
     }
   },
   {
-    "query": "我想找一个与Hyper-V研究相关的库，支持最新的虚拟化技术。",
+    "query": "Hyper-V research tools and resources for developers",
     "relevant_repo_ids": [
       "msuiche/LiveCloudKd"
     ],
@@ -4186,7 +4186,7 @@
     }
   },
   {
-    "query": "我想找一个用Go语言编写的Whois信息解析库。",
+    "query": "a Go library for parsing domain whois information",
     "relevant_repo_ids": [
       "likexian/whois-parser"
     ],
@@ -4199,7 +4199,7 @@
     }
   },
   {
-    "query": "我想找一个用于 web fuzzing 的库，有哪些推荐的项目吗？",
+    "query": "web fuzzing tool for discovering and exploiting vulnerabilities",
     "relevant_repo_ids": [
       "nixawk/fuzzdb"
     ],
@@ -4212,7 +4212,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 实现的 GUI 库，能够显示各种弹窗和通知。",
+    "query": "a Swift library for showing popups and notifications in a GUI",
     "relevant_repo_ids": [
       "peterprokop/SwiftOverlays"
     ],
@@ -4225,7 +4225,7 @@
     }
   },
   {
-    "query": "我想找一个支持图像处理的深度学习库。",
+    "query": "\"lightweight neural network implementation for image classification\"",
     "relevant_repo_ids": [
       "huawei-noah/VanillaNet"
     ],
@@ -4238,7 +4238,7 @@
     }
   },
   {
-    "query": "我想找一个支持快速开发响应式网站的 Joomla 框架库。",
+    "query": "A framework for building responsive Joomla websites and templates.",
     "relevant_repo_ids": [
       "templaza/astroid-framework"
     ],
@@ -4251,7 +4251,7 @@
     }
   },
   {
-    "query": "我想找一个收集各种类别macOS软件的开源项目。",
+    "query": "\"collection of premium macOS software in various categories\"",
     "relevant_repo_ids": [
       "jaywcjlove/awesome-mac"
     ],
@@ -4264,7 +4264,7 @@
     }
   },
   {
-    "query": "我想找一个用于iOS的Couchbase Lite示例库。",
+    "query": "a simple demo app for Couchbase Lite on iOS",
     "relevant_repo_ids": [
       "couchbaselabs/Grocery-Sync-iOS"
     ],
@@ -4277,7 +4277,7 @@
     }
   },
   {
-    "query": "我想找一个可以获取IP地址安全信息的库。",
+    "query": "\"tool to retrieve security information about IP addresses\"",
     "relevant_repo_ids": [
       "jreisinger/checkip"
     ],
@@ -4290,7 +4290,7 @@
     }
   },
   {
-    "query": "我想找一个用于 MySQL 和 MariaDB 数据库复制管理的工具库。",
+    "query": "a replication manager for MySQL and MariaDB systems",
     "relevant_repo_ids": [
       "signal18/replication-manager"
     ],
@@ -4303,7 +4303,7 @@
     }
   },
   {
-    "query": "我想找一个使用 React 的 JavaScript 库，可以帮助我解决 CORS 问题。",
+    "query": "React course materials and assignments for building a food app with CORS support",
     "relevant_repo_ids": [
       "chetannada/Namaste-React"
     ],
@@ -4316,7 +4316,7 @@
     }
   },
   {
-    "query": "我想找一个用 Swift 实现的 UICollectionView 下拉刷新动画库。",
+    "query": "a Swift library for implementing pull-to-refresh animations in UICollectionView with sticky headers",
     "relevant_repo_ids": [
       "fruitcoder/ReplaceAnimation"
     ],
@@ -4329,7 +4329,7 @@
     }
   },
   {
-    "query": "我想找一个可以在Hadoop或AWS上运行MapReduce作业的库。",
+    "query": "MapReduce jobs on Hadoop or AWS",
     "relevant_repo_ids": [
       "Yelp/mrjob"
     ],
@@ -4342,7 +4342,7 @@
     }
   },
   {
-    "query": "我想找一个支持 PSR-11 兼容的 PHP 依赖注入容器库。",
+    "query": "a PHP library for PSR-11 compatible dependency injection",
     "relevant_repo_ids": [
       "bitExpert/disco"
     ],
@@ -4355,7 +4355,7 @@
     }
   },
   {
-    "query": "我想找一个用于音乐合成的C语言库。",
+    "query": "a project for music composition using Mucom88 synthesizer",
     "relevant_repo_ids": [
       "onitama/mucom88"
     ],
@@ -4368,7 +4368,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现多线程下载功能的 Android 库。",
+    "query": "a library for multi-threaded downloading in Android",
     "relevant_repo_ids": [
       "Aspsine/MultiThreadDownload"
     ],
@@ -4381,7 +4381,7 @@
     }
   },
   {
-    "query": "我想找一个可以自动登录京东并进行打卡和签到的库。",
+    "query": "\"automatically log in to JD.com and collect rewards\"",
     "relevant_repo_ids": [
       "CaoZ/JD-Coin"
     ],
@@ -4394,7 +4394,7 @@
     }
   },
   {
-    "query": "我想找一个用于缓存数据的 Go 语言库。",
+    "query": "a Go library for managing and extending cache functionalities",
     "relevant_repo_ids": [
       "eko/gocache"
     ],
@@ -4407,7 +4407,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Google Cloud 服务的 Swift 库。",
+    "query": "\"tools for integrating with Google Cloud services\"",
     "relevant_repo_ids": [
       "vapor-community/google-cloud-kit"
     ],
@@ -4420,7 +4420,7 @@
     }
   },
   {
-    "query": "我想找一个可以实时监控CVE和安全工具更新的库。",
+    "query": "Real-time monitoring of new CVEs and security tool updates on GitHub with notifications",
     "relevant_repo_ids": [
       "yhy0/github-cve-monitor"
     ],
@@ -4433,7 +4433,7 @@
     }
   },
   {
-    "query": "我想找一个可以轻松摇动视图的 Swift 库，最好支持无障碍功能。",
+    "query": "Swift extension to shake a UIView with one line of code",
     "relevant_repo_ids": [
       "haaakon/SingleLineShakeAnimation"
     ],
@@ -4446,7 +4446,7 @@
     }
   },
   {
-    "query": "我想找一个用Java、JavaScript、Python、C++或C#编写的HackerRank解题库。",
+    "query": "solutions for HackerRank challenges in Java, JavaScript, Python, C++, and C#",
     "relevant_repo_ids": [
       "RyanFehr/HackerRank"
     ],
@@ -4459,7 +4459,7 @@
     }
   },
   {
-    "query": "我想找一个用于快速加载PostgreSQL数据的库。",
+    "query": "high speed data loading utility for PostgreSQL",
     "relevant_repo_ids": [
       "ossc-db/pg_bulkload"
     ],
@@ -4472,7 +4472,7 @@
     }
   },
   {
-    "query": "我想找一个用Swift编写的自定义UITableView节索引的库。",
+    "query": "a Swift library for customizing UITableView section indexes",
     "relevant_repo_ids": [
       "0xcj/SectionIndexView"
     ],
@@ -4485,7 +4485,7 @@
     }
   },
   {
-    "query": "我想找一个支持离线优先应用的 Redux 库，适用于 Web 和 React Native。",
+    "query": "\"library for building offline-first applications with React and Redux\"",
     "relevant_repo_ids": [
       "redux-offline/redux-offline"
     ],
@@ -4498,7 +4498,7 @@
     }
   },
   {
-    "query": "我想找一个用 Go 语言写的 TCP 反向 Shell 库。",
+    "query": "a simple TCP reverse shell implemented in Go",
     "relevant_repo_ids": [
       "sysdream/hershell"
     ],
@@ -4511,7 +4511,7 @@
     }
   },
   {
-    "query": "我想找一个支持可编程 PWM 控制的风扇控制库。",
+    "query": "open source PWM fan controller for PC",
     "relevant_repo_ids": [
       "tjko/fanpico"
     ],
@@ -4524,7 +4524,7 @@
     }
   },
   {
-    "query": "我想找一个用于网络可观察性的eBPF库。",
+    "query": "a tool for network observability using eBPF technology",
     "relevant_repo_ids": [
       "netobserv/netobserv-ebpf-agent"
     ],
@@ -4537,7 +4537,7 @@
     }
   },
   {
-    "query": "我想找一个用于智能KVM切换的库，有哪些推荐？",
+    "query": "\"smart KVM switch for managing multiple computers\"",
     "relevant_repo_ids": [
       "jfedor2/screen-hopper"
     ],
@@ -4550,7 +4550,7 @@
     }
   },
   {
-    "query": "我想找一个用于 Node.js 的聊天 API 库，可以与 Facebook 聊天功能兼容。",
+    "query": "\"a Node.js library for interacting with Facebook Chat\"",
     "relevant_repo_ids": [
       "Schmavery/facebook-chat-api"
     ],
@@ -4563,7 +4563,7 @@
     }
   },
   {
-    "query": "我想找一个强大的开发工具包，可以帮助我提高开发效率。",
+    "query": "developer toolkit for enhancing productivity and collaboration",
     "relevant_repo_ids": [
       "phorgeit/phorge"
     ],
@@ -4576,7 +4576,7 @@
     }
   },
   {
-    "query": "我想找一个可以帮助我创建iOS“今日”和“分享”扩展的库。",
+    "query": "how to create iOS today and share extensions",
     "relevant_repo_ids": [
       "atomicbird/iOS-Extension-Demo"
     ],
@@ -4589,7 +4589,7 @@
     }
   },
   {
-    "query": "我想找一个用于物联网安全的密码技术库，最好是用C语言开发的。",
+    "query": "example code for mbedtls in IoT security projects",
     "relevant_repo_ids": [
       "iotwuxi/iot_security"
     ],
@@ -4602,7 +4602,7 @@
     }
   },
   {
-    "query": "我想找一个用于分布式数据库基准测试的库。",
+    "query": "a tool for testing performance of distributed databases",
     "relevant_repo_ids": [
       "etcd-io/dbtester"
     ],
@@ -4615,7 +4615,7 @@
     }
   },
   {
-    "query": "我想找一个支持测试驱动开发的 Go 语言库。",
+    "query": "Go programming learning with test-driven development resources",
     "relevant_repo_ids": [
       "larien/aprenda-go-com-testes"
     ],
@@ -4628,7 +4628,7 @@
     }
   },
   {
-    "query": "我想找一个可以自定义 Argo CD 行为的插件库。",
+    "query": "a plugin to customize Argo CD functionality",
     "relevant_repo_ids": [
       "crumbhole/argocd-lovely-plugin"
     ],
@@ -4641,7 +4641,7 @@
     }
   },
   {
-    "query": "我想找一个能展示Twitter漏洞示例的库。",
+    "query": "\"find snippets to exploit vulnerabilities in Twitter\"",
     "relevant_repo_ids": [
       "yeswehack/vulnerable-code-snippets"
     ],
@@ -4654,7 +4654,7 @@
     }
   },
   {
-    "query": "我想找一个支持Symfony的Websocket服务器库，有没有推荐的？",
+    "query": "Websocket server for Symfony applications with a JavaScript client support",
     "relevant_repo_ids": [
       "GeniusesOfSymfony/WebSocketBundle"
     ],
@@ -4667,7 +4667,7 @@
     }
   },
   {
-    "query": "我想找一个适合程序员的编程游戏库。",
+    "query": "programming game for learning coding skills",
     "relevant_repo_ids": [
       "tpoindex/crobots"
     ],
@@ -4680,7 +4680,7 @@
     }
   },
   {
-    "query": "我想找一个支持多种 LLM 模型集成的轻量级 API 库。",
+    "query": "A lightweight API integration system for enterprise-level LLMs with Docker support.",
     "relevant_repo_ids": [
       "iimeta/fastapi"
     ],
@@ -4693,7 +4693,7 @@
     }
   },
   {
-    "query": "我想找一个用于访问和展示圣训的库。",
+    "query": "website for accessing and reading Islamic texts and teachings",
     "relevant_repo_ids": [
       "sunnah-com/website"
     ],
@@ -4706,7 +4706,7 @@
     }
   },
   {
-    "query": "我想找一个用于安卓开发的屏幕适配工具库。",
+    "query": "an easy-to-use library for Android screen adaptation",
     "relevant_repo_ids": [
       "yatoooon/AndroidScreenAdaptation"
     ],
@@ -4719,7 +4719,7 @@
     }
   },
   {
-    "query": "我想找一个可以驱动和控制伺服电机的库，最好支持编码器和PID调速。",
+    "query": "servo motor control with encoder and PID tuning features",
     "relevant_repo_ids": [
       "Clear492g/ServoMotorDriver-STM32"
     ],
@@ -4732,7 +4732,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 iOS 中实现 storyboard 之间链接的库。",
+    "query": "a tool for linking storyboards in iOS development",
     "relevant_repo_ids": [
       "rob-brown/RBStoryboardLink"
     ],
@@ -4745,7 +4745,7 @@
     }
   },
   {
-    "query": "我想找一个用于管理Kamailio的Web界面库。",
+    "query": "web admin interface for managing Kamailio",
     "relevant_repo_ids": [
       "asipto/siremis-php"
     ],
@@ -4758,7 +4758,7 @@
     }
   },
   {
-    "query": "我想找一个轻量级的扫描器库，用于提交概念验证模块。",
+    "query": "a lightweight scanner for submitting proof-of-concept modules in a community-driven environment",
     "relevant_repo_ids": [
       "detectify/ugly-duckling"
     ],
@@ -4771,7 +4771,7 @@
     }
   },
   {
-    "query": "有没有可以优化和处理资产的 PHP 库？",
+    "query": "PHP library for asset optimization and manipulation",
     "relevant_repo_ids": [
       "meenie/munee"
     ],
@@ -4784,7 +4784,7 @@
     }
   },
   {
-    "query": "我想找一个用 PHP 编写的文件系统监视库。",
+    "query": "a PHP library for monitoring filesystem changes",
     "relevant_repo_ids": [
       "phprtc/watcher"
     ],
@@ -4797,7 +4797,7 @@
     }
   },
   {
-    "query": "我想找一个用 PHP 和 React 开发的游戏服务器管理库。",
+    "query": "\"open-source game server management panel with Docker support\"",
     "relevant_repo_ids": [
       "pterodactyl/panel"
     ],
@@ -4810,7 +4810,7 @@
     }
   },
   {
-    "query": "我想找一个用于开发网站的Python库。",
+    "query": "Python source code for building and managing a website",
     "relevant_repo_ids": [
       "python/pythondotorg"
     ],
@@ -4823,7 +4823,7 @@
     }
   },
   {
-    "query": "我想找一个用于通过电话或短信验证用户的库。",
+    "query": "package for user verification through call or SMS",
     "relevant_repo_ids": [
       "worksome/verify-by-phone"
     ],
@@ -4836,7 +4836,7 @@
     }
   },
   {
-    "query": "我想找一个用于访问跟踪的iOS应用开发库。",
+    "query": "iOS app for tracking visits using HyperTrack",
     "relevant_repo_ids": [
       "hypertrack/visits-ios"
     ],
@@ -4849,7 +4849,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 Node.js 控制台显示颜色的库。",
+    "query": "\"node.js library to get colors in console\"",
     "relevant_repo_ids": [
       "Marak/colors.js"
     ],
@@ -4862,7 +4862,7 @@
     }
   },
   {
-    "query": "我想找一个使用 Laravel 构建论坛的开源项目。",
+    "query": "a tutorial for building a forum application using Laravel",
     "relevant_repo_ids": [
       "laracasts/Lets-Build-a-Forum-in-Laravel"
     ],
@@ -4875,7 +4875,7 @@
     }
   },
   {
-    "query": "我想找一个简单易用的 Python 正则表达式库。",
+    "query": "a Python library for simplifying regular expressions",
     "relevant_repo_ids": [
       "VerbalExpressions/PythonVerbalExpressions"
     ],
@@ -4888,7 +4888,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 iOS 和 tvOS 上显示树形结构的库。",
+    "query": "a library for displaying tree structures in iOS and tvOS applications",
     "relevant_repo_ids": [
       "Augustyniak/RATreeView"
     ],
@@ -4901,7 +4901,7 @@
     }
   },
   {
-    "query": "我想找一个可以评估数学和布尔表达式的 Java 库。",
+    "query": "Java library for evaluating mathematical and boolean expressions",
     "relevant_repo_ids": [
       "ezylang/EvalEx"
     ],
@@ -4914,7 +4914,7 @@
     }
   },
   {
-    "query": "我想找一个可以在安卓系统上显示logcat缓冲区的库。",
+    "query": "Android app for viewing logcat logs in an overlay window",
     "relevant_repo_ids": [
       "jgilfelt/GhostLog"
     ],
@@ -4927,7 +4927,7 @@
     }
   },
   {
-    "query": "我想找一个用于监控的 PHP 库。",
+    "query": "PHP client library for integrating with Datadog services",
     "relevant_repo_ids": [
       "DataDog/dd-trace-php"
     ],
@@ -4940,7 +4940,7 @@
     }
   },
   {
-    "query": "我想找一个可以快速收集Java 8代码片段的库。",
+    "query": "a quick way to find useful Java 8 code snippets",
     "relevant_repo_ids": [
       "hellokaton/30-seconds-of-java8"
     ],
@@ -4953,7 +4953,7 @@
     }
   },
   {
-    "query": "我想找一个基于Spring Boot和MyBatis的分布式服务框架库。",
+    "query": "distributed service framework using dubbo, spring boot, mybatis, and redis",
     "relevant_repo_ids": [
       "dearbinge/dubbo-spring-boot-mybatis-redis"
     ],
@@ -4966,7 +4966,7 @@
     }
   },
   {
-    "query": "我想找一个用于管理样本和MIDI设备的库。",
+    "query": "a tool for managing samples and MIDI devices",
     "relevant_repo_ids": [
       "dagargo/elektroid"
     ],
@@ -4979,7 +4979,7 @@
     }
   },
   {
-    "query": "有没有支持 GTFS Realtime 协议的语言库推荐？",
+    "query": "\"language bindings for GTFS Realtime protocol in various programming languages\"",
     "relevant_repo_ids": [
       "MobilityData/gtfs-realtime-bindings"
     ],
@@ -4992,7 +4992,7 @@
     }
   },
   {
-    "query": "我想找一个基于树莓派的逻辑分析仪库。",
+    "query": "a Logic Analyzer tool for Raspberry Pi",
     "relevant_repo_ids": [
       "richardghirst/Panalyzer"
     ],
@@ -5005,7 +5005,7 @@
     }
   },
   {
-    "query": "有没有支持生成网站地图的 Typecho 插件？",
+    "query": "\"Typecho sitemap generator tool\"",
     "relevant_repo_ids": [
       "wusongbuaa/typecho-sitemap"
     ],
@@ -5018,7 +5018,7 @@
     }
   },
   {
-    "query": "我想找一个可以将 Postgres 数据高效复制到数据仓库和存储的库。",
+    "query": "a cost-effective tool for streaming data from Postgres to data warehouses and storage solutions",
     "relevant_repo_ids": [
       "PeerDB-io/peerdb"
     ],
@@ -5031,7 +5031,7 @@
     }
   },
   {
-    "query": "我想找一个适合团队使用的问答平台库，最好支持社区论坛和知识管理功能。",
+    "query": "\"Q&A platform software for team collaboration and knowledge management\"",
     "relevant_repo_ids": [
       "apache/answer"
     ],
@@ -5044,7 +5044,7 @@
     }
   },
   {
-    "query": "我想找一个用于教堂管理的开源软件库。",
+    "query": "a management software for church administration and community engagement",
     "relevant_repo_ids": [
       "ChurchCRM/CRM"
     ],
@@ -5057,7 +5057,7 @@
     }
   },
   {
-    "query": "我想找一个可以轻松添加图片编辑功能的iOS库。",
+    "query": "iOS image editing library for easy integration into apps",
     "relevant_repo_ids": [
       "wordpress-mobile/MediaEditor-iOS"
     ],
@@ -5070,7 +5070,7 @@
     }
   },
   {
-    "query": "我想找一个可以在每次请求时自动更换IP的Burp Suite扩展。",
+    "query": "an extension for Burp Suite to rotate IP addresses using AWS API Gateway",
     "relevant_repo_ids": [
       "RhinoSecurityLabs/IPRotate_Burp_Extension"
     ],
@@ -5083,7 +5083,7 @@
     }
   },
   {
-    "query": "我想找一个使用 Python 的终端功能库。",
+    "query": "Python wrapper for terminal capabilities",
     "relevant_repo_ids": [
       "erikrose/blessings"
     ],
@@ -5096,7 +5096,7 @@
     }
   },
   {
-    "query": "我想找一个可以在 GitHub 热力图上绘图的库。",
+    "query": "A tool for customizing my GitHub contribution heatmap",
     "relevant_repo_ids": [
       "ben174/git-draw"
     ],
@@ -5109,7 +5109,7 @@
     }
   },
   {
-    "query": "我想找一个用于数字音频工作站的音效插件库。",
+    "query": "digital audio workstation with instrument and effect plugins",
     "relevant_repo_ids": [
       "stargatedaw/stargate"
     ],
@@ -5122,7 +5122,7 @@
     }
   },
   {
-    "query": "我想找一个适用于16位和32位微控制器的实时内核库。",
+    "query": "a real-time kernel for 16- and 32-bit microcontrollers",
     "relevant_repo_ids": [
       "dimonomid/tneo"
     ],
@@ -5135,7 +5135,7 @@
     }
   },
   {
-    "query": "有没有实现RPC后门功能的库？",
+    "query": "\"RPC backdoor emulation tool for security testing\"",
     "relevant_repo_ids": [
       "eladshamir/RPC-Backdoor"
     ],
@@ -5148,7 +5148,7 @@
     }
   },
   {
-    "query": "我想找一个可以实现多控制器列表和分类切换的iOS库。",
+    "query": "customizable scroll view with multiple controllers and header support for app category switching",
     "relevant_repo_ids": [
       "CoderLinLee/LLSegmentViewController"
     ],
@@ -5161,7 +5161,7 @@
     }
   },
   {
-    "query": "我想找一个支持 Darcula 风格的 Java UI 库。",
+    "query": "a Java library for implementing Darcula look and feel in applications",
     "relevant_repo_ids": [
       "bulenkov/Darcula"
     ],
@@ -5174,7 +5174,7 @@
     }
   },
   {
-    "query": "我想找一个支持流媒体和物联网的网络库。",
+    "query": "a broker for RSocket that supports mesh networking and streaming for IoT applications",
     "relevant_repo_ids": [
       "alibaba/alibaba-rsocket-broker"
     ],
@@ -5187,7 +5187,7 @@
     }
   },
   {
-    "query": "我想找一个用于分享位置信息的库。",
+    "query": "\"library for sharing location services in applications\"",
     "relevant_repo_ids": [
       "igroomgrim/CLLocationManager-Singleton-in-Swift"
     ],

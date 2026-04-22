@@ -72,13 +72,13 @@ def _make_glm_client() -> OpenAI:
 
 
 JUDGE_PROMPT = """\
-用户查询：{query}
-仓库名称：{repo_full_name}
-仓库描述：{description}
-README 摘要：{readme_snippet}
+User query: {query}
+Repository: {repo_full_name}
+Description: {description}
+README snippet: {readme_snippet}
 
-该仓库是否与用户查询相关？
-请只回答 0（不相关）或 1（相关），不要解释。"""
+Is this repository relevant to the user query?
+Reply with only 0 (not relevant) or 1 (relevant), no explanation."""
 
 
 def _judge(client: OpenAI, query: str, meta: dict) -> int | None:
