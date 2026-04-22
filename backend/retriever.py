@@ -1,4 +1,4 @@
-import json, math, pickle, pathlib
+import json, pickle, pathlib
 import os
 from sentence_transformers import SentenceTransformer
 
@@ -7,10 +7,9 @@ _BASE = pathlib.Path(__file__).parent  # always relative to this file, not cwd
 _model = None
 _bm25 = None
 _chunk_metadata = None
-_chunk_count_per_repo = None
 
 def _load_artifacts():
-    global _model, _bm25, _chunk_metadata, _chunk_count_per_repo
+    global _model, _bm25, _chunk_metadata
     if _model is None:
         _model = SentenceTransformer("all-MiniLM-L6-v2")
     if _bm25 is None:
@@ -19,10 +18,6 @@ def _load_artifacts():
     if _chunk_metadata is None:
         with open(_BASE / "chunk_metadata.json", encoding="utf-8") as f:
             _chunk_metadata = json.load(f)
-        _chunk_count_per_repo = {}
-        for m in _chunk_metadata:
-            pid = m["parent_id"]
-            _chunk_count_per_repo[pid] = _chunk_count_per_repo.get(pid, 0) + 1
 
 def _apply_filter(meta: dict, language: str, min_stars: int, topics: list[str]) -> bool:
     if language and meta.get("language", "") != language:
@@ -87,25 +82,7 @@ def hybrid_search(
     # --- BM25 search ---
     tokenized_query = query.lower().split()
     bm25_scores = _bm25.get_scores(tokenized_query)
-
-    # 方案B：按 parent_id 去重，每个 repo 只保留得分最高的 chunk
-    best_chunk_per_repo: dict[str, int] = {}
-    for i, score in enumerate(bm25_scores):
-        pid = _chunk_metadata[i]["parent_id"]
-        if pid not in best_chunk_per_repo or score > bm25_scores[best_chunk_per_repo[pid]]:
-            best_chunk_per_repo[pid] = i
-
-    # 方案A：对 chunk 数量多的 repo 施加惩罚，抑制大仓库虚高得分
-    def _penalized_score(chunk_idx: int) -> float:
-        pid = _chunk_metadata[chunk_idx]["parent_id"]
-        n_chunks = _chunk_count_per_repo.get(pid, 1)
-        return bm25_scores[chunk_idx] / math.log1p(n_chunks)
-
-    bm25_ranked_all = sorted(
-        best_chunk_per_repo.values(),
-        key=_penalized_score,
-        reverse=True
-    )[:20]
+    bm25_ranked_all = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:20]
 
     # Post-filter BM25 results
     bm25_ranked = [
