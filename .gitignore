@@ -29,3 +29,7 @@ Thumbs.db
 
 # Eval output (per-run artifact, not committed)
 eval/report.json
+eval/report_result.txt
+
+# Interview prep (personal notes, not for public repo)
+docs/interview-prep-rag.md

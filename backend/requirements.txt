@@ -1,10 +1,28 @@
+# Web 框架
+fastapi==0.111.0           # FastAPI 后端框架，提供 REST API 和 SSE 流式输出
+uvicorn[standard]==0.29.0  # ASGI 服务器，用于运行 FastAPI
 
-fastapi==0.111.0
-uvicorn[standard]==0.29.0
-python-dotenv==1.0.1
-sentence-transformers==3.0.1
-rank-bm25==0.2.2
-pinecone-client==3.2.2
-openai>=1.51.0
-pandas==2.2.2
-pydantic>=2.9.0
+# 环境变量
+python-dotenv==1.0.1       # 从 .env 文件加载环境变量（API Keys 等）
+
+# LlamaIndex 框架
+llama-index-core            # LlamaIndex 核心库：SentenceSplitter、BaseRetriever、NodeWithScore 等
+llama-index-embeddings-openai  # OpenAIEmbedding：调用 text-embedding-3-small 进行向量化
+
+# Token 计数
+tiktoken                    # OpenAI tokenizer，用于 cl100k_base 编码计算 token 数（切块阈值）
+
+# 检索
+rank-bm25==0.2.2            # BM25Okapi 关键词检索，与向量检索组成混合检索
+
+# 向量数据库
+pinecone-client==3.2.2      # Pinecone SDK，存储子 chunk 向量及元数据
+
+# LLM 调用
+openai>=1.51.0              # OpenAI SDK，llm.py 直接调用（GLM/GPT 均兼容），同时作为 OpenAIEmbedding 底层依赖
+
+# 数据处理
+pandas==2.2.2               # 读取和合并 GitHub CSV 数据文件
+
+# 数据校验
+pydantic>=2.9.0             # FastAPI 请求/响应模型定义（ChatRequest、FilterOptions 等）

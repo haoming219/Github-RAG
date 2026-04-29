@@ -23,6 +23,7 @@ REPORT_PATH  = ROOT / "eval" / "report.json"
 BACKEND      = ROOT / "backend"
 
 LOW_SCORE_SAMPLE_COUNT = 50
+SAMPLE_SIZE = None  # 设为 None 则跑全量400条
 
 
 # ---------------------------------------------------------------------------
@@ -131,7 +132,11 @@ def main():
     print("Loading testset...", flush=True)
     with open(TESTSET_PATH, encoding="utf-8") as f:
         testset = json.load(f)
-    print(f"Testset: {len(testset)} queries", flush=True)
+    if SAMPLE_SIZE is not None:
+        testset = testset[:SAMPLE_SIZE]
+        print(f"Testset: {len(testset)} queries (sampled {SAMPLE_SIZE})", flush=True)
+    else:
+        print(f"Testset: {len(testset)} queries", flush=True)
 
     print("Loading backend artifacts...", flush=True)
     _load_artifacts()
