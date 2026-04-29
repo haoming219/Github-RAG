@@ -9,10 +9,9 @@ def _get_client():
     if client is None:
         # GLM_API_URL is the full endpoint (e.g. https://aihubmix.com/v1/chat/completions)
         # OpenAI SDK base_url must be the root without the path suffix
-        api_url = os.environ["GLM_API_URL"]  # https://aihubmix.com/v1/chat/completions
-        base_url = api_url.rsplit("/chat/completions", 1)[0]  # https://aihubmix.com/v1
+        base_url = os.environ["LLM_API_URL"]
         client = OpenAI(
-            api_key=os.environ["GLM_API_KEY"],
+            api_key=os.environ["LLM_API_KEY"],
             base_url=base_url,
         )
     return client
@@ -115,12 +114,14 @@ def stream_answer(retrieved_docs: list[dict], messages: list[dict]) -> Generator
     c = _get_client()
     try:
         response = c.chat.completions.create(
-            model=os.environ["GLM_MODEL_ID"],
+            model=os.environ["LLM_MODEL_ID"],
             messages=prompt_messages,
             stream=True,
             max_tokens=4096,
         )
         for chunk in response:
+            if not chunk.choices:
+                continue
             delta = chunk.choices[0].delta
             if delta.content:
                 yield f"data: {json.dumps({'text': delta.content}, ensure_ascii=False)}\n\n"
