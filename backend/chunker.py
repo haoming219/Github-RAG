@@ -1,64 +1,93 @@
 import re
+import tiktoken
+from llama_index.core.node_parser import SentenceSplitter
+
+_tokenizer = tiktoken.get_encoding("cl100k_base")
+_splitter = SentenceSplitter(chunk_size=512, chunk_overlap=50, tokenizer=_tokenizer.encode)
+
+MIN_TOKENS = 3
+
+
+def _count_tokens(text: str) -> int:
+    return len(_tokenizer.encode(text))
+
 
 def clean_readme(text: str) -> str:
-    """Remove badges, HTML tags, and image links from README markdown."""
-    # Remove badge links: [![...](...)(...)]
     text = re.sub(r'\[!\[.*?\]\(.*?\)\]\(.*?\)', '', text)
-    # Remove plain image links: ![...](...)
     text = re.sub(r'!\[.*?\]\(.*?\)', '', text)
-    # Remove HTML tags
     text = re.sub(r'<[^>]+>', '', text)
-    # Collapse multiple blank lines
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 
-def split_by_headings(text: str, parent_id: str) -> list[dict]:
+
+def split_by_headings(text: str, full_name: str, description: str = "") -> list[dict]:
     """
-    Split cleaned markdown text into chunks at each heading boundary.
-    Returns list of dicts with: parent_id, section_title, content, chunk_index.
-    Chunks with fewer than 50 chars of content are merged into the previous chunk.
+    First-level split: divide cleaned README text at Markdown heading boundaries.
+    Returns parent chunk dicts with parent_id, section_index, section_title, content.
+    If text is empty, falls back to a single description chunk.
     """
+    if not text.strip():
+        return [{
+            "parent_id": f"{full_name}__0",
+            "full_name": full_name,
+            "section_index": 0,
+            "section_title": "__description__",
+            "content": description or full_name,
+        }]
+
     lines = text.split('\n')
-    chunks = []
+    raw_chunks = []
     current_title = "__intro__"
     current_lines = []
 
     for line in lines:
         if re.match(r'^#{1,6}\s', line):
-            # Save current chunk before starting new one
             content = '\n'.join(current_lines).strip()
             if content:
-                chunks.append({
-                    "parent_id": parent_id,
-                    "section_title": current_title,
-                    "content": content,
-                    "chunk_index": len(chunks)
-                })
+                raw_chunks.append({"section_title": current_title, "content": content})
             current_title = line.strip()
             current_lines = []
         else:
             current_lines.append(line)
 
-    # Save final chunk
     content = '\n'.join(current_lines).strip()
     if content:
-        chunks.append({
-            "parent_id": parent_id,
-            "section_title": current_title,
-            "content": content,
-            "chunk_index": len(chunks)
-        })
+        raw_chunks.append({"section_title": current_title, "content": content})
 
-    # Merge short chunks (< 50 chars) into previous
+    # Merge chunks below MIN_TOKENS threshold into previous chunk
     merged = []
-    for chunk in chunks:
-        if merged and len(chunk["content"]) < 50:
+    for chunk in raw_chunks:
+        if merged and _count_tokens(chunk["content"]) < MIN_TOKENS:
             merged[-1]["content"] += "\n" + chunk["content"]
         else:
             merged.append(chunk)
 
-    # Re-index after merge
+    result = []
     for i, chunk in enumerate(merged):
-        chunk["chunk_index"] = i
+        result.append({
+            "parent_id": f"{full_name}__{i}",
+            "full_name": full_name,
+            "section_index": i,
+            "section_title": chunk["section_title"],
+            "content": chunk["content"],
+        })
+    return result
 
-    return merged
+
+def split_into_children(parent: dict) -> list[dict]:
+    """
+    Second-level split: divide a parent chunk's content using SentenceSplitter.
+    Returns child chunk dicts with parent_id, child_index, vector_id, content.
+    """
+    from llama_index.core.schema import Document
+    doc = Document(text=parent["content"])
+    nodes = _splitter.get_nodes_from_documents([doc])
+    children = []
+    for i, node in enumerate(nodes):
+        children.append({
+            "parent_id": parent["parent_id"],
+            "child_index": i,
+            "vector_id": f"{parent['parent_id']}__child{i}",
+            "content": node.get_content(),
+        })
+    return children
