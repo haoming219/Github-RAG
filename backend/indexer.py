@@ -66,12 +66,11 @@ def main():
         meta = build_repo_meta(row)
         full_name = meta["full_name"]
         readme = str(row.get("Readme Content", "")).strip()
+        if not readme:
+            continue  # skip repos without README — only index repos with real content
 
-        if readme:
-            cleaned = clean_readme(readme)
-            parents = split_by_headings(cleaned, full_name, description=meta["description"])
-        else:
-            parents = split_by_headings("", full_name, description=meta["description"])
+        cleaned = clean_readme(readme)
+        parents = split_by_headings(cleaned, full_name, description=meta["description"])
 
         for parent in parents:
             parent.update({k: v for k, v in meta.items() if k != "full_name"})
