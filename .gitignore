@@ -15,7 +15,10 @@ venv/
 
 # Backend generated artifacts (large files — regenerate with indexer.py)
 backend/bm25_index.pkl
+backend/bm25_parent_ids.json
+backend/parent_chunks.json
 backend/chunk_metadata.json
+backend/filter_options.json
 
 # Node / Frontend
 node_modules/

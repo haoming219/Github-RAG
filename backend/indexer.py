@@ -102,8 +102,17 @@ def main():
         api_base=os.environ["LLM_API_URL"],
     )
 
+    # fetch already-uploaded vector count to skip completed batches
+    existing_count = index.describe_index_stats().total_vector_count
+    skip_batches = existing_count // 100
+    if skip_batches > 0:
+        print(f"Resuming: skipping first {skip_batches} batches ({existing_count} vectors already uploaded)")
+
     batch_size = 100
     for i in range(0, len(all_child_chunks), batch_size):
+        batch_num = i // batch_size
+        if batch_num < skip_batches:
+            continue
         batch = all_child_chunks[i:i + batch_size]
         texts = [c["content"] for c in batch]
         embeddings = embed_model.get_text_embedding_batch(texts, show_progress=False)
@@ -130,7 +139,15 @@ def main():
                     "push_time": parent["push_time"],
                 },
             })
-        index.upsert(vectors=vectors)
+        for attempt in range(3):
+            try:
+                index.upsert(vectors=vectors)
+                break
+            except Exception as e:
+                if attempt == 2:
+                    raise
+                print(f"  Upsert failed ({e}), retrying in 5s...")
+                time.sleep(5)
         print(f"  Uploaded {min(i + batch_size, len(all_child_chunks))}/{len(all_child_chunks)}")
         time.sleep(0.5)
 

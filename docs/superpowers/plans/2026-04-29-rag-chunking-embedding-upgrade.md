@@ -31,7 +31,7 @@
 **Files:**
 - Modify: `backend/requirements.txt`
 
-- [ ] **Step 1: Edit requirements.txt**
+- [x] **Step 1: Edit requirements.txt**
 
 Replace `sentence-transformers==3.0.1` with the new deps:
 
@@ -49,7 +49,7 @@ pandas==2.2.2
 pydantic>=2.9.0
 ```
 
-- [ ] **Step 2: Install and verify**
+- [x] **Step 2: Install and verify**
 
 ```bash
 cd backend
@@ -59,7 +59,7 @@ python -c "from llama_index.core.node_parser import SentenceSplitter; from llama
 
 Expected: `OK`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add backend/requirements.txt
@@ -1116,11 +1116,11 @@ git commit -m "feat(eval): add RetrieverQueryEngine offline eval helper"
 
 This task runs outside the normal test cycle and requires live API keys. Run only after Tasks 1–8 are complete.
 
-- [ ] **Step 1: Delete old Pinecone index**
+- [x] **Step 1: Delete old Pinecone index**
 
 Go to [Pinecone console](https://app.pinecone.io), delete the existing `github-rag` index (dimension 384).
 
-- [ ] **Step 2: Run indexer.py**
+- [x] **Step 2: Run indexer.py**
 
 ```bash
 cd backend
@@ -1132,7 +1132,7 @@ Expected final lines:
 Done. Commit parent_chunks.json, bm25_index.pkl, bm25_parent_ids.json, filter_options.json.
 ```
 
-- [ ] **Step 3: Commit generated artifacts**
+- [x] **Step 3: Commit generated artifacts**
 
 ```bash
 git add backend/parent_chunks.json backend/bm25_index.pkl backend/bm25_parent_ids.json backend/filter_options.json
