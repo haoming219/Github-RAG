@@ -1,124 +1,152 @@
-import json, pickle, pathlib
-import os
-from sentence_transformers import SentenceTransformer
+import json, pickle, pathlib, os
+from typing import Optional
+from llama_index.core.retrievers import BaseRetriever
+from llama_index.core.schema import NodeWithScore, TextNode, QueryBundle
+from llama_index.embeddings.openai import OpenAIEmbedding
+from rank_bm25 import BM25Okapi
 
-_BASE = pathlib.Path(__file__).parent  # always relative to this file, not cwd
+_BASE = pathlib.Path(__file__).parent
 
-_model = None
-_bm25 = None
-_chunk_metadata = None
 
-def _load_artifacts():
-    global _model, _bm25, _chunk_metadata
-    if _model is None:
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
-    if _bm25 is None:
-        with open(_BASE / "bm25_index.pkl", "rb") as f:
-            _bm25 = pickle.load(f)
-    if _chunk_metadata is None:
-        with open(_BASE / "chunk_metadata.json", encoding="utf-8") as f:
-            _chunk_metadata = json.load(f)
-
-def _apply_filter(meta: dict, language: str, min_stars: int, topics: list[str]) -> bool:
+def _apply_filter(meta: dict, language: str, min_stars: int, topics: list) -> bool:
     if language and meta.get("language", "") != language:
         return False
     if min_stars and int(meta.get("stars", 0)) < min_stars:
         return False
     if topics:
-        repo_topics = meta.get("topics", [])  # stored as real list in chunk_metadata.json
+        repo_topics = meta.get("topics", [])
         if not any(t in repo_topics for t in topics):
             return False
     return True
 
-def _rrf(ranked_lists: list[list[int]], k: int = 60) -> list[int]:
-    """Reciprocal Rank Fusion over multiple ranked lists of chunk indices."""
-    scores: dict[int, float] = {}
-    for ranked in ranked_lists:
-        for rank, idx in enumerate(ranked):
-            scores[idx] = scores.get(idx, 0.0) + 1.0 / (k + rank + 1)
-    return sorted(scores, key=lambda x: scores[x], reverse=True)
 
-def hybrid_search(
-    query: str,
-    pinecone_index,
-    language: str = "",
-    min_stars: int = 0,
-    topics: list[str] = None,
-    top_k: int = 5,
-    return_debug: bool = False
-) -> "list[dict] | tuple[list[dict], dict]":
-    if topics is None:
-        topics = []
-    _load_artifacts()
+def _rrf(ranked_dicts: list[dict], k: int = 60, top_k: int = 100) -> list:
+    """
+    Reciprocal Rank Fusion over a list of {id: rank} dicts.
+    Returns a list of IDs sorted by fused score descending.
+    """
+    scores: dict = {}
+    for ranked in ranked_dicts:
+        for pid, rank in ranked.items():
+            scores[pid] = scores.get(pid, 0.0) + 1.0 / (k + rank + 1)
+    return sorted(scores, key=lambda x: scores[x], reverse=True)[:top_k]
 
-    # Build Pinecone metadata filter
-    pc_filter = {}
-    if language:
-        pc_filter["language"] = {"$eq": language}
-    if min_stars:
-        pc_filter["stars"] = {"$gte": min_stars}
-    # topics: stored as a real list in Pinecone (see indexer.py), so $in works directly
-    if topics:
-        pc_filter["topics"] = {"$in": topics}
 
-    # --- Pinecone vector search ---
-    query_emb = _model.encode(query).tolist()
-    pc_kwargs = {"vector": query_emb, "top_k": 20, "include_metadata": True}
-    if pc_filter:
-        pc_kwargs["filter"] = pc_filter
-    pc_results = pinecone_index.query(**pc_kwargs)
-
-    # Build Pinecone ranked list: map vector id → chunk_metadata index
-    id_to_meta_idx = {
-        f"{m['parent_id']}__chunk{m['chunk_index']}": i
-        for i, m in enumerate(_chunk_metadata)
-    }
-    pinecone_ranked = []
-    for match in pc_results["matches"]:
-        idx = id_to_meta_idx.get(match["id"])
-        if idx is not None:
-            pinecone_ranked.append(idx)
-
-    # --- BM25 search ---
-    tokenized_query = query.lower().split()
-    bm25_scores = _bm25.get_scores(tokenized_query)
-    bm25_ranked_all = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:20]
-
-    # Post-filter BM25 results
-    bm25_ranked = [
-        i for i in bm25_ranked_all
-        if _apply_filter(_chunk_metadata[i], language, min_stars, topics)
-    ]
-
-    # --- RRF fusion ---
-    ranked_lists = [pinecone_ranked]
-    if bm25_ranked:
-        ranked_lists.append(bm25_ranked)
-    # If both empty, return empty with a signal
-    if not pinecone_ranked and not bm25_ranked:
-        return []
-
-    fused_all = _rrf(ranked_lists)
-    fused = fused_all[:top_k]
-
-    results = []
-    seen_parents = set()
-    for idx in fused:
-        meta = _chunk_metadata[idx]
-        parent_id = meta["parent_id"]
-        # Deduplicate: include only one chunk per repo in the prompt context
-        if parent_id in seen_parents:
-            continue
-        seen_parents.add(parent_id)
-        results.append(meta)
-        if len(results) >= top_k:
+def _max_pool_vector_results(matches: list, limit: int = 20) -> dict:
+    """
+    Aggregate Pinecone child-chunk matches to parent level.
+    For each parent_id, keep only the best (lowest) rank.
+    Returns {parent_id: best_rank} for up to `limit` distinct parents.
+    """
+    seen: dict = {}
+    for rank, match in enumerate(matches):
+        pid = match.metadata["parent_id"]
+        if pid not in seen:
+            seen[pid] = rank
+        if len(seen) >= limit:
             break
+    return seen
 
-    if return_debug:
-        debug_info = {
-            "pinecone_candidate_ids": [_chunk_metadata[i]["parent_id"] for i in pinecone_ranked],
-            "bm25_candidate_ids": [_chunk_metadata[i]["parent_id"] for i in bm25_ranked],
-            "fused_ranked_ids": [_chunk_metadata[i]["parent_id"] for i in fused_all[:top_k * 3]],
-        }
-        return results, debug_info
-    return results
+
+class CustomRetriever(BaseRetriever):
+    def __init__(
+        self,
+        pinecone_index,
+        parent_chunks: dict,
+        bm25: BM25Okapi,
+        bm25_parent_ids: list,
+        embed_model: OpenAIEmbedding,
+    ):
+        super().__init__()
+        self._pinecone_index = pinecone_index
+        self._parent_chunks = parent_chunks
+        self._bm25 = bm25
+        self._bm25_parent_ids = bm25_parent_ids
+        self._embed_model = embed_model
+        # Filter attributes — set before each retrieve() call
+        self.language: str = ""
+        self.min_stars: int = 0
+        self.topics: list = []
+
+    def _build_pc_filter(self) -> dict:
+        f = {}
+        if self.language:
+            f["language"] = {"$eq": self.language}
+        if self.min_stars:
+            f["stars"] = {"$gte": self.min_stars}
+        if self.topics:
+            f["topics"] = {"$in": self.topics}
+        return f
+
+    def _vector_search(self, query: str) -> dict:
+        vector = self._embed_model.get_text_embedding(query)
+        pc_filter = self._build_pc_filter()
+        kwargs = {"vector": vector, "top_k": 60, "include_metadata": True}
+        if pc_filter:
+            kwargs["filter"] = pc_filter
+        results = self._pinecone_index.query(**kwargs)
+        return _max_pool_vector_results(results.matches, limit=20)
+
+    def _bm25_search(self, query: str) -> dict:
+        tokenized = query.lower().split()
+        scores = self._bm25.get_scores(tokenized)
+        top20 = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:20]
+        ranked = {}
+        rank = 0
+        for idx in top20:
+            pid = self._bm25_parent_ids[idx]
+            meta = self._parent_chunks.get(pid, {})
+            if _apply_filter(meta, self.language, self.min_stars, self.topics):
+                ranked[pid] = rank
+                rank += 1
+        return ranked
+
+    def _retrieve(self, query_bundle: QueryBundle) -> list[NodeWithScore]:
+        query = query_bundle.query_str
+        vector_ranked = self._vector_search(query)
+        bm25_ranked = self._bm25_search(query)
+
+        ranked_lists = [d for d in [vector_ranked, bm25_ranked] if d]
+        if not ranked_lists:
+            return []
+
+        fused = _rrf(ranked_lists, top_k=5)
+
+        results = []
+        for pid in fused:
+            chunk = self._parent_chunks.get(pid)
+            if not chunk:
+                continue
+            node = TextNode(text=chunk["content"], metadata=chunk)
+            results.append(NodeWithScore(node=node, score=1.0))
+            if len(results) >= 5:
+                break
+        return results
+
+
+def load_retriever(pinecone_index) -> "CustomRetriever":
+    """Load all local artifacts and return a ready CustomRetriever."""
+    with open(_BASE / "parent_chunks.json", encoding="utf-8") as f:
+        parent_chunks = json.load(f)
+    with open(_BASE / "bm25_index.pkl", "rb") as f:
+        bm25 = pickle.load(f)
+    with open(_BASE / "bm25_parent_ids.json", encoding="utf-8") as f:
+        bm25_parent_ids = json.load(f)
+
+    assert len(bm25_parent_ids) == bm25.corpus_size, (
+        f"BM25 corpus size mismatch: {len(bm25_parent_ids)} ids vs {bm25.corpus_size} docs. "
+        "Regenerate bm25_index.pkl and bm25_parent_ids.json together."
+    )
+
+    embed_model = OpenAIEmbedding(
+        model="text-embedding-3-small",
+        api_key=os.environ["LLM_API_KEY"],
+        api_base=os.environ["LLM_API_URL"],
+    )
+    return CustomRetriever(
+        pinecone_index=pinecone_index,
+        parent_chunks=parent_chunks,
+        bm25=bm25,
+        bm25_parent_ids=bm25_parent_ids,
+        embed_model=embed_model,
+    )
