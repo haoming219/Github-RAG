@@ -55,6 +55,12 @@ eval/
 | 分层采样逻辑 | 保留 | **保留不变** |
 | `_generate_query` | 保留 | **保留不变** |
 
+**main() 中需要删除的逻辑：**
+- `_find_similar` 的调用及其结果变量（`extras`、`relevant_repo_ids`）
+- `_embed_all_repos` 的调用及相关 embedding cache 逻辑
+- `testset` 条目中的 `relevant_repo_ids` 字段
+- 输出路径改为 `testset_queries.json`（而非 `testset.json`）
+
 ### 4.2 输出格式
 
 ```json
@@ -93,8 +99,11 @@ eval/
 ```
 对每个 query：
   1. 从 parent_chunks.json 取出 source_repo 下所有父 chunk
+     过滤方式：chunk["full_name"] == source_repo
+     （等价于：parent_id 以 source_repo + "__" 开头）
   2. 逐 chunk 调用 LLM，传入完整 chunk content（不截断）
   3. LLM 返回 0 或 1（是否与 query relevant）
+     解析规则：response.strip().startswith("1") → 1，startswith("0") → 0，其他视为调用失败
   4. 收集所有标注为 1 的 chunk IDs → relevant_chunk_ids
   5. 后处理：若 len(relevant_chunk_ids) < 2，丢弃该条目
 ```
@@ -135,8 +144,8 @@ Reply with only 0 (not relevant) or 1 (relevant), no explanation.
 
 ### 5.5 容错与幂等
 
-- LLM 调用失败时跳过该 chunk（不标注为 1），记录 warning
-- 支持断点续跑：若 `testset.json` 已存在，跳过已处理的 query（按 `source_chunk_id` 判断）
+- LLM 调用异常或返回非 0/1 内容时：跳过该 chunk（不标注为 1），打印 warning，继续处理下一个 chunk
+- 支持断点续跑：启动时读取已有的 `testset.json`，提取其中所有 `meta.source_chunk_id`，跳过 `testset_queries.json` 中 `meta.source_chunk_id` 已在其中的条目
 
 ---
 
@@ -148,23 +157,31 @@ Reply with only 0 (not relevant) or 1 (relevant), no explanation.
 |------|--------|--------|
 | 检索调用 | `hybrid_search` / `_load_artifacts`（旧接口） | 直接使用 `CustomRetriever` |
 | relevant 粒度 | repo ID（`facebook/react`） | parent chunk ID（`facebook/react__1`） |
-| `retrieved_ids` | `r["parent_id"]` from hybrid_search 结果 | `n.metadata["parent_id"]` from `NodeWithScore` |
+| `retrieved_ids` | `r["parent_id"]` from hybrid_search 结果 | `n.node.metadata["parent_id"]` from `NodeWithScore` |
 | 环境变量 | `GLM_*` | `LLM_*` |
-| `_contribution_label` | `pinecone_candidate_ids` | `vector_candidate_ids`（对应 `last_debug`） |
+| `_contribution_label` 内部 key | `debug["pinecone_candidate_ids"]` | `debug["vector_candidate_ids"]` |
+| `_contribution_label` 返回值 | `"pinecone_only"` | `"vector_only"` |
+| `total_contrib` dict key | `"pinecone_only"` | `"vector_only"` |
+| 报告字段 | `"pinecone_only_pct"` | `"vector_only_pct"` |
+
+**环境变量：** `evaluate.py` 在运行时需要以下所有环境变量：
+- `PINECONE_API_KEY`，`PINECONE_INDEX_NAME`（Pinecone 连接）
+- `LLM_API_KEY`，`LLM_API_URL`（`load_retriever` 内部初始化 embedding 模型所需）
+- `LLM_MODEL_ID`（LLM judge 调用所需）
 
 ### 6.2 检索调用方式
 
 ```python
-# lifespan 初始化
+# 脚本启动时初始化（load_retriever 内部需要 LLM_API_KEY / LLM_API_URL）
 retriever = load_retriever(pinecone_index)
 
-# 每条 query
+# 每条 query（评估时不设过滤条件）
 retriever.language = ""
 retriever.min_stars = 0
 retriever.topics = []
 nodes = retriever.retrieve(query)
-retrieved_ids = [n.metadata["parent_id"] for n in nodes]
-debug = retriever.last_debug
+retrieved_ids = [n.node.metadata["parent_id"] for n in nodes]
+debug = retriever.last_debug  # {"vector_candidate_ids": [...], "bm25_candidate_ids": [...]}
 ```
 
 ### 6.3 指标定义
