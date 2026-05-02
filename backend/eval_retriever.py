@@ -1,6 +1,6 @@
 """
-Offline evaluation helper: wraps CustomRetriever in a RetrieverQueryEngine
-for interactive query testing without starting the FastAPI server.
+Offline evaluation helper: runs CustomRetriever directly for interactive
+query testing without starting the FastAPI server.
 
 Usage:
     cd backend
@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from pinecone import Pinecone
-from llama_index.core.query_engine import RetrieverQueryEngine
 from retriever import load_retriever
 
 _BASE = pathlib.Path(__file__).parent
@@ -24,10 +23,6 @@ def main():
     pinecone_index = pc.Index(os.environ["PINECONE_INDEX_NAME"])
 
     retriever = load_retriever(pinecone_index)
-
-    # Wire into RetrieverQueryEngine for offline evaluation
-    # (not used in production SSE path — see main.py)
-    engine = RetrieverQueryEngine.from_args(retriever=retriever)
 
     print(f"\nQuery: {query}\n{'='*60}")
     nodes = retriever.retrieve(query)

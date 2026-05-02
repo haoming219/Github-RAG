@@ -74,7 +74,7 @@ git commit -m "chore: replace sentence-transformers with llama-index-core + tikt
 - Rewrite: `backend/chunker.py`
 - Create: `backend/tests/test_chunker.py`
 
-- [ ] **Step 1: Create tests directory and write failing tests**
+- [x] **Step 1: Create tests directory and write failing tests**
 
 ```bash
 mkdir -p backend/tests
@@ -174,7 +174,7 @@ def test_split_into_children_child_index_sequential():
     assert indices == list(range(len(children)))
 ```
 
-- [ ] **Step 2: Run tests to confirm they fail**
+- [x] **Step 2: Run tests to confirm they fail**
 
 ```bash
 cd backend
@@ -183,7 +183,7 @@ python -m pytest tests/test_chunker.py -v 2>&1 | head -40
 
 Expected: multiple FAILED / ImportError on `split_into_children`
 
-- [ ] **Step 3: Rewrite chunker.py**
+- [x] **Step 3: Rewrite chunker.py**
 
 ```python
 import re
@@ -282,7 +282,7 @@ def split_into_children(parent: dict) -> list[dict]:
     return children
 ```
 
-- [ ] **Step 4: Run tests to confirm they pass**
+- [x] **Step 4: Run tests to confirm they pass**
 
 ```bash
 cd backend
@@ -291,7 +291,7 @@ python -m pytest tests/test_chunker.py -v
 
 Expected: all PASSED
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/chunker.py backend/tests/__init__.py backend/tests/test_chunker.py
@@ -306,7 +306,7 @@ git commit -m "feat(chunker): two-level chunking with SentenceSplitter and tikto
 - Rewrite: `backend/retriever.py`
 - Create: `backend/tests/test_retriever.py`
 
-- [ ] **Step 1: Write failing tests**
+- [x] **Step 1: Write failing tests**
 
 Create `backend/tests/test_retriever.py`:
 
@@ -398,7 +398,7 @@ def test_max_pool_records_first_seen_rank():
     assert result["repo/a__0"] == 0
 ```
 
-- [ ] **Step 2: Run tests to confirm they fail**
+- [x] **Step 2: Run tests to confirm they fail**
 
 ```bash
 cd backend
@@ -407,7 +407,7 @@ python -m pytest tests/test_retriever.py -v 2>&1 | head -40
 
 Expected: FAILED / ImportError
 
-- [ ] **Step 3: Rewrite retriever.py**
+- [x] **Step 3: Rewrite retriever.py**
 
 ```python
 import json, pickle, pathlib, os
@@ -564,7 +564,7 @@ def load_retriever(pinecone_index) -> "CustomRetriever":
     )
 ```
 
-- [ ] **Step 4: Run tests to confirm they pass**
+- [x] **Step 4: Run tests to confirm they pass**
 
 ```bash
 cd backend
@@ -573,7 +573,7 @@ python -m pytest tests/test_retriever.py -v
 
 Expected: all PASSED
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/retriever.py backend/tests/test_retriever.py
@@ -589,7 +589,7 @@ git commit -m "feat(retriever): CustomRetriever with BM25+vector+RRF hybrid sear
 
 Note: indexer.py is a one-shot script, not called at server startup. Tests require live API keys so we skip unit tests and rely on a dry-run smoke check instead.
 
-- [ ] **Step 1: Rewrite indexer.py**
+- [x] **Step 1: Rewrite indexer.py**
 
 ```python
 import os, json, pickle, ast, pathlib, time
@@ -777,7 +777,7 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 2: Smoke-test dry run (no API calls)**
+- [x] **Step 2: Smoke-test dry run (no API calls)**
 
 ```bash
 cd backend
@@ -805,7 +805,7 @@ Parents: 2
 Smoke test OK
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add backend/indexer.py
@@ -819,7 +819,7 @@ git commit -m "feat(indexer): rewrite with two-level chunking, OpenAIEmbedding, 
 **Files:**
 - Modify: `backend/llm.py:86`
 
-- [ ] **Step 1: Remove the [:800] truncation**
+- [x] **Step 1: Remove the [:800] truncation**
 
 In `backend/llm.py`, find `build_prompt_messages()` and change:
 
@@ -845,7 +845,7 @@ And update the variable name for clarity:
 
 remains unchanged (just the slice is removed).
 
-- [ ] **Step 2: Verify syntax**
+- [x] **Step 2: Verify syntax**
 
 ```bash
 cd backend
@@ -854,7 +854,7 @@ python -c "import llm; print('llm.py OK')"
 
 Expected: `llm.py OK`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add backend/llm.py
@@ -868,7 +868,7 @@ git commit -m "feat(llm): remove 800-char truncation on parent chunk content"
 **Files:**
 - Modify: `backend/main.py`
 
-- [ ] **Step 1: Rewrite main.py**
+- [x] **Step 1: Rewrite main.py**
 
 Replace the existing content with:
 
@@ -979,7 +979,7 @@ def health():
     return {"status": "ok"}
 ```
 
-- [ ] **Step 2: Verify syntax**
+- [x] **Step 2: Verify syntax**
 
 ```bash
 cd backend
@@ -988,7 +988,7 @@ python -c "import ast; ast.parse(open('main.py').read()); print('main.py syntax 
 
 Expected: `main.py syntax OK`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add backend/main.py
@@ -1001,7 +1001,7 @@ git commit -m "feat(main): replace hybrid_search with CustomRetriever.retrieve()
 
 **Files:** none
 
-- [ ] **Step 1: Run all backend tests**
+- [x] **Step 1: Run all backend tests**
 
 ```bash
 cd backend
@@ -1010,7 +1010,7 @@ python -m pytest tests/ -v
 
 Expected: all tests PASSED (test_chunker.py + test_retriever.py)
 
-- [ ] **Step 2: Verify server starts without errors (no live API keys needed for import check)**
+- [x] **Step 2: Verify server starts without errors (no live API keys needed for import check)**
 
 ```bash
 cd backend
@@ -1028,7 +1028,7 @@ print('main.py imports OK')
 
 Expected: `main.py imports OK`
 
-- [ ] **Step 3: Final commit**
+- [x] **Step 3: Final commit**
 
 ```bash
 git status  # confirm only expected files remain modified
@@ -1045,7 +1045,7 @@ git commit -m "chore: verify all tests pass after RAG upgrade"
 
 This is a standalone offline script (not part of the request path) that wires `CustomRetriever` into a `RetrieverQueryEngine` for interactive testing and evaluation, satisfying the spec requirement in §3.
 
-- [ ] **Step 1: Create eval_retriever.py**
+- [x] **Step 1: Create eval_retriever.py**
 
 ```python
 """
@@ -1094,7 +1094,7 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 2: Verify syntax**
+- [x] **Step 2: Verify syntax**
 
 ```bash
 cd backend
@@ -1103,7 +1103,7 @@ python -c "import ast; ast.parse(open('eval_retriever.py').read()); print('eval_
 
 Expected: `eval_retriever.py syntax OK`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add backend/eval_retriever.py
@@ -1139,7 +1139,7 @@ git add backend/parent_chunks.json backend/bm25_index.pkl backend/bm25_parent_id
 git commit -m "data: rebuild index with text-embedding-3-small and two-level chunking"
 ```
 
-- [ ] **Step 4: Smoke-test the running server**
+- [x] **Step 4: Smoke-test the running server**
 
 ```bash
 cd backend
