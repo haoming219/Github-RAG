@@ -40,9 +40,9 @@ def _score_chunk(client: OpenAI, query: str, chunk: dict) -> int | None:
     """Return 1 (relevant), 0 (not relevant), or None (parse/call failure)."""
     prompt = JUDGE_PROMPT.format(
         query=query,
-        full_name=chunk["full_name"],
-        section_title=chunk["section_title"],
-        content=chunk["content"],
+        full_name=chunk.get("full_name", ""),
+        section_title=chunk.get("section_title", ""),
+        content=chunk.get("content", ""),
     )
     try:
         resp = client.chat.completions.create(
