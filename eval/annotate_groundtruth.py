@@ -86,6 +86,8 @@ def main():
     if TESTSET_PATH.exists():
         with open(TESTSET_PATH, encoding="utf-8") as f:
             existing = json.load(f)
+        # Filter to v3-format entries only (old format lacks source_chunk_id)
+        existing = [item for item in existing if item.get("meta", {}).get("source_chunk_id")]
         done_ids = {item["meta"]["source_chunk_id"] for item in existing}
         print(f"Resuming: {len(done_ids)} queries already annotated", flush=True)
 
