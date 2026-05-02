@@ -162,7 +162,7 @@ Reply with only 0 (not relevant) or 1 (relevant), no explanation.
 ### 5.5 容错与幂等
 
 - LLM 调用异常或返回非 0/1 内容时：跳过该 chunk（不标注为 1），打印 warning，继续处理下一个 chunk
-- 支持断点续跑：启动时读取已有的 `testset.json`，提取其中所有 `meta.source_chunk_id`，跳过 `testset_queries.json` 中 `meta.source_chunk_id` 已在其中的条目
+- 支持断点续跑：启动时读取已有的 `testset.json`，提取其中所有 `item["meta"]["source_chunk_id"]`，跳过 `testset_queries.json` 中 `item["meta"]["source_chunk_id"]` 已在其中的条目（注意：`source_chunk_id` 是 `meta` 对象内的嵌套字段，不是顶层字段）
 - **被丢弃的条目（relevant < 2）不写入 `testset.json`，因此不会出现在已处理集合中，下次续跑时会重新处理。** 这是预期行为：重新处理的成本仅为该 repo 的 chunk 数量（通常 5~15 次 LLM 调用），可接受。如需避免重复调用，可自行维护一个单独的 `processed_chunk_ids.json` 跳过列表，但默认实现无需此机制。
 
 ---
@@ -217,6 +217,7 @@ debug = retriever.last_debug  # {"vector_candidate_ids": [...], "bm25_candidate_
 - `ground_truth_hits`：retrieved 中属于 `relevant_chunk_ids` 的数量
 - `judge_hits`：retrieved 中不属于 `relevant_chunk_ids`、但 LLM judge 返回 1 的数量
 - `judge_valid`：retrieved 中属于 `relevant_chunk_ids`、或 LLM judge 返回有效值（0 或 1）的数量（即排除 judge 调用失败的条目）
+- **注意：** 属于 `relevant_chunk_ids` 的条目不调用 LLM judge（relevance 已知），但始终计入 `judge_valid`；LLM judge 仅对不在 `relevant_chunk_ids` 中的条目调用
 
 ### 6.4 报告结构
 
