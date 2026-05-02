@@ -76,8 +76,9 @@ def main():
     # Build lookup: full_name -> list of chunk dicts (all sections for that repo)
     repo_chunks: dict[str, list[dict]] = {}
     for chunk in all_chunks.values():
-        fn = chunk["full_name"]
-        repo_chunks.setdefault(fn, []).append(chunk)
+        fn = chunk.get("full_name") or ""
+        if fn:
+            repo_chunks.setdefault(fn, []).append(chunk)
 
     # Resume support: load already-annotated source_chunk_ids
     done_ids: set[str] = set()
@@ -113,8 +114,9 @@ def main():
         relevant_chunk_ids = []
         for chunk in candidates:
             score = _score_chunk(client, query, chunk)
-            if score == 1:
-                relevant_chunk_ids.append(chunk["parent_id"])
+            pid = chunk.get("parent_id")
+            if score == 1 and pid:
+                relevant_chunk_ids.append(pid)
 
         if len(relevant_chunk_ids) < MIN_RELEVANT:
             print(f"  → discarded (only {len(relevant_chunk_ids)} relevant chunk(s))", flush=True)
