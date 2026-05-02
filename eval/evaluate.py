@@ -121,6 +121,24 @@ def _contribution_label(chunk_id: str, debug: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Aggregation helpers
+# ---------------------------------------------------------------------------
+
+def _mean(key: str, per_query: list[dict]) -> float:
+    vals = [q[key] for q in per_query]
+    return round(sum(vals) / len(vals), 4) if vals else 0.0
+
+
+def _mean_by(key: str, field: str, value: str, per_query: list[dict]) -> float:
+    vals = [q[key] for q in per_query if q.get(field) == value]
+    return round(sum(vals) / len(vals), 4) if vals else 0.0
+
+
+def _contrib_pct(label: str, total_contrib: dict, total_slots: int) -> float:
+    return round(total_contrib.get(label, 0) / total_slots, 4) if total_slots > 0 else 0.0
+
+
+# ---------------------------------------------------------------------------
 # Main evaluation loop
 # ---------------------------------------------------------------------------
 
@@ -148,7 +166,7 @@ def main():
 
         print(f"[{i+1}/{len(testset)}] {query[:60]}...", flush=True)
 
-        # Retrieve with no filters (evaluation uses full index)
+        # CustomRetriever reads language/min_stars/topics as late-bound attrs in _retrieve()
         retriever.language  = ""
         retriever.min_stars = 0
         retriever.topics    = []
@@ -205,18 +223,7 @@ def main():
     # Aggregation
     # ---------------------------------------------------------------------------
 
-    def _mean(key):
-        vals = [q[key] for q in per_query]
-        return round(sum(vals) / len(vals), 4) if vals else 0.0
-
-    def _mean_by(key, field, value):
-        vals = [q[key] for q in per_query if q.get(field) == value]
-        return round(sum(vals) / len(vals), 4) if vals else 0.0
-
     total_slots = sum(len(q["retrieved"]) for q in per_query)
-
-    def _contrib_pct(label):
-        return round(total_contrib.get(label, 0) / total_slots, 4) if total_slots > 0 else 0.0
 
     langs = {q["meta"].get("language") for q in per_query if q["meta"].get("language")}
     by_language = {}
@@ -252,22 +259,22 @@ def main():
         "date":          str(date.today()),
         "total_queries": len(per_query),
         "metrics": {
-            "precision_at_5":      _mean("precision"),
-            "recall_at_5":         _mean("recall"),
-            "mrr":                 _mean("mrr"),
-            "soft_precision_at_5": _mean("soft_precision"),
+            "precision_at_5":      _mean("precision", per_query),
+            "recall_at_5":         _mean("recall", per_query),
+            "mrr":                 _mean("mrr", per_query),
+            "soft_precision_at_5": _mean("soft_precision", per_query),
         },
         "relevant_count_distribution": rel_dist,
         "contribution": {
-            "bm25_only_pct":    _contrib_pct("bm25_only"),
-            "vector_only_pct":  _contrib_pct("vector_only"),
-            "both_pct":         _contrib_pct("both"),
-            "unknown_pct":      _contrib_pct("unknown"),
+            "bm25_only_pct":    _contrib_pct("bm25_only", total_contrib, total_slots),
+            "vector_only_pct":  _contrib_pct("vector_only", total_contrib, total_slots),
+            "both_pct":         _contrib_pct("both", total_contrib, total_slots),
+            "unknown_pct":      _contrib_pct("unknown", total_contrib, total_slots),
         },
         "by_query_type": {
             qt: {
-                "precision_at_5": _mean_by("precision", "query_type", qt),
-                "mrr":            _mean_by("mrr", "query_type", qt),
+                "precision_at_5": _mean_by("precision", "query_type", qt, per_query),
+                "mrr":            _mean_by("mrr", "query_type", qt, per_query),
             }
             for qt in ("semantic", "keyword")
         },
