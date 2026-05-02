@@ -106,6 +106,11 @@ class CustomRetriever(BaseRetriever):
         vector_ranked = self._vector_search(query)
         bm25_ranked = self._bm25_search(query)
 
+        self.last_debug = {
+            "vector_candidate_ids": list(vector_ranked.keys()),
+            "bm25_candidate_ids":   list(bm25_ranked.keys()),
+        }
+
         ranked_lists = [d for d in [vector_ranked, bm25_ranked] if d]
         if not ranked_lists:
             return []

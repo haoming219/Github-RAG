@@ -83,3 +83,44 @@ def test_max_pool_records_first_seen_rank():
     ]
     result = _max_pool_vector_results(matches, limit=20)
     assert result["repo/a__0"] == 0
+
+
+def test_last_debug_populated():
+    """_retrieve() must write last_debug with both candidate lists after every call."""
+    import types, json, pickle, pathlib, os
+    # Build a minimal CustomRetriever with no-op internals
+    from retriever import CustomRetriever, _rrf
+
+    class _FakeEmbed:
+        def get_text_embedding(self, text):
+            return [0.0] * 1536
+
+    class _FakePinecone:
+        def query(self, **kwargs):
+            ns = types.SimpleNamespace()
+            ns.matches = []
+            return ns
+
+    # One-entry BM25 so corpus_size=1
+    from rank_bm25 import BM25Okapi
+    bm25 = BM25Okapi([["hello"]])
+    parent_chunks = {"repo/a__0": {"content": "hello world", "full_name": "repo/a",
+                                    "language": "", "stars": 0, "topics": []}}
+    bm25_parent_ids = ["repo/a__0"]
+
+    retriever = CustomRetriever(
+        pinecone_index=_FakePinecone(),
+        parent_chunks=parent_chunks,
+        bm25=bm25,
+        bm25_parent_ids=bm25_parent_ids,
+        embed_model=_FakeEmbed(),
+    )
+
+    from llama_index.core.schema import QueryBundle
+    retriever._retrieve(QueryBundle(query_str="hello"))
+
+    assert hasattr(retriever, "last_debug")
+    assert "vector_candidate_ids" in retriever.last_debug
+    assert "bm25_candidate_ids" in retriever.last_debug
+    assert isinstance(retriever.last_debug["vector_candidate_ids"], list)
+    assert isinstance(retriever.last_debug["bm25_candidate_ids"], list)
