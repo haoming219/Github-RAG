@@ -83,7 +83,7 @@ def build_prompt_messages(retrieved_docs: list[dict], messages: list[dict]) -> l
     # Build context string from retrieved docs
     context_parts = []
     for i, doc in enumerate(retrieved_docs):
-        snippet = doc.get("content", "")[:800]
+        snippet = doc.get("content", "")
         repo_name = doc.get("full_name", "")
         language = doc.get("language", "")
         stars = doc.get("stars", 0)
