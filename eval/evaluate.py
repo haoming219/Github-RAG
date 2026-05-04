@@ -160,7 +160,7 @@ def main():
 
     for i, item in enumerate(testset):
         query      = item["query"]
-        relevant   = set(item["relevant_chunk_ids"])
+        relevant   = set(item.get("refined_chunk_ids") or item["relevant_chunk_ids"])
         query_type = item.get("query_type", "unknown")
         meta_info  = item.get("meta", {})
 
