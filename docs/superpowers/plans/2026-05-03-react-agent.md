@@ -86,7 +86,7 @@ git commit -m "chore: add httpx, google-search-results, llama-index-agent-openai
 - Create: `backend/agent/types.py`
 - Create: `backend/agent/__init__.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/tests/agent/__init__.py`（空文件），然后创建 `backend/tests/agent/test_types.py`：
 
@@ -114,7 +114,7 @@ def test_code_result_keys():
     assert "snippet" in c
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -123,7 +123,7 @@ pytest tests/agent/test_types.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent'`
 
-- [ ] **Step 3: 创建包文件与类型定义**
+- [x] **Step 3: 创建包文件与类型定义**
 
 创建 `backend/agent/__init__.py`（空文件）。
 
@@ -160,7 +160,7 @@ class CodeResult(TypedDict):
     url: str
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -169,7 +169,7 @@ pytest tests/agent/test_types.py -v
 
 Expected: 3 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/__init__.py backend/agent/types.py backend/tests/agent/__init__.py backend/tests/agent/test_types.py
@@ -185,7 +185,7 @@ git commit -m "feat(agent): add TypedDict definitions for RepoResult, RepoProfil
 - Create: `backend/agent/tools/knowledge_base.py`
 - Test: `backend/tests/agent/test_tools_kb.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/agent/tools/__init__.py`（空文件）。
 
@@ -247,7 +247,7 @@ def test_sorted_by_score_descending():
     assert results[0]["score"] >= results[1]["score"]
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -256,7 +256,7 @@ pytest tests/agent/test_tools_kb.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent.tools.knowledge_base'`
 
-- [ ] **Step 3: 实现 `knowledge_base.py`**
+- [x] **Step 3: 实现 `knowledge_base.py`**
 
 创建 `backend/agent/tools/knowledge_base.py`：
 
@@ -295,7 +295,7 @@ def search_knowledge_base(query: str) -> list[RepoResult]:
     return results[:5]
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -304,7 +304,7 @@ pytest tests/agent/test_tools_kb.py -v
 
 Expected: 3 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/tools/__init__.py backend/agent/tools/knowledge_base.py backend/tests/agent/test_tools_kb.py
@@ -319,7 +319,7 @@ git commit -m "feat(agent): implement search_knowledge_base tool wrapping existi
 - Create: `backend/agent/tools/github.py`
 - Test: `backend/tests/agent/test_tools_github.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/tests/agent/test_tools_github.py`：
 
@@ -438,7 +438,7 @@ def test_github_get_file_short_content_not_truncated():
     assert result == content
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -447,7 +447,7 @@ pytest tests/agent/test_tools_github.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent.tools.github'`
 
-- [ ] **Step 3: 实现 `github.py`**
+- [x] **Step 3: 实现 `github.py`**
 
 创建 `backend/agent/tools/github.py`：
 
@@ -601,7 +601,7 @@ def github_get_file(repo: str, path: str) -> str:
     )
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -610,7 +610,7 @@ pytest tests/agent/test_tools_github.py -v
 
 Expected: 8 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/tools/github.py backend/tests/agent/test_tools_github.py
@@ -625,7 +625,7 @@ git commit -m "feat(agent): implement github_repo_info, github_search_code, gith
 - Create: `backend/agent/tools/web_search.py`
 - Test: `backend/tests/agent/test_tools_web_search.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/tests/agent/test_tools_web_search.py`：
 
@@ -702,7 +702,7 @@ def test_handles_api_exception():
     assert "[web_search 错误" in result
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -711,7 +711,7 @@ pytest tests/agent/test_tools_web_search.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent.tools.web_search'`
 
-- [ ] **Step 3: 实现 `web_search.py`**
+- [x] **Step 3: 实现 `web_search.py`**
 
 创建 `backend/agent/tools/web_search.py`：
 
@@ -749,7 +749,7 @@ def web_search(query: str) -> str:
     return "\n\n".join(lines)
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -758,7 +758,7 @@ pytest tests/agent/test_tools_web_search.py -v
 
 Expected: 5 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/tools/web_search.py backend/tests/agent/test_tools_web_search.py
@@ -773,7 +773,7 @@ git commit -m "feat(agent): implement web_search tool via SerpAPI, replacing fet
 - Create: `backend/agent/tools/report.py`
 - Test: `backend/tests/agent/test_tools_report.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/tests/agent/test_tools_report.py`：
 
@@ -821,7 +821,7 @@ def test_generate_report_content_includes_repo_name(tmp_path):
     assert "encode/httpx" in result["content"]
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -830,7 +830,7 @@ pytest tests/agent/test_tools_report.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent.tools.report'`
 
-- [ ] **Step 3: 实现 `report.py`**
+- [x] **Step 3: 实现 `report.py`**
 
 创建 `backend/agent/tools/report.py`：
 
@@ -919,7 +919,7 @@ def _render_markdown(repo: str, content: dict) -> str:
 """
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -928,7 +928,7 @@ pytest tests/agent/test_tools_report.py -v
 
 Expected: 5 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/tools/report.py backend/tests/agent/test_tools_report.py
@@ -942,7 +942,7 @@ git commit -m "feat(agent): implement generate_report tool saving markdown to re
 **Files:**
 - Create: `backend/agent/prompts.py`
 
-- [ ] **Step 1: 创建 `prompts.py`**
+- [x] **Step 1: 创建 `prompts.py`**
 
 创建 `backend/agent/prompts.py`：
 
@@ -967,7 +967,7 @@ REACT_AGENT_SYSTEM_PROMPT = """\
 """
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add backend/agent/prompts.py
@@ -982,7 +982,7 @@ git commit -m "feat(agent): add ReAct agent system prompt"
 - Create: `backend/agent/session.py`
 - Test: `backend/tests/agent/test_session.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 创建 `backend/tests/agent/test_session.py`：
 
@@ -1033,7 +1033,7 @@ def test_touch_updates_last_active(manager):
     assert manager._sessions["sid-4"]["last_active"] > old_ts
 ```
 
-- [ ] **Step 2: 运行，确认失败**
+- [x] **Step 2: 运行，确认失败**
 
 ```bash
 cd backend
@@ -1042,7 +1042,7 @@ pytest tests/agent/test_session.py -v
 
 Expected: `ModuleNotFoundError: No module named 'agent.session'`
 
-- [ ] **Step 3: 实现 `session.py`**
+- [x] **Step 3: 实现 `session.py`**
 
 创建 `backend/agent/session.py`：
 
@@ -1079,7 +1079,7 @@ class SessionManager:
         return self._locks[session_id]
 ```
 
-- [ ] **Step 4: 运行，确认通过**
+- [x] **Step 4: 运行，确认通过**
 
 ```bash
 cd backend
@@ -1088,7 +1088,7 @@ pytest tests/agent/test_session.py -v
 
 Expected: 4 passed
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add backend/agent/session.py backend/tests/agent/test_session.py
