@@ -11,7 +11,7 @@ from agent.tools.github import github_repo_info, github_search_code, github_get_
 from agent.tools.web_search import web_search
 from agent.tools.report import generate_report
 
-MAX_ITERATIONS = 8
+MAX_ITERATIONS = 10
 
 
 def _make_tools() -> list[FunctionTool]:
