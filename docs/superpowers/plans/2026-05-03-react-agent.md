@@ -1102,7 +1102,7 @@ git commit -m "feat(agent): implement SessionManager with TTL expiry and per-ses
 **Files:**
 - Create: `backend/agent/agent.py`
 
-- [ ] **Step 1: 创建 `agent.py`**
+- [x] **Step 1: 创建 `agent.py`**
 
 创建 `backend/agent/agent.py`：
 
@@ -1149,7 +1149,7 @@ def create_agent() -> ReActAgent:
     )
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add backend/agent/agent.py
@@ -1163,7 +1163,7 @@ git commit -m "feat(agent): wire up ReActAgent with all tools and system prompt"
 **Files:**
 - Modify: `backend/main.py`
 
-- [ ] **Step 1: 读取现有 `main.py` 确认当前结构**
+- [x] **Step 1: 读取现有 `main.py` 确认当前结构**
 
 运行：
 
@@ -1174,7 +1174,7 @@ grep -n "def \|async def \|@app\." main.py
 
 预期看到 `lifespan`、`/api/chat`、`/api/filters/options`、`/health` 等端点。
 
-- [ ] **Step 2: 在 `main.py` 中添加 Agent 初始化与端点**
+- [x] **Step 2: 在 `main.py` 中添加 Agent 初始化与端点**
 
 在 `main.py` 中进行以下修改：
 
@@ -1319,7 +1319,7 @@ async def get_report(filename: str):
     return PlainTextResponse(file_path.read_text(encoding="utf-8"))
 ```
 
-- [ ] **Step 3: 手动启动服务器，验证端点注册**
+- [ ] **Step 3: 手动启动服务器，验证端点注册** *(需手动执行)*
 
 ```bash
 cd backend
@@ -1342,7 +1342,7 @@ Expected: 输出 `1`（端点已注册）
 
 停止服务器（Ctrl+C）。
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add backend/main.py
@@ -1353,7 +1353,7 @@ git commit -m "feat(agent): add /agent/chat SSE endpoint and /agent/reports/{fil
 
 ## Task 11：全量测试 & 最终验证
 
-- [ ] **Step 1: 运行所有测试，确认全部通过**
+- [x] **Step 1: 运行所有测试，确认全部通过**
 
 ```bash
 cd backend
@@ -1362,7 +1362,7 @@ pytest tests/ -v
 
 Expected: 全部 PASSED，无 FAILED/ERROR
 
-- [ ] **Step 2: 验证目录结构符合设计文档**
+- [x] **Step 2: 验证目录结构符合设计文档**
 
 ```bash
 find backend/agent -type f | sort
@@ -1383,7 +1383,7 @@ backend/agent/tools/report.py
 backend/agent/types.py
 ```
 
-- [ ] **Step 3: 端对端冒烟测试（需要实际环境变量）**
+- [x] **Step 3: 端对端冒烟测试（需要实际环境变量）**
 
 确认 `.env` 已配置 `PINECONE_API_KEY`、`LLM_API_KEY`、`LLM_API_URL`，然后：
 
@@ -1398,7 +1398,7 @@ curl -s -X POST http://localhost:8000/agent/chat \
 
 Expected: 看到 SSE 格式的 `data: {"type": "token", ...}` 输出流。
 
-- [ ] **Step 4: Commit（如有未提交改动）**
+- [x] **Step 4: Commit（如有未提交改动）**
 
 ```bash
 git add -A
