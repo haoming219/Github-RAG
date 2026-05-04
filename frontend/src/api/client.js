@@ -7,15 +7,18 @@ export async function getFilterOptions() {
 }
 
 /**
- * Send chat request and call onChunk(text) for each streaming chunk.
- * Calls onDone() when stream ends. Calls onError(err) on failure.
+ * Send a message to the ReAct agent endpoint.
+ * onStep(text)  — called for each agent_step event
+ * onToken(text) — called for each token event
+ * onDone()      — called when stream ends
+ * onError(err)  — called on failure
  */
-export async function sendChat({ messages, filters, onChunk, onDone, onError }) {
+export async function sendAgentChat({ sessionId, message, onStep, onToken, onDone, onError }) {
   try {
-    const res = await fetch(`${API_URL}/api/chat`, {
+    const res = await fetch(`${API_URL}/agent/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages, filters }),
+      body: JSON.stringify({ session_id: sessionId, message }),
     });
 
     if (!res.ok) {
@@ -33,7 +36,7 @@ export async function sendChat({ messages, filters, onChunk, onDone, onError }) 
       buffer += decoder.decode(value, { stream: true });
 
       const lines = buffer.split("\n");
-      buffer = lines.pop(); // keep incomplete line in buffer
+      buffer = lines.pop();
 
       for (const line of lines) {
         if (!line.startsWith("data: ")) continue;
@@ -44,7 +47,9 @@ export async function sendChat({ messages, filters, onChunk, onDone, onError }) 
         }
         try {
           const parsed = JSON.parse(data);
-          if (parsed.text) onChunk(parsed.text);
+          if (parsed.type === "agent_step") onStep(parsed.content);
+          else if (parsed.type === "token") onToken(parsed.content);
+          else if (parsed.type === "error") onError(new Error(parsed.content));
         } catch {
           // ignore malformed lines
         }

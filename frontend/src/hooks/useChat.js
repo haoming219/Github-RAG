@@ -1,15 +1,15 @@
-import { useState, useCallback } from "react";
-import { sendChat } from "../api/client";
+import { useState, useCallback, useRef } from "react";
+import { sendAgentChat } from "../api/client";
+
+function makeId() {
+  return Math.random().toString(36).slice(2);
+}
 
 export function useChat() {
+  const sessionId = useRef(makeId()).current;
   const [messages, setMessages] = useState([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [error, setError] = useState(null);
-  const [filters, setFilters] = useState({
-    language: "",
-    min_stars: 0,
-    topics: [],
-  });
 
   const sendMessage = useCallback(
     (userText) => {
@@ -17,21 +17,30 @@ export function useChat() {
       setError(null);
 
       const userMsg = { role: "user", content: userText };
-      const assistantMsg = { role: "assistant", content: "" };
+      // assistant message carries steps[] for tool call display
+      const assistantMsg = { role: "assistant", content: "", steps: [] };
 
       setMessages((prev) => [...prev, userMsg, assistantMsg]);
       setIsStreaming(true);
 
-      sendChat({
-        messages: [...messages, userMsg],
-        filters,
-        onChunk: (text) => {
+      sendAgentChat({
+        sessionId,
+        message: userText,
+        onStep: (text) => {
           setMessages((prev) => {
             const updated = [...prev];
-            updated[updated.length - 1] = {
-              ...updated[updated.length - 1],
-              content: updated[updated.length - 1].content + text,
-            };
+            const last = updated[updated.length - 1];
+            if (!last || last.role !== "assistant") return prev;
+            updated[updated.length - 1] = { ...last, steps: [...last.steps, text] };
+            return updated;
+          });
+        },
+        onToken: (char) => {
+          setMessages((prev) => {
+            const updated = [...prev];
+            const last = updated[updated.length - 1];
+            if (!last || last.role !== "assistant") return prev;
+            updated[updated.length - 1] = { ...last, content: last.content + char };
             return updated;
           });
         },
@@ -42,8 +51,8 @@ export function useChat() {
         },
       });
     },
-    [messages, filters, isStreaming]
+    [messages, isStreaming, sessionId]
   );
 
-  return { messages, isStreaming, error, filters, setFilters, sendMessage };
+  return { messages, isStreaming, error, sendMessage };
 }

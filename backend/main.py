@@ -4,14 +4,15 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from pinecone import Pinecone
 from pydantic import BaseModel
 
 from llama_index.core.callbacks import CallbackManager, CBEventType
 from llama_index.core.callbacks.base import BaseCallbackHandler
+from llama_index.core.callbacks.schema import EventPayload
 from llama_index.core.agent import AgentChatResponse
 
 from models import ChatRequest, FilterOptions, StarsRange
@@ -23,15 +24,15 @@ from agent.tools.knowledge_base import init_retriever as init_kb_retriever
 
 _session_manager = SessionManager(ttl_seconds=30 * 60)
 
-
-class AgentChatRequest(BaseModel):
-    session_id: str
-    message: str
-
 _BASE = pathlib.Path(__file__).parent
 
 _retriever = None
 _filter_options: dict = {}
+
+
+class AgentChatRequest(BaseModel):
+    session_id: str
+    message: str
 
 
 @asynccontextmanager
@@ -62,10 +63,11 @@ origins = os.environ.get("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
-
 
 @app.get("/api/filters/options", response_model=FilterOptions)
 def filters_options():
@@ -104,11 +106,16 @@ async def chat(request: ChatRequest):
         import time
         first_chunk = True
         t_start = time.perf_counter()
-        for chunk in stream_answer(docs, messages_dicts):
-            if first_chunk:
-                print(f"[timing] time to first LLM chunk: {time.perf_counter() - t_start:.2f}s", flush=True)
-                first_chunk = False
-            yield chunk
+        try:
+            for chunk in stream_answer(docs, messages_dicts):
+                if first_chunk:
+                    print(f"[timing] time to first LLM chunk: {time.perf_counter() - t_start:.2f}s", flush=True)
+                    first_chunk = False
+                yield chunk
+        except Exception as e:
+            logging.exception("stream_answer error")
+            yield f'data: {{"text": "流式响应错误：{type(e).__name__}: {str(e)[:100]}"}}\n\n'
+            yield "data: [DONE]\n\n"
         print(f"[timing] total stream: {time.perf_counter() - t_start:.2f}s", flush=True)
         print(f"[timing] total request: {time.perf_counter() - t0:.2f}s", flush=True)
 
@@ -136,24 +143,29 @@ class _SseStepHandler(BaseCallbackHandler):
         "generate_report": "正在生成完整报告...",
     }
 
-    def __init__(self, queue: asyncio.Queue):
+    def __init__(self, queue: asyncio.Queue, loop: asyncio.AbstractEventLoop):
         super().__init__(event_starts_to_ignore=[], event_ends_to_ignore=[])
         self._queue = queue
-        self._loop = asyncio.get_event_loop()
+        self._loop = loop
 
     def on_event_start(self, event_type, payload=None, **kwargs):
         if event_type == CBEventType.FUNCTION_CALL:
-            tool_name = (payload or {}).get("tool", {}).get("name", "")
-            tool_input = str((payload or {}).get("tool_input", ""))[:80]
+            p = payload or {}
+            tool_meta = p.get(EventPayload.TOOL)
+            tool_name = tool_meta.get_name() if tool_meta else ""
+            tool_input = str(p.get(EventPayload.FUNCTION_CALL, ""))[:80]
             tpl = self.TOOL_MESSAGES.get(tool_name, f"正在调用工具：{tool_name}")
             msg = tpl.format(input=tool_input)
+            print(f"[agent_step] {msg}", flush=True)
             self._loop.call_soon_threadsafe(
                 self._queue.put_nowait,
                 json.dumps({"type": "agent_step", "content": msg}, ensure_ascii=False),
             )
 
     def on_event_end(self, event_type, payload=None, **kwargs):
-        pass
+        if event_type == CBEventType.FUNCTION_CALL:
+            output = str((payload or {}).get(EventPayload.FUNCTION_OUTPUT, ""))[:300]
+            print(f"[agent_tool_output] {output}", flush=True)
 
     def start_trace(self, trace_id=None): pass
     def end_trace(self, trace_id=None, trace_map=None): pass
@@ -166,15 +178,16 @@ async def agent_chat(request: AgentChatRequest):
 
     async def event_stream():
         queue: asyncio.Queue = asyncio.Queue()
-        handler = _SseStepHandler(queue)
+        handler = _SseStepHandler(queue, asyncio.get_running_loop())
 
         async with lock:
             agent = _session_manager.get_or_create(session_id, factory=create_agent)
-            agent.callback_manager = CallbackManager([handler])
+            cb = CallbackManager([handler])
+            agent.agent_worker.callback_manager = cb
             _session_manager.touch(session_id)
 
             try:
-                loop = asyncio.get_event_loop()
+                loop = asyncio.get_running_loop()
                 fut = loop.run_in_executor(None, lambda: agent.chat(request.message))
 
                 while not fut.done():
@@ -189,7 +202,7 @@ async def agent_chat(request: AgentChatRequest):
                     yield f"data: {msg}\n\n"
 
                 response: AgentChatResponse = await fut
-                for char in str(response):
+                for char in response.response:
                     yield f"data: {json.dumps({'type': 'token', 'content': char}, ensure_ascii=False)}\n\n"
 
             except Exception as e:
