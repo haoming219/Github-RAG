@@ -10,7 +10,7 @@
 当前系统是一个针对 GitHub 仓库的 RAG 检索系统，能从向量知识库中检索相关仓库和代码片段。本次升级目标是将其扩展为一个**仓库推荐与深度调研 Agent**，使其能够：
 
 - 根据用户模糊的概念问题，从知识库中推荐相关仓库
-- 当知识库信息不足时，自动调用外部工具（GitHub API、网页抓取等）补充信息
+- 当知识库信息不足时，自动调用外部工具（GitHub API、网络搜索等）补充信息
 - 当用户直接提供 GitHub 链接时，自动触发完整分析流程
 - 最终能为用户生成一份结构化的完整仓库画像报告
 
@@ -36,7 +36,7 @@ backend/
 │   ├── tools/
 │   │   ├── knowledge_base.py   # 封装现有 retriever.py
 │   │   ├── github.py           # GitHub API 工具集
-│   │   ├── fetch_url.py        # 网页内容抓取
+│   │   ├── web_search.py       # SerpAPI 网络搜索
 │   │   └── report.py           # 报告生成与保存
 │   └── prompts.py        # Agent system prompt
 ├── main.py               # FastAPI，新增 /agent/chat 端点
@@ -64,7 +64,7 @@ class RepoProfile(TypedDict):
     forks: int
     language: str
     license: str          # SPDX 标识，如 "MIT"，无则为 ""
-    readme_summary: str   # LLM 提炼的 README 摘要，200字以内
+    readme_summary: str   # LLM 提炼的 README 摘要，500字以内
     last_commit: str      # ISO 8601 日期字符串
     commits_last_30d: int
     top_contributors: list[str]   # GitHub 用户名列表，最多5个
@@ -98,13 +98,15 @@ class CodeResult(TypedDict):
 - 长度限制：返回内容超过 **8000 字符**时，截取前 4000 字符 + 末尾 4000 字符，中间插入 `\n[...内容已截断，共 {total} 字符...]\n`
 - 不额外调用 LLM 做摘要，截断标记足以让 Agent 判断是否需要进一步查询特定部分
 
-### 4.5 `fetch_url(url: str) → str`
-- 抓取任意 URL 页面内容并提取纯文本（去除 HTML 标签）
-- **SSRF 防护：** 拒绝以下请求，返回错误字符串 `"[fetch_url 错误：不允许访问该地址]"`：
-  - 私有 IP 范围（`10.x`, `172.16-31.x`, `192.168.x`, `127.x`, `169.254.x`）
-  - 非 HTTP/HTTPS 协议
-  - 仅允许公网可路由 IP 或公共域名
-- 长度限制：返回内容超过 **8000 字符**时，截取前 8000 字符并追加 `[内容已截断]`
+### 4.5 `web_search(query: str) → str`
+- 通过 SerpAPI 在互联网上搜索，返回结构化的搜索结果摘要
+- **典型使用场景：**
+  - 搜索仓库相关的教程博客（如 "encode/httpx tutorial blog"）
+  - 发现类似仓库推荐（如 "Python async HTTP client alternatives"）
+  - 获取某项技术的介绍性说明
+- **实现：** 调用 SerpAPI `GET /search`，通过环境变量 `SERPAPI_API_KEY` 认证；默认使用 Google 引擎
+- **返回格式：** 将结果格式化为可读字符串，每条结果包含标题、摘要、链接，最多返回 **5 条**
+- **错误处理：** API key 未配置或请求失败时，返回 `"[web_search 错误：{原因}]"`
 
 ### 4.6 `generate_report(repo: str, content: dict) → str`
 - `repo`：`"owner/repo"` 格式，用于生成文件名
@@ -169,7 +171,7 @@ class CodeResult(TypedDict):
 - 最近活跃度（最后 commit 时间、过去30天 commit 数）
 
 ## 2. 项目简介
-- README 摘要（LLM 提炼，200字以内）
+- README 摘要（LLM 提炼，500字以内）
 
 ## 3. 核心架构
 - 目录结构概览

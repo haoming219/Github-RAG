@@ -41,3 +41,9 @@ eval/repo_embeddings_index.json
 
 # Interview prep (personal notes, not for public repo)
 docs/interview-prep-rag.md
+
+# IDE
+.idea/
+
+# Personal files
+resume.tex
