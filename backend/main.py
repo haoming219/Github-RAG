@@ -1,5 +1,6 @@
-import os, json, pathlib
+import os, json, pathlib, asyncio, logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -7,10 +8,25 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pinecone import Pinecone
+from pydantic import BaseModel
+
+from llama_index.core.callbacks import CallbackManager, CBEventType
+from llama_index.core.callbacks.base import BaseCallbackHandler
+from llama_index.core.agent import AgentChatResponse
 
 from models import ChatRequest, FilterOptions, StarsRange
 from retriever import load_retriever
 from llm import stream_answer
+from agent.agent import create_agent
+from agent.session import SessionManager
+from agent.tools.knowledge_base import init_retriever as init_kb_retriever
+
+_session_manager = SessionManager(ttl_seconds=30 * 60)
+
+
+class AgentChatRequest(BaseModel):
+    session_id: str
+    message: str
 
 _BASE = pathlib.Path(__file__).parent
 
@@ -31,6 +47,10 @@ async def lifespan(app: FastAPI):
     print("[startup] Loading filter_options.json...", flush=True)
     with open(_BASE / "filter_options.json", encoding="utf-8") as f:
         _filter_options = json.load(f)
+
+    init_kb_retriever(_retriever)
+    if not os.getenv("GITHUB_TOKEN"):
+        logging.warning("GITHUB_TOKEN not set — GitHub API rate limit: 60 req/hour (anonymous)")
 
     print("[startup] Ready.", flush=True)
     yield
@@ -102,3 +122,89 @@ async def chat(request: ChatRequest):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+class _SseStepHandler(BaseCallbackHandler):
+    """将 LlamaIndex 工具调用事件写入异步队列，供 SSE 流读取。"""
+
+    TOOL_MESSAGES = {
+        "search_knowledge_base": "正在查询知识库...",
+        "github_repo_info": "正在从 GitHub 获取仓库信息：{input}",
+        "github_search_code": "正在搜索代码：{input}",
+        "github_get_file": "正在读取文件：{input}",
+        "web_search": "正在搜索互联网：{input}",
+        "generate_report": "正在生成完整报告...",
+    }
+
+    def __init__(self, queue: asyncio.Queue):
+        super().__init__(event_starts_to_ignore=[], event_ends_to_ignore=[])
+        self._queue = queue
+        self._loop = asyncio.get_event_loop()
+
+    def on_event_start(self, event_type, payload=None, **kwargs):
+        if event_type == CBEventType.FUNCTION_CALL:
+            tool_name = (payload or {}).get("tool", {}).get("name", "")
+            tool_input = str((payload or {}).get("tool_input", ""))[:80]
+            tpl = self.TOOL_MESSAGES.get(tool_name, f"正在调用工具：{tool_name}")
+            msg = tpl.format(input=tool_input)
+            self._loop.call_soon_threadsafe(
+                self._queue.put_nowait,
+                json.dumps({"type": "agent_step", "content": msg}, ensure_ascii=False),
+            )
+
+    def on_event_end(self, event_type, payload=None, **kwargs):
+        pass
+
+    def start_trace(self, trace_id=None): pass
+    def end_trace(self, trace_id=None, trace_map=None): pass
+
+
+@app.post("/agent/chat")
+async def agent_chat(request: AgentChatRequest):
+    session_id = request.session_id
+    lock = await _session_manager.get_lock(session_id)
+
+    async def event_stream():
+        queue: asyncio.Queue = asyncio.Queue()
+        handler = _SseStepHandler(queue)
+
+        async with lock:
+            agent = _session_manager.get_or_create(session_id, factory=create_agent)
+            agent.callback_manager = CallbackManager([handler])
+            _session_manager.touch(session_id)
+
+            try:
+                loop = asyncio.get_event_loop()
+                fut = loop.run_in_executor(None, lambda: agent.chat(request.message))
+
+                while not fut.done():
+                    try:
+                        msg = queue.get_nowait()
+                        yield f"data: {msg}\n\n"
+                    except asyncio.QueueEmpty:
+                        await asyncio.sleep(0.05)
+
+                while not queue.empty():
+                    msg = queue.get_nowait()
+                    yield f"data: {msg}\n\n"
+
+                response: AgentChatResponse = await fut
+                for char in str(response):
+                    yield f"data: {json.dumps({'type': 'token', 'content': char}, ensure_ascii=False)}\n\n"
+
+            except Exception as e:
+                yield f"data: {json.dumps({'type': 'error', 'content': str(e)}, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
+
+
+@app.get("/agent/reports/{filename}")
+async def get_report(filename: str):
+    from fastapi import HTTPException
+    from fastapi.responses import PlainTextResponse
+    reports_dir = Path(__file__).parent.parent / "reports"
+    safe_name = Path(filename).name
+    file_path = reports_dir / safe_name
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="报告不存在")
+    return PlainTextResponse(file_path.read_text(encoding="utf-8"))
