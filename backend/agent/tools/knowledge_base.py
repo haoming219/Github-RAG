@@ -3,9 +3,15 @@ import contextvars
 
 _retriever_instance = None
 _rewriter_instance = None
-_conversation_history_var: contextvars.ContextVar[list[dict]] = contextvars.ContextVar(
-    "_conversation_history", default=[]
+_MISSING = object()
+_conversation_history_var: contextvars.ContextVar = contextvars.ContextVar(
+    "_conversation_history", default=_MISSING
 )
+
+
+def _get_history() -> list[dict]:
+    val = _conversation_history_var.get()
+    return [] if val is _MISSING else val
 
 
 def _get_retriever():
@@ -34,8 +40,10 @@ def search_knowledge_base(query: str) -> str:
     """搜索知识库，返回最多5条相关仓库，按相关度降序排列。
     返回格式为纯文本，每条结果包含 repo_name（owner/repo 格式，可直接传给 github_repo_info）和摘要。"""
     retriever = _get_retriever()
+    if retriever is None:
+        return "知识库未初始化，请联系管理员。"
     rewriter = _get_rewriter()
-    history = _conversation_history_var.get()
+    history = _get_history()
     effective_query = rewriter.rewrite(query, history) if rewriter else query
 
     nodes = retriever.retrieve(effective_query)

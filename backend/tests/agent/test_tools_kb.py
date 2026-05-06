@@ -121,27 +121,32 @@ def test_contextvar_isolation_in_executor_context():
     """验证 ctx.run() 模式下不同 context 的 ContextVar 互不干扰。"""
     import asyncio
     import contextvars
-    from agent.tools.knowledge_base import set_conversation_history, _conversation_history_var
-
-    # Reset main context to default before the test to avoid pollution from prior tests
-    set_conversation_history([])
+    from agent.tools.knowledge_base import set_conversation_history, _conversation_history_var, _get_history
+    set_conversation_history([])  # 重置主 context
 
     results = {}
 
     async def run_two_sessions():
+        # 在任何 ctx.run 之前先同时 copy 两个 context
         ctx_a = contextvars.copy_context()
+        ctx_b = contextvars.copy_context()
+
         def set_a():
             set_conversation_history([{"role": "user", "content": "hello from A"}])
-            results["a"] = _conversation_history_var.get()
+            results["a"] = _get_history()
         ctx_a.run(set_a)
 
-        ctx_b = contextvars.copy_context()
-        def set_b():
+        def read_and_set_b():
+            # ctx_b 是在 ctx_a.run() 之前 copy 的，所以不应该看到 ctx_a 的写入
+            results["b_before_set"] = _get_history()
             set_conversation_history([{"role": "user", "content": "hello from B"}])
-            results["b"] = _conversation_history_var.get()
-        ctx_b.run(set_b)
+            results["b"] = _get_history()
+        ctx_b.run(read_and_set_b)
 
     asyncio.run(run_two_sessions())
     assert results["a"][0]["content"] == "hello from A"
     assert results["b"][0]["content"] == "hello from B"
-    assert _conversation_history_var.get() == []
+    # 关键：ctx_b 在自己 set 之前，不应该看到 ctx_a 的值
+    assert results["b_before_set"] == []
+    # 主 context 不受影响
+    assert _get_history() == []
