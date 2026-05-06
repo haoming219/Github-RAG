@@ -4,7 +4,7 @@
 
 **Goal:** 在不改变 `search_knowledge_base` 函数签名的前提下，为知识库检索添加对话感知的查询改写，解决多轮对话中代词指代和首轮口语化问题。
 
-**Architecture:** 新增独立的 `QueryRewriter` 类（持有自己的 LLM client），通过 `contextvars.ContextVar` 将每轮对话历史以请求级隔离的方式注入 `knowledge_base.py`，在 `retriever.retrieve` 前自动改写 query，对 Agent 完全透明。
+**Architecture:** 新增独立的 `QueryRewriter` 类（持有自己的 LLM client），通过 `contextvars.ContextVar` 将每轮对话历史以请求级隔离的方式注入 `knowledge_base.py`，在 `retriever.retrieve` 前自动改写 query，对 Agent 完全透明。关键实现细节：`run_in_executor` 不自动传播 ContextVar，必须在 `main.py` 中用 `ctx.run()` 显式捕获并传播 context。
 
 **Tech Stack:** Python 3.10+, openai SDK (OpenAI-compatible), contextvars, FastAPI lifespan, LlamaIndex ReActAgent
 
@@ -16,7 +16,7 @@
 |------|------|------|
 | 新增 | `backend/agent/tools/query_rewriter.py` | QueryRewriter 类，持有独立 LLM client，实现两种改写策略 |
 | 修改 | `backend/agent/tools/knowledge_base.py` | 添加 ContextVar、rewriter 注入函数，在检索前调用改写 |
-| 修改 | `backend/main.py` | lifespan 中 fail-soft 初始化 rewriter；`/agent/chat` 中注入对话历史 |
+| 修改 | `backend/main.py` | lifespan 中 fail-soft 初始化 rewriter；`/agent/chat` 中注入对话历史并用 `ctx.run()` 传播 context |
 | 新增 | `backend/tests/agent/test_query_rewriter.py` | QueryRewriter 单元测试 |
 | 修改 | `backend/tests/agent/test_tools_kb.py` | 修复现有测试（实现返回字符串，不是 dict），添加 rewriter 集成测试 |
 
@@ -65,7 +65,6 @@ def test_first_turn_calls_llm_and_returns_rewritten_query():
 
     assert result == "Python task queue async worker"
     mock_create.assert_called_once()
-    # 验证 prompt 里没有 history（首轮）
     call_messages = mock_create.call_args.kwargs["messages"]
     assert not any("history" in str(m).lower() for m in call_messages if m["role"] == "system")
 ```
@@ -158,7 +157,7 @@ cd backend && python -m pytest tests/agent/test_query_rewriter.py::test_first_tu
 
 期望：`PASSED`
 
-- [ ] **Step 5: 补充其余 QueryRewriter 测试**
+- [ ] **Step 5: 补充其余 QueryRewriter 测试（不含 ContextVar 测试，那在 Task 2 做）**
 
 在 `backend/tests/agent/test_query_rewriter.py` 末尾追加：
 
@@ -189,7 +188,7 @@ def test_multi_turn_truncates_history_to_last_30():
 
     call_messages = mock_create.call_args.kwargs["messages"]
     user_msg = next(m for m in call_messages if m["role"] == "user")
-    # 最多保留 30 条，history[20..49]，即 msg 20..49
+    # 保留 history[-30:]，即 msg 20..49，msg 19 不应出现
     assert "msg 19" not in user_msg["content"]
     assert "msg 20" in user_msg["content"]
 
@@ -208,30 +207,6 @@ def test_empty_llm_response_returns_original_query():
                       return_value=_mock_completion("")):
         result = rewriter.rewrite("original query", history=[])
     assert result == "original query"
-
-
-def test_contextvar_isolation_across_threads():
-    """两个线程设置不同 history，各自读取的值不相互干扰。"""
-    import threading
-    import contextvars
-    from agent.tools.knowledge_base import set_conversation_history, _conversation_history_var
-
-    results = {}
-
-    def worker(name, history):
-        ctx = contextvars.copy_context()
-        def run():
-            set_conversation_history(history)
-            results[name] = _conversation_history_var.get()
-        ctx.run(run)
-
-    t1 = threading.Thread(target=worker, args=("a", [{"role": "user", "content": "hello"}]))
-    t2 = threading.Thread(target=worker, args=("b", [{"role": "user", "content": "world"}]))
-    t1.start(); t2.start()
-    t1.join(); t2.join()
-
-    assert results["a"][0]["content"] == "hello"
-    assert results["b"][0]["content"] == "world"
 ```
 
 - [ ] **Step 6: 运行所有 QueryRewriter 测试，确认全部通过**
@@ -240,7 +215,7 @@ def test_contextvar_isolation_across_threads():
 cd backend && python -m pytest tests/agent/test_query_rewriter.py -v
 ```
 
-期望：所有测试 `PASSED`
+期望：所有5个测试 `PASSED`
 
 - [ ] **Step 7: Commit**
 
@@ -257,7 +232,7 @@ git commit -m "feat(agent): add QueryRewriter with first-turn and multi-turn rew
 - Modify: `backend/agent/tools/knowledge_base.py`
 - Modify: `backend/tests/agent/test_tools_kb.py`
 
-- [ ] **Step 1: 修复现有 test_tools_kb.py（测试与实现不一致）**
+- [ ] **Step 1: 修复现有 test_tools_kb.py 并添加新测试（含 ContextVar 隔离测试）**
 
 现有测试断言 `search_knowledge_base` 返回 dict list，但实际实现返回字符串。将 `backend/tests/agent/test_tools_kb.py` 全部替换为：
 
@@ -266,7 +241,6 @@ import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.parent))
 
 from unittest.mock import MagicMock, patch
-from agent.tools.knowledge_base import search_knowledge_base, set_conversation_history
 
 
 def _make_node(repo_name, text, score):
@@ -283,9 +257,10 @@ def _mock_retriever(nodes):
     return r
 
 
-# ── 基础行为测试（与现有语义一致，修复返回类型断言）──────────────────────────
+# ── 基础行为测试 ───────────────────────────────────────────────────────────────
 
 def test_returns_formatted_string_with_repo_names():
+    from agent.tools.knowledge_base import search_knowledge_base
     mock_retriever = _mock_retriever([
         _make_node("a/repo", "some text", 0.9),
         _make_node("b/repo", "other text", 0.7),
@@ -298,17 +273,19 @@ def test_returns_formatted_string_with_repo_names():
 
 
 def test_returns_at_most_5_repos():
+    from agent.tools.knowledge_base import search_knowledge_base
     mock_retriever = _mock_retriever([
         _make_node(f"repo/{i}", "text", 0.9 - i * 0.1) for i in range(8)
     ])
     with patch("agent.tools.knowledge_base._get_retriever", return_value=mock_retriever), \
          patch("agent.tools.knowledge_base._get_rewriter", return_value=None):
         result = search_knowledge_base("query")
-    # 最多5条，即最多5个 [N] 序号
-    assert result.count("[") <= 5
+    # 最多5条结果，用分隔符数量验证：5条结果有4个 "\n\n"
+    assert result.count("\n\n") <= 4
 
 
 def test_empty_results_returns_not_found_message():
+    from agent.tools.knowledge_base import search_knowledge_base
     mock_retriever = _mock_retriever([])
     with patch("agent.tools.knowledge_base._get_retriever", return_value=mock_retriever), \
          patch("agent.tools.knowledge_base._get_rewriter", return_value=None):
@@ -320,6 +297,7 @@ def test_empty_results_returns_not_found_message():
 
 def test_rewriter_rewrites_query_before_retrieval():
     """rewriter 存在时，retriever 收到改写后的 query。"""
+    from agent.tools.knowledge_base import search_knowledge_base
     mock_retriever = _mock_retriever([_make_node("a/repo", "text", 0.9)])
     mock_rewriter = MagicMock()
     mock_rewriter.rewrite.return_value = "rewritten query"
@@ -333,6 +311,7 @@ def test_rewriter_rewrites_query_before_retrieval():
 
 def test_no_rewriter_uses_original_query():
     """rewriter 为 None 时，retriever 收到原始 query。"""
+    from agent.tools.knowledge_base import search_knowledge_base
     mock_retriever = _mock_retriever([_make_node("a/repo", "text", 0.9)])
 
     with patch("agent.tools.knowledge_base._get_retriever", return_value=mock_retriever), \
@@ -344,6 +323,7 @@ def test_no_rewriter_uses_original_query():
 
 def test_rewriter_receives_current_history():
     """rewriter.rewrite 被调用时收到当前注入的 history。"""
+    from agent.tools.knowledge_base import search_knowledge_base, set_conversation_history
     mock_retriever = _mock_retriever([])
     mock_rewriter = MagicMock()
     mock_rewriter.rewrite.return_value = "query"
@@ -359,6 +339,7 @@ def test_rewriter_receives_current_history():
 
 def test_two_calls_in_same_turn_use_same_history():
     """同一 turn 内两次调用 search_knowledge_base，rewriter 均收到相同 history。"""
+    from agent.tools.knowledge_base import search_knowledge_base, set_conversation_history
     mock_retriever = _mock_retriever([])
     mock_rewriter = MagicMock()
     mock_rewriter.rewrite.return_value = "query"
@@ -373,15 +354,45 @@ def test_two_calls_in_same_turn_use_same_history():
     assert mock_rewriter.rewrite.call_count == 2
     for call_args in mock_rewriter.rewrite.call_args_list:
         assert call_args.args[1] == history
+
+
+def test_contextvar_isolation_in_executor_context():
+    """验证 ctx.run() 模式下不同 context 的 ContextVar 互不干扰（模拟 run_in_executor 的显式 ctx.run 用法）。"""
+    import asyncio
+    import contextvars
+    from agent.tools.knowledge_base import set_conversation_history, _conversation_history_var
+
+    results = {}
+
+    async def run_two_sessions():
+        # Session A 设置 history
+        ctx_a = contextvars.copy_context()
+        def set_a():
+            set_conversation_history([{"role": "user", "content": "hello from A"}])
+            results["a"] = _conversation_history_var.get()
+        ctx_a.run(set_a)
+
+        # Session B 设置不同 history
+        ctx_b = contextvars.copy_context()
+        def set_b():
+            set_conversation_history([{"role": "user", "content": "hello from B"}])
+            results["b"] = _conversation_history_var.get()
+        ctx_b.run(set_b)
+
+    asyncio.run(run_two_sessions())
+    assert results["a"][0]["content"] == "hello from A"
+    assert results["b"][0]["content"] == "hello from B"
+    # 主 context 不受影响
+    assert _conversation_history_var.get() == []
 ```
 
-- [ ] **Step 2: 运行修复后的测试，确认基础测试通过、新增测试失败**
+- [ ] **Step 2: 运行测试，确认所有测试因 `_get_rewriter` 不存在而失败**
 
 ```bash
 cd backend && python -m pytest tests/agent/test_tools_kb.py -v
 ```
 
-期望：前3个基础测试 `PASSED`，后4个新测试 `FAILED`（`_get_rewriter` 不存在）
+期望：**所有测试 `FAILED`**（`patch` 目标 `agent.tools.knowledge_base._get_rewriter` 不存在，触发 `AttributeError`）
 
 - [ ] **Step 3: 更新 knowledge_base.py**
 
@@ -460,7 +471,7 @@ def search_knowledge_base(query: str) -> str:
 cd backend && python -m pytest tests/agent/test_tools_kb.py -v
 ```
 
-期望：所有7个测试 `PASSED`
+期望：所有8个测试 `PASSED`
 
 - [ ] **Step 5: Commit**
 
@@ -476,12 +487,13 @@ git commit -m "feat(agent): integrate QueryRewriter into search_knowledge_base v
 **Files:**
 - Modify: `backend/main.py`
 
-- [ ] **Step 1: 在 lifespan 末尾添加 QueryRewriter 的 fail-soft 初始化**
+**关键说明**：`loop.run_in_executor` 在 Python 中不自动传播 ContextVar 到 executor 线程。必须在提交前用 `contextvars.copy_context()` 捕获当前 context，再用 `ctx.run()` 在 executor 中执行，才能让 `_conversation_history_var` 的值在 `agent.stream_chat` 执行链中可见。
 
-在 `backend/main.py` 的 `lifespan` 函数中，`init_kb_retriever(_retriever)` 这行**之后**添加：
+- [ ] **Step 1: 在 lifespan 中 fail-soft 初始化 QueryRewriter**
+
+在 `backend/main.py` 的 `lifespan` 函数中，`init_kb_retriever(_retriever)` 这行**之后**（`yield` **之前**）添加：
 
 ```python
-    # QueryRewriter — fail-soft: 初始化失败不阻断启动
     try:
         from agent.tools.query_rewriter import QueryRewriter
         from agent.tools.knowledge_base import init_rewriter
@@ -496,23 +508,43 @@ git commit -m "feat(agent): integrate QueryRewriter into search_knowledge_base v
         logging.warning(f"[startup] QueryRewriter 初始化失败，查询改写已禁用: {e}")
 ```
 
-- [ ] **Step 2: 在 `/agent/chat` 中注入对话历史**
+- [ ] **Step 2: 在 `/agent/chat` 中注入对话历史并用 ctx.run() 传播 context**
 
-在 `backend/main.py` 的 `agent_chat` → `event_stream` → `async with lock` 块内，`_session_manager.touch(session_id)` 这行**之后**、`try:` 块**之前**添加：
+在 `backend/main.py` 顶部 import 区域添加：
 
 ```python
-            # 注入当前对话历史（只取 user/assistant，过滤 ReAct scratchpad）
-            from agent.tools.knowledge_base import set_conversation_history
-            _history = [
-                {"role": str(m.role.value if hasattr(m.role, 'value') else m.role),
-                 "content": m.content}
-                for m in agent.chat_history
-                if str(m.role.value if hasattr(m.role, 'value') else m.role) in ("user", "assistant")
-            ]
-            set_conversation_history(_history)
+import contextvars
 ```
 
-> **注意**：LlamaIndex `ChatMessage.role` 是 `MessageRole` 枚举，需要用 `.value` 取字符串值。
+将 `agent_chat` → `event_stream` → `async with lock` 块内的 executor 调用部分替换。
+
+**原来的代码**（在 `_session_manager.touch(session_id)` 之后）：
+
+```python
+            try:
+                loop = asyncio.get_running_loop()
+                fut = loop.run_in_executor(None, lambda: agent.stream_chat(request.message))
+```
+
+**替换为**：
+
+```python
+            from agent.tools.knowledge_base import set_conversation_history
+            _history = [
+                {"role": str(m.role.value if hasattr(m.role, "value") else m.role),
+                 "content": m.content}
+                for m in agent.chat_history
+                if str(m.role.value if hasattr(m.role, "value") else m.role) in ("user", "assistant")
+            ]
+            set_conversation_history(_history)
+
+            try:
+                loop = asyncio.get_running_loop()
+                ctx = contextvars.copy_context()
+                fut = loop.run_in_executor(None, lambda: ctx.run(agent.stream_chat, request.message))
+```
+
+> **注意**：`m.role` 是 LlamaIndex `MessageRole` 枚举，`.value` 取其字符串值（`"user"` / `"assistant"`）。以计划中的 `.value` 处理为准，直接用 `m.role in ("user", "assistant")` 会因类型不匹配而过滤失败。
 
 - [ ] **Step 3: 本地启动服务验证初始化日志**
 
@@ -535,7 +567,7 @@ WARNING: [startup] QueryRewriter 初始化失败，查询改写已禁用: ...
 
 ```bash
 git add backend/main.py
-git commit -m "feat(main): initialize QueryRewriter in lifespan and inject chat history into /agent/chat"
+git commit -m "feat(main): initialize QueryRewriter in lifespan and inject chat history with ctx.run into /agent/chat"
 ```
 
 ---
@@ -558,17 +590,23 @@ cd backend && python -m pytest tests/ -v
 ```json
 {"session_id": "test-001", "message": "有没有好用的 Python 异步任务队列？"}
 ```
-观察 server 日志中应出现 `search_knowledge_base` 被调用，且 retriever 收到英文关键词 query。
+观察 server 日志：`search_knowledge_base` 被调用，retriever 收到英文关键词 query（而非原始中文）。
 
 **第2轮**（多轮消歧验证）：
 ```json
 {"session_id": "test-001", "message": "它支持分布式部署吗？"}
 ```
-观察 server 日志，`search_knowledge_base` 调用时 query 应包含第1轮推荐的仓库名，而非直接使用"它"。
+观察 server 日志：`search_knowledge_base` 的 query 应包含第1轮推荐的仓库名，而非直接传入"它"。
 
-- [ ] **Step 3: 最终 Commit**
+- [ ] **Step 3: 检查 git status 并收尾**
 
 ```bash
-git add -A
+git status
+```
+
+若有遗漏未提交的文件，明确 add 后提交：
+
+```bash
+git add <specific-file>
 git commit -m "chore: finalize context-aware query rewriting implementation"
 ```
