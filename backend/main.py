@@ -1,4 +1,4 @@
-import os, json, pathlib, asyncio, logging
+import os, json, pathlib, asyncio, logging, contextvars
 from contextlib import asynccontextmanager
 from pathlib import Path
 from dotenv import load_dotenv
@@ -51,6 +51,18 @@ async def lifespan(app: FastAPI):
         _filter_options = json.load(f)
 
     init_kb_retriever(_retriever)
+    try:
+        from agent.tools.query_rewriter import QueryRewriter
+        from agent.tools.knowledge_base import init_rewriter
+        _rewriter = QueryRewriter(
+            model=os.getenv("LLM_MODEL_ID", "gpt-4o-mini"),
+            api_key=os.environ["LLM_API_KEY"],
+            api_base=os.environ["LLM_API_URL"],
+        )
+        init_rewriter(_rewriter)
+        print("[startup] QueryRewriter initialized.", flush=True)
+    except Exception as e:
+        logging.warning(f"[startup] QueryRewriter 初始化失败，查询改写已禁用: {e}")
     if not os.getenv("GITHUB_TOKEN"):
         logging.warning("GITHUB_TOKEN not set — GitHub API rate limit: 60 req/hour (anonymous)")
 
@@ -187,9 +199,19 @@ async def agent_chat(request: AgentChatRequest):
             agent.agent_worker.callback_manager = cb
             _session_manager.touch(session_id)
 
+            from agent.tools.knowledge_base import set_conversation_history
+            _history = [
+                {"role": str(m.role.value if hasattr(m.role, "value") else m.role),
+                 "content": m.content}
+                for m in agent.chat_history
+                if str(m.role.value if hasattr(m.role, "value") else m.role) in ("user", "assistant")
+            ]
+            set_conversation_history(_history)
+
             try:
                 loop = asyncio.get_running_loop()
-                fut = loop.run_in_executor(None, lambda: agent.stream_chat(request.message))
+                ctx = contextvars.copy_context()
+                fut = loop.run_in_executor(None, lambda: ctx.run(agent.stream_chat, request.message))
 
                 # Drain agent_step events while the agent is running (tool calls phase)
                 while not fut.done():
