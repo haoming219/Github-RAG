@@ -22,6 +22,7 @@ from llm import stream_answer
 from agent.agent import create_agent
 from agent.session import SessionManager
 from agent.tools.knowledge_base import init_retriever as init_kb_retriever
+from agent.tools.knowledge_base import set_conversation_history
 
 _session_manager = SessionManager(ttl_seconds=30 * 60)
 
@@ -51,18 +52,23 @@ async def lifespan(app: FastAPI):
         _filter_options = json.load(f)
 
     init_kb_retriever(_retriever)
-    try:
-        from agent.tools.query_rewriter import QueryRewriter
-        from agent.tools.knowledge_base import init_rewriter
-        _rewriter = QueryRewriter(
-            model=os.getenv("LLM_MODEL_ID", "gpt-4o-mini"),
-            api_key=os.environ["LLM_API_KEY"],
-            api_base=os.environ["LLM_API_URL"],
-        )
-        init_rewriter(_rewriter)
-        print("[startup] QueryRewriter initialized.", flush=True)
-    except Exception as e:
-        logging.warning(f"[startup] QueryRewriter 初始化失败，查询改写已禁用: {e}")
+    _llm_api_key = os.getenv("LLM_API_KEY")
+    _llm_api_base = os.getenv("LLM_API_URL")
+    if not _llm_api_key or not _llm_api_base:
+        logging.warning("[startup] LLM_API_KEY 或 LLM_API_URL 未配置，QueryRewriter 已禁用")
+    else:
+        try:
+            from agent.tools.query_rewriter import QueryRewriter
+            from agent.tools.knowledge_base import init_rewriter
+            _rewriter = QueryRewriter(
+                model=os.getenv("LLM_MODEL_ID", "gpt-4o-mini"),
+                api_key=_llm_api_key,
+                api_base=_llm_api_base,
+            )
+            init_rewriter(_rewriter)
+            print("[startup] QueryRewriter initialized.", flush=True)
+        except Exception as e:
+            logging.warning(f"[startup] QueryRewriter 初始化失败，查询改写已禁用: {e}")
     if not os.getenv("GITHUB_TOKEN"):
         logging.warning("GITHUB_TOKEN not set — GitHub API rate limit: 60 req/hour (anonymous)")
 
@@ -199,7 +205,6 @@ async def agent_chat(request: AgentChatRequest):
             agent.agent_worker.callback_manager = cb
             _session_manager.touch(session_id)
 
-            from agent.tools.knowledge_base import set_conversation_history
             _history = [
                 {"role": str(m.role.value if hasattr(m.role, "value") else m.role),
                  "content": m.content}
