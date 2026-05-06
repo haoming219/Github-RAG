@@ -1,7 +1,7 @@
 from __future__ import annotations
 import os, base64
 from datetime import datetime, timezone, timedelta
-
+from openai import OpenAI
 import httpx
 
 from agent.types import RepoProfile, CodeResult
@@ -28,8 +28,11 @@ def _parse_repo_name(repo_url_or_name: str) -> str:
 
 
 def _summarize_readme(text: str) -> str:
-    from llm import _get_client
-    client = _get_client()
+    base_url = os.environ["LLM_API_URL"]
+    client = OpenAI(
+        api_key=os.environ["LLM_API_KEY"],
+        base_url=base_url,
+    )
     resp = client.chat.completions.create(
         model=os.getenv("LLM_MODEL_ID", "gpt-4o-mini"),
         messages=[

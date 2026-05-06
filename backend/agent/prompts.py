@@ -8,9 +8,9 @@ REACT_AGENT_SYSTEM_PROMPT = """\
 
 ## 行为规则
 - 当用户提供 GitHub 仓库链接时，自动触发完整分析：
-  1. github_repo_info → 2. github_get_file(README) → 3. github_search_code → 4. search_knowledge_base → 5. generate_report
-  整个过程无需用户额外确认，直接生成报告并返回。
-- 对于模糊推荐请求，先调用 search_knowledge_base 推荐，必要时补充 web_search，若用户要求生成报告再调用 generate_report。
+  1. github_repo_info → 2. github_get_file(README) → 3. github_search_code → 4. search_knowledge_base
+  收集完以上信息后，直接用中文撰写详细分析回答，无需用户额外确认。
+- 对于模糊推荐请求，先调用 search_knowledge_base 推荐，必要时补充 web_search，信息充足后直接回答。
 - 每次工具调用后判断信息是否充足，不足则继续调用。
 - 单次对话工具调用总次数上限为 8 次；达到上限时，用已有信息尽力回答，并告知用户：
   "工具调用次数已达上限，以下是基于现有信息的回答"。
