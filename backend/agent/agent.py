@@ -11,7 +11,10 @@ from agent.tools.github import github_repo_info, github_search_code, github_get_
 from agent.tools.web_search import web_search
 from agent.tools.report import generate_report
 
-MAX_ITERATIONS = 10
+# Each tool call produces ~3 reasoning steps (Thought + Action + Observation).
+# Set this to 3× the desired max tool calls per turn.
+MAX_TOOL_CALLS_PER_TURN = 6
+MAX_ITERATIONS = MAX_TOOL_CALLS_PER_TURN * 3
 
 
 def _make_tools() -> list[FunctionTool]:

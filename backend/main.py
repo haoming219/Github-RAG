@@ -14,6 +14,7 @@ from llama_index.core.callbacks import CallbackManager, CBEventType
 from llama_index.core.callbacks.base import BaseCallbackHandler
 from llama_index.core.callbacks.schema import EventPayload
 from llama_index.core.agent import AgentChatResponse
+from llama_index.core.chat_engine.types import StreamingAgentChatResponse
 
 from models import ChatRequest, FilterOptions, StarsRange
 from retriever import load_retriever
@@ -188,8 +189,9 @@ async def agent_chat(request: AgentChatRequest):
 
             try:
                 loop = asyncio.get_running_loop()
-                fut = loop.run_in_executor(None, lambda: agent.chat(request.message))
+                fut = loop.run_in_executor(None, lambda: agent.stream_chat(request.message))
 
+                # Drain agent_step events while the agent is running (tool calls phase)
                 while not fut.done():
                     try:
                         msg = queue.get_nowait()
@@ -201,9 +203,11 @@ async def agent_chat(request: AgentChatRequest):
                     msg = queue.get_nowait()
                     yield f"data: {msg}\n\n"
 
-                response: AgentChatResponse = await fut
-                for char in response.response:
-                    yield f"data: {json.dumps({'type': 'token', 'content': char}, ensure_ascii=False)}\n\n"
+                response: StreamingAgentChatResponse = await fut
+
+                # Stream the final LLM response token by token
+                for token in response.response_gen:
+                    yield f"data: {json.dumps({'type': 'token', 'content': token}, ensure_ascii=False)}\n\n"
 
             except Exception as e:
                 yield f"data: {json.dumps({'type': 'error', 'content': str(e)}, ensure_ascii=False)}\n\n"
