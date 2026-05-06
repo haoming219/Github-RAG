@@ -1,10 +1,19 @@
 from __future__ import annotations
+import contextvars
 
 _retriever_instance = None
+_rewriter_instance = None
+_conversation_history_var: contextvars.ContextVar[list[dict]] = contextvars.ContextVar(
+    "_conversation_history", default=[]
+)
 
 
 def _get_retriever():
     return _retriever_instance
+
+
+def _get_rewriter():
+    return _rewriter_instance
 
 
 def init_retriever(retriever) -> None:
@@ -12,11 +21,24 @@ def init_retriever(retriever) -> None:
     _retriever_instance = retriever
 
 
+def init_rewriter(rewriter) -> None:
+    global _rewriter_instance
+    _rewriter_instance = rewriter
+
+
+def set_conversation_history(history: list[dict]) -> None:
+    _conversation_history_var.set(history)
+
+
 def search_knowledge_base(query: str) -> str:
     """搜索知识库，返回最多5条相关仓库，按相关度降序排列。
     返回格式为纯文本，每条结果包含 repo_name（owner/repo 格式，可直接传给 github_repo_info）和摘要。"""
     retriever = _get_retriever()
-    nodes = retriever.retrieve(query)
+    rewriter = _get_rewriter()
+    history = _conversation_history_var.get()
+    effective_query = rewriter.rewrite(query, history) if rewriter else query
+
+    nodes = retriever.retrieve(effective_query)
 
     items = []
     for node in nodes:
