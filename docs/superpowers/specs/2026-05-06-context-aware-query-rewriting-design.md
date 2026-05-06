@@ -47,7 +47,7 @@ retriever.retrieve(rewritten_query)              [现有逻辑不变]
 - **目的**：解析代词指代，结合对话历史还原完整意图，同时补充技术关键词
 - **示例**：history 中讨论了 Celery，当前 query `"它支持分布式部署吗？"` → `"Celery distributed deployment support"`
 - **Prompt 核心指令**：根据对话历史理解用户最新问题的真实意图，改写为一条完整独立的英文检索查询，只输出改写结果，不解释
-- **History 内容过滤**：只传入 `role` 为 `"user"` 或 `"assistant"` 的消息，过滤 ReAct 中间推理 scratchpad；最多取最近 10 条消息，避免 prompt 过长
+- **History 内容过滤**：只传入 `role` 为 `"user"` 或 `"assistant"` 的消息，过滤 ReAct 中间推理 scratchpad；最多取最近 30 条消息，避免 prompt 过长
 
 **输出语言要求**：两种模式的改写结果均强制为英文，与 Pinecone 索引语言保持一致。
 
@@ -68,7 +68,7 @@ QueryRewriter
 ├── __init__(model, api_key, api_base, timeout=5)  — 持有独立 OpenAI client 实例
 └── rewrite(query, history) -> str
     ├── history 为空 → _rewrite_first_turn(query)
-    ├── history 非空 → _rewrite_multi_turn(query, history[-10:])  [最近10条]
+    ├── history 非空 → _rewrite_multi_turn(query, history[-30:])  [最近30条]
     └── 任何异常 → 返回原始 query（静默降级）
 ```
 
@@ -147,7 +147,7 @@ set_conversation_history(history)
 
 - **`test_query_rewriter.py`**（新增）：
   - 首轮 prompt 分支：验证 history 为空时调用 `_rewrite_first_turn`
-  - 多轮 prompt 分支：验证 history 非空时调用 `_rewrite_multi_turn`，且 history 截断为最近 10 条
+  - 多轮 prompt 分支：验证 history 非空时调用 `_rewrite_multi_turn`，且 history 截断为最近 30 条
   - LLM 异常降级：mock LLM 抛出异常，验证返回原始 query
   - 空响应降级：mock LLM 返回空字符串，验证返回原始 query
   - 并发隔离：两个线程分别设置不同 history，验证互不干扰（验证 ContextVar 行为）
