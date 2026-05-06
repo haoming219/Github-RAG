@@ -16,9 +16,8 @@ from llama_index.core.callbacks.schema import EventPayload
 from llama_index.core.agent import AgentChatResponse
 from llama_index.core.chat_engine.types import StreamingAgentChatResponse
 
-from models import ChatRequest, FilterOptions, StarsRange
+from models import FilterOptions, StarsRange
 from retriever import load_retriever
-from llm import stream_answer
 from agent.agent import create_agent
 from agent.session import SessionManager
 from agent.tools.knowledge_base import init_retriever as init_kb_retriever
@@ -61,7 +60,7 @@ async def lifespan(app: FastAPI):
             from agent.tools.query_rewriter import QueryRewriter
             from agent.tools.knowledge_base import init_rewriter
             _rewriter = QueryRewriter(
-                model=os.getenv("LLM_MODEL_ID", "gpt-4o-mini"),
+                model=os.getenv("QUERY_MODEL_ID", "gpt-4o-mini"),
                 api_key=_llm_api_key,
                 api_base=_llm_api_base,
             )
@@ -98,51 +97,51 @@ def filters_options():
     )
 
 
-@app.post("/api/chat")
-async def chat(request: ChatRequest):
-    import time
-    t0 = time.perf_counter()
-
-    filters = request.filters
-    language = filters.language if filters else ""
-    min_stars = filters.min_stars if filters else 0
-    topics = filters.topics if filters else []
-
-    _retriever.language = language or ""
-    _retriever.min_stars = min_stars or 0
-    _retriever.topics = topics or []
-
-    query = request.messages[-1].content
-    t1 = time.perf_counter()
-    nodes = _retriever.retrieve(query)
-    t2 = time.perf_counter()
-    print(f"[timing] retrieve: {t2 - t1:.2f}s | results: {len(nodes)}", flush=True)
-
-    docs = [n.metadata for n in nodes]
-    messages_dicts = [{"role": m.role, "content": m.content} for m in request.messages]
-
-    def timed_stream():
-        import time
-        first_chunk = True
-        t_start = time.perf_counter()
-        try:
-            for chunk in stream_answer(docs, messages_dicts):
-                if first_chunk:
-                    print(f"[timing] time to first LLM chunk: {time.perf_counter() - t_start:.2f}s", flush=True)
-                    first_chunk = False
-                yield chunk
-        except Exception as e:
-            logging.exception("stream_answer error")
-            yield f'data: {{"text": "流式响应错误：{type(e).__name__}: {str(e)[:100]}"}}\n\n'
-            yield "data: [DONE]\n\n"
-        print(f"[timing] total stream: {time.perf_counter() - t_start:.2f}s", flush=True)
-        print(f"[timing] total request: {time.perf_counter() - t0:.2f}s", flush=True)
-
-    return StreamingResponse(
-        timed_stream(),
-        media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
-    )
+# @app.post("/api/chat")
+# async def chat(request: ChatRequest):
+#     import time
+#     t0 = time.perf_counter()
+#
+#     filters = request.filters
+#     language = filters.language if filters else ""
+#     min_stars = filters.min_stars if filters else 0
+#     topics = filters.topics if filters else []
+#
+#     _retriever.language = language or ""
+#     _retriever.min_stars = min_stars or 0
+#     _retriever.topics = topics or []
+#
+#     query = request.messages[-1].content
+#     t1 = time.perf_counter()
+#     nodes = _retriever.retrieve(query)
+#     t2 = time.perf_counter()
+#     print(f"[timing] retrieve: {t2 - t1:.2f}s | results: {len(nodes)}", flush=True)
+#
+#     docs = [n.metadata for n in nodes]
+#     messages_dicts = [{"role": m.role, "content": m.content} for m in request.messages]
+#
+#     def timed_stream():
+#         import time
+#         first_chunk = True
+#         t_start = time.perf_counter()
+#         try:
+#             for chunk in stream_answer(docs, messages_dicts):
+#                 if first_chunk:
+#                     print(f"[timing] time to first LLM chunk: {time.perf_counter() - t_start:.2f}s", flush=True)
+#                     first_chunk = False
+#                 yield chunk
+#         except Exception as e:
+#             logging.exception("stream_answer error")
+#             yield f'data: {{"text": "流式响应错误：{type(e).__name__}: {str(e)[:100]}"}}\n\n'
+#             yield "data: [DONE]\n\n"
+#         print(f"[timing] total stream: {time.perf_counter() - t_start:.2f}s", flush=True)
+#         print(f"[timing] total request: {time.perf_counter() - t0:.2f}s", flush=True)
+#
+#     return StreamingResponse(
+#         timed_stream(),
+#         media_type="text/event-stream",
+#         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+#     )
 
 
 @app.get("/health")
@@ -159,7 +158,6 @@ class _SseStepHandler(BaseCallbackHandler):
         "github_search_code": "正在搜索代码：{input}",
         "github_get_file": "正在读取文件：{input}",
         "web_search": "正在搜索互联网：{input}",
-        "generate_report": "正在生成完整报告...",
     }
 
     def __init__(self, queue: asyncio.Queue, loop: asyncio.AbstractEventLoop):
