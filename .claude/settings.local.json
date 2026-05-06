@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(.venv/Scripts/python.exe -c ' *)"
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(python -m pytest tests/agent/test_query_rewriter.py -v)",
+      "Bash(python -m pytest tests/agent/test_tools_kb.py -v)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(python -m py_compile main.py)"
     ]
   }
 }
