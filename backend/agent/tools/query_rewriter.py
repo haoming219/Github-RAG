@@ -1,5 +1,8 @@
 from __future__ import annotations
+import logging
 from openai import OpenAI
+
+_logger = logging.getLogger(__name__)
 
 _FIRST_TURN_SYSTEM = (
     "You are a search query optimizer for a GitHub repository search engine. "
@@ -31,7 +34,8 @@ class QueryRewriter:
             if not history:
                 return self._rewrite_first_turn(query)
             return self._rewrite_multi_turn(query, history)
-        except Exception:
+        except Exception as exc:
+            _logger.warning("QueryRewriter failed, returning original query: %s", exc)
             return query
 
     def _rewrite_first_turn(self, query: str) -> str:
@@ -44,13 +48,15 @@ class QueryRewriter:
             max_tokens=64,
             temperature=0,
         )
+        if not response.choices or response.choices[0].message.content is None:
+            return query
         rewritten = response.choices[0].message.content.strip()
         return rewritten if rewritten else query
 
     def _rewrite_multi_turn(self, query: str, history: list[dict]) -> str:
         recent = history[-30:]
         history_text = "\n".join(
-            f"{m['role'].upper()}: {m['content']}" for m in recent
+            f"{m['role'].upper()}: {m['content'][:300]}" for m in recent
         )
         response = self._client.chat.completions.create(
             model=self._model,
@@ -61,5 +67,7 @@ class QueryRewriter:
             max_tokens=64,
             temperature=0,
         )
+        if not response.choices or response.choices[0].message.content is None:
+            return query
         rewritten = response.choices[0].message.content.strip()
         return rewritten if rewritten else query
